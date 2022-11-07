@@ -2,7 +2,6 @@
 # FunkoPopShop
 
 
-Testing 
 
 ## Setup
 
