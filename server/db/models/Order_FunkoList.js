@@ -11,9 +11,11 @@ const Order_FunkoList = db.define(order_product, {
     },
 
     quantity: {
-        funkoPrice: {
-            type: Sequelize.DECIMAL
-        }
+        type: Sequelize.INTEGER
+    },
+    
+    funkoPrice: {
+        type: Sequelize.DECIMAL
     }
 })
 
