@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const db = require('../db')
 
-const Order_FunkoList = db.define(order_product, {
+const Order_FunkoPop = db.define(order_funkoPop, {
     orderId: {
         type: Sequelize.INTEGER
     },
@@ -19,4 +19,4 @@ const Order_FunkoList = db.define(order_product, {
     }
 })
 
-module.exports = Order_FunkoList
+module.exports = Order_FunkoPop
