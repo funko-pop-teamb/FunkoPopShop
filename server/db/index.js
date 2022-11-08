@@ -1,8 +1,7 @@
 //this is the access point for all things database related!
 
-const { HasMany } = require('sequelize')
 const db = require('./db')
-const Order = require('./moddels/Order')
+const Order = require('./models/Order')
 const User = require('./models/User')
 
 //associations could go here!
