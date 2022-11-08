@@ -18,8 +18,8 @@ const Order = db.define('orders', {
       notEmpty: true,
     },
   },
-  orderStatus:{
-    type: Sequelize.ENUM('Cart','Pending','Shipping','Complete')
+  orderStatus: {
+    type: Sequelize.ENUM('Cart', 'Pending', 'Shipping', 'Complete')
   }
 
 });
