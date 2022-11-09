@@ -306,13 +306,13 @@ const funkos = [{
   },
   
   {
-    name:'DeathStroke',
-    category:'DC Comics',
-    imageUrl:'https://cdn.media.amplience.net/s/hottopic/14423568_hi',
-    price:'12.50',
-    size:'regular',
+    Name:'DeathStroke',
+    Category:'DC Comics',
+    ImageUrl:'https://cdn.media.amplience.net/s/hottopic/14423568_hi',
+    Price:'12.50',
+    Size:'regular',
     description:'Bring your favorite DC Villain into your Batman collection with this Pop! of Deathstroke. Armed and ready to fight, he is definitely going to cause some problems.',
-    edition:'exclusive',
+    Edition:'exclusive',
     },
     {
       Name: "Batman (Hellbat)",
@@ -340,7 +340,7 @@ const funkos = [{
       Price: "12.50",
       ImageUrl: "https://ultra.com.cy/images/detailed/253/u6FJRIJH9fNpsue3BrBwNvAPYByqQMsv.jpg",
       Size: "regular",
-      Edition: "regular",
+      Edition: "general",
       description: "Funko POP: Marvel Fantastic Four #561 Doctor Doom (Fantastic Four)"
       },
      
@@ -359,7 +359,7 @@ const funkos = [{
       Category: "Marvel",
       Price: "24.99",
       ImageUrl: "https://m.media-amazon.com/images/I/41+TFqOv5KL._AC_SY580_.jpg",
-      Size: "Jumbo",
+      Size: "jumbo",
       Edition: "exclusive",
       description: "Venom on the Throne is the next to be added to our PIAB EXC collection! We didn't think it could look any more awesome but the King in Black certainly doesn't disappoint."
       },
@@ -380,7 +380,7 @@ const funkos = [{
       Price: "12.50",
       ImageUrl: "https://m.media-amazon.com/images/I/615db0m8I0L.jpg",
       Size: "regular",
-      Edition: "regular",
+      Edition: "general",
       description: "Funko Pop! Star Wars Clone Wars OBI Wan Kenobi Figure #270"
       },
       {
@@ -389,7 +389,7 @@ const funkos = [{
       Price: "12.50",
       ImageUrl: "https://m.media-amazon.com/images/I/615db0m8I0L.jpg",
       Size: "regular",
-      Edition: "regular",
+      Edition: "general",
       description: "Funko POP! The Mandalorian: Ahsoka (Hooded) figure"
    
    
@@ -400,7 +400,7 @@ const funkos = [{
       Price: "12.50",
       ImageUrl: "https://m.media-amazon.com/images/I/51XV+EqMToL.jpg",
       Size: "regular",
-      Edition: "regular",
+      Edition: "general",
       description: "Funko - POP! Games Star Wars Jedi: Fallen Order! Cal Kestis With BD-1"
    
    
