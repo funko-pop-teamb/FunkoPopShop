@@ -10,11 +10,12 @@ router.get('/', async (req, res, next) => {
     }
 })
 
-router.get('/:category', async (req, res, next) => {
+router.get('/filter/:category', async (req, res, next) => {
     try {
         const { category } = req.params
         res.send(await FunkoPop.findAll(category, {
-            where: { Category: category}
+
+            where: { category: category }
         }))
     } catch (err) {
 
@@ -31,10 +32,10 @@ router.get('/:funkoId', async (req, res, next) => {
     }
 })
 
-router.post('/', async(req, res, next) => {
+router.post('/', async (req, res, next) => {
     try {
         const newFunko = await FunkoPop.create(req.body)
-        res,send(newFunko)
+        res.send(newFunko)
     } catch (err) {
         console.log('Error in POST/api/funkoPop')
         next(err)
@@ -42,27 +43,29 @@ router.post('/', async(req, res, next) => {
 })
 
 router.delete('/:funkoId', async (req, res, next) => {
-    try{
-        const {funkoId} = req.params
+    try {
+        const { funkoId } = req.params
         let deleteFunko = await FunkoPop.findByPk(funkoId)
         if (!deleteFunko) {
-            res.status(404).send ('This Funko Does Not Exist')
+            res.status(404).send('This Funko Does Not Exist')
             return
         }
+        res.send(await deleteFunko.destroy(funkoId))
     } catch (err) {
-        console.log('Error in DELETE/api/funkoPop/:id', err)
+        console.log('Error in DELETE/api/funkoPop/:funkoId', err)
         next(err)
     }
 })
 
-router.put ('/:funkoId', async (req, res, next) => {
+router.put('/:funkoId', async (req, res, next) => {
     try {
-        const {funkoId} = req.params
+        const { funkoId } = req.params
         let updateFunko = await FunkoPop.findByPk(funkoId)
         if (!updateFunko) {
             res.status(404).send('Cannot Update A Non-Existing Funko')
             return
         }
+        res.send(await updateFunko.update(req.body))
     } catch (err) {
         console.log('Error in PUT/api/funkoPop/:id', err)
         next(err)
