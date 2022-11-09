@@ -6,16 +6,15 @@ const Order_FunkoPop = require('./models/Order_FunkoPop')
 const FunkoPop = require('./models/FunkoPop')
 const User = require('./models/User')
 const { Sequelize } = require('sequelize')
-const Order_FunkoPop = require('./models/Order_FunkoPop')
 
 //associations could go here!
 
-User.HasMany(Order)
+User.hasMany(Order)
 Order.belongsTo(User)
 
-const Order_FunkoPop = Sequelize.define('Order_FunkoPop', {selfGranted: DataTypes.BOOLEAN}, {timestamp: false} )
+// const Order_FunkoPop = Sequelize.define('Order_FunkoPop', {timestamp: false} )
 FunkoPop.belongsToMany(Order, { through: Order_FunkoPop })
-Order.belongToMany(FunkoPop,  { through: Order_FunkoPop })
+Order.belongsToMany(FunkoPop,  { through: Order_FunkoPop })
 
 module.exports = {
   db,
