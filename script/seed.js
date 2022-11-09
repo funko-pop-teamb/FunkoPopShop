@@ -8,7 +8,7 @@ const FunkoPop = require('../server/db/models/FunkoPop')
 const funkos = [{
   
   Name: 'Stitch with Boba: Lilo and Stitch Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '15.00',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/16748978_hi?$productMainDesktop$',
   Size: 'regular',
@@ -18,7 +18,7 @@ const funkos = [{
   
   {
   Name: 'Sleeping Stitch: Lilo and Stitch Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '12.50',
   ImageUrl:'https://cdn.media.amplience.net/s/hottopic/14925870_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -28,7 +28,7 @@ const funkos = [{
   
   {
   Name: 'Kuromi (With Baku): Sanrio Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '14.90',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/18945338_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -38,7 +38,7 @@ const funkos = [{
   
   {
   Name: 'Games Lapras: Pokemon Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '12.90',
   ImageUrl:'https://cdn.media.amplience.net/s/hottopic/17417633_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -48,7 +48,7 @@ const funkos = [{
   
   {
   Name: 'Classics Tinker Bell: Peter Pan Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '14.90',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/16916184_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -58,7 +58,7 @@ const funkos = [{
   
   {
   Name: 'Alien: Toy Story Diamond Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '14.50',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/13032934_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -68,7 +68,7 @@ const funkos = [{
   
   {
   Name: 'Winnie The Pooh (Flocked): Winnie the Pooh Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '15.90',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/19426491_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -78,7 +78,7 @@ const funkos = [{
   
   {
   Name: 'Pochacco: Sanrio Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '12.90',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/19426425_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -88,7 +88,7 @@ const funkos = [{
   
   {
   Name: 'Bisky: Hunter X Hunter Collection ',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '12.90',
   ImageUrl:'https://cdn.media.amplience.net/s/hottopic/17417605_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -98,7 +98,7 @@ const funkos = [{
   
   {
   Name: 'Soda Vanellope: Wreck-It Ralph Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '14.90',
   ImageUrl:'https://cdn.media.amplience.net/s/hottopic/19226304_hi?$productMainDesktopRetina$',
   Size: 'regular',
