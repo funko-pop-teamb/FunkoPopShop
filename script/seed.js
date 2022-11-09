@@ -420,7 +420,7 @@ async function seed() {
   // Creating Users
   await Promise.all(funkos.map(funko => {
 
-    return FunkoPop.create(funko)
+     FunkoPop.create(funko)
 
   }))
 
