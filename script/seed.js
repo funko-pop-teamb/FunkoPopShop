@@ -5,6 +5,7 @@ const {
   models: { User },
 } = require("../server/db");
 const FunkoPop = require("../server/db/models/FunkoPop");
+const OrderDB = require('../server/db/models/Order')
 
 const funkos = [
   {
@@ -465,7 +466,19 @@ const funkos = [
     description:
       "Funko - POP! Games Star Wars Jedi: Fallen Order! Cal Kestis With BD-1",
   },
+  
+
+
+
 ];
+
+const Orders = [
+{
+  totalPrice: "30.00",
+  shippingAddress: "101 main street",
+  orderStatus: "Pending"
+
+} ]
 
 /**
  * seed - this function clears the database, updates tables to
@@ -481,6 +494,14 @@ const funkos = [
     return FunkoPop.create(funko)
 
   }))
+
+  await Promise.all(Orders.map(Order => {
+
+    return OrderDB.create(Order)
+
+  }))
+
+
 
 
   const users = await Promise.all([
