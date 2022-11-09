@@ -14,7 +14,7 @@ router.get('/:category', async (req, res, next) => {
     try {
         const { category } = req.params
         res.send(await FunkoPop.findAll(category, {
-            where: { category: category}
+            where: { Category: category}
         }))
     } catch (err) {
 
@@ -24,7 +24,7 @@ router.get('/:category', async (req, res, next) => {
 router.get('/:funkoId', async (req, res, next) => {
     try {
         const { funkoId } = req.params
-        res.send(await FunkoPop.findByPk(id))
+        res.send(await FunkoPop.findByPk(funkoId))
     } catch (err) {
         console.log('Error in GET/api/funkoPop/:id', err)
         next(err)
