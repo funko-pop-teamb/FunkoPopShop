@@ -21,10 +21,11 @@ router.get('/:userId', async (req, res, next) => {
   try {
     const { userId } = req.params
     const oneUser = await User.findOne({
+      // attributes: ['id', 'username','firstName','lastName','email'],
         where: {
-            id: userId
-        }
-      // attributes: ['id', 'username','firstName','lastName','email']
+            id: userId,
+          },
+          attributes: { exclude: ['password'] }
     })
     res.json(oneUser)
   } catch (err) {
