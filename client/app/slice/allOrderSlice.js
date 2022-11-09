@@ -8,17 +8,17 @@ export const fetchOrders = createAsyncThunk('fetchOrders', async () => {
 })
 
 export const filteredOrders = createAsyncThunk('filteredOrders', async () => {
-    const { data } = await axios.get()
+    const { data } = await axios.get(`/api/orders/filter/${userId}`)
     return data
 })
 
 export const addOrder = createAsyncThunk('addOrder', async () => {
-    const { data } = axios.post()
+    const { data } = axios.post('/api/orders')
     return data
 })
 
 export const deleteOrder = createAsyncThunk('deleteOrder', async () => {
-    const { data } = await axios.delete()
+    const { data } = await axios.delete(`/api/orders/${orderId}`)
     return data
 })
 
