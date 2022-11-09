@@ -13,7 +13,7 @@ router.get('/', async (req, res, next) => {
 router.get('/filter/:category', async (req, res, next) => {
     try {
         const { category } = req.params
-        res.send(await FunkoPop.findAll(category, {
+        res.send(await FunkoPop.findAll( {
 
             where: { category: category }
         }))
