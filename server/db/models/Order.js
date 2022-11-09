@@ -1,13 +1,7 @@
 const Sequelize = require('sequelize');
-const db = require('./database');
+const db = require('../db');
 
 const Order = db.define('orders', {
-  userId: {
-    type: Sequelize.STRING,
-    validate: {
-      notEmpty: true,
-    },
-  },
   totalPrice: {
     type: Sequelize.FLOAT,
   },

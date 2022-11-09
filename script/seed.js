@@ -8,7 +8,7 @@ const FunkoPop = require('../server/db/models/FunkoPop')
 const funkos = [{
   
   Name: 'Stitch with Boba: Lilo and Stitch Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '15.00',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/16748978_hi?$productMainDesktop$',
   Size: 'regular',
@@ -18,7 +18,7 @@ const funkos = [{
   
   {
   Name: 'Sleeping Stitch: Lilo and Stitch Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '12.50',
   ImageUrl:'https://cdn.media.amplience.net/s/hottopic/14925870_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -28,7 +28,7 @@ const funkos = [{
   
   {
   Name: 'Kuromi (With Baku): Sanrio Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '14.90',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/18945338_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -38,7 +38,7 @@ const funkos = [{
   
   {
   Name: 'Games Lapras: Pokemon Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '12.90',
   ImageUrl:'https://cdn.media.amplience.net/s/hottopic/17417633_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -48,7 +48,7 @@ const funkos = [{
   
   {
   Name: 'Classics Tinker Bell: Peter Pan Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '14.90',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/16916184_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -58,7 +58,7 @@ const funkos = [{
   
   {
   Name: 'Alien: Toy Story Diamond Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '14.50',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/13032934_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -68,7 +68,7 @@ const funkos = [{
   
   {
   Name: 'Winnie The Pooh (Flocked): Winnie the Pooh Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '15.90',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/19426491_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -78,7 +78,7 @@ const funkos = [{
   
   {
   Name: 'Pochacco: Sanrio Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '12.90',
   ImageUrl: 'https://cdn.media.amplience.net/s/hottopic/19426425_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -88,7 +88,7 @@ const funkos = [{
   
   {
   Name: 'Bisky: Hunter X Hunter Collection ',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '12.90',
   ImageUrl:'https://cdn.media.amplience.net/s/hottopic/17417605_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -98,7 +98,7 @@ const funkos = [{
   
   {
   Name: 'Soda Vanellope: Wreck-It Ralph Collection',
-  Category: 'Disney/ Animation',
+  Category: 'Disney/Animation',
   Price: '14.90',
   ImageUrl:'https://cdn.media.amplience.net/s/hottopic/19226304_hi?$productMainDesktopRetina$',
   Size: 'regular',
@@ -306,13 +306,13 @@ const funkos = [{
   },
   
   {
-    name:'DeathStroke',
-    category:'DC Comics',
-    imageUrl:'https://cdn.media.amplience.net/s/hottopic/14423568_hi',
-    price:'12.50',
-    size:'regular',
+    Name:'DeathStroke',
+    Category:'DC Comics',
+    ImageUrl:'https://cdn.media.amplience.net/s/hottopic/14423568_hi',
+    Price:'12.50',
+    Size:'regular',
     description:'Bring your favorite DC Villain into your Batman collection with this Pop! of Deathstroke. Armed and ready to fight, he is definitely going to cause some problems.',
-    edition:'exclusive',
+    Edition:'exclusive',
     },
     {
       Name: "Batman (Hellbat)",
@@ -340,7 +340,7 @@ const funkos = [{
       Price: "12.50",
       ImageUrl: "https://ultra.com.cy/images/detailed/253/u6FJRIJH9fNpsue3BrBwNvAPYByqQMsv.jpg",
       Size: "regular",
-      Edition: "regular",
+      Edition: "general",
       description: "Funko POP: Marvel Fantastic Four #561 Doctor Doom (Fantastic Four)"
       },
      
@@ -359,7 +359,7 @@ const funkos = [{
       Category: "Marvel",
       Price: "24.99",
       ImageUrl: "https://m.media-amazon.com/images/I/41+TFqOv5KL._AC_SY580_.jpg",
-      Size: "Jumbo",
+      Size: "jumbo",
       Edition: "exclusive",
       description: "Venom on the Throne is the next to be added to our PIAB EXC collection! We didn't think it could look any more awesome but the King in Black certainly doesn't disappoint."
       },
@@ -380,7 +380,7 @@ const funkos = [{
       Price: "12.50",
       ImageUrl: "https://m.media-amazon.com/images/I/615db0m8I0L.jpg",
       Size: "regular",
-      Edition: "regular",
+      Edition: "general",
       description: "Funko Pop! Star Wars Clone Wars OBI Wan Kenobi Figure #270"
       },
       {
@@ -389,7 +389,7 @@ const funkos = [{
       Price: "12.50",
       ImageUrl: "https://m.media-amazon.com/images/I/615db0m8I0L.jpg",
       Size: "regular",
-      Edition: "regular",
+      Edition: "general",
       description: "Funko POP! The Mandalorian: Ahsoka (Hooded) figure"
    
    
@@ -400,7 +400,7 @@ const funkos = [{
       Price: "12.50",
       ImageUrl: "https://m.media-amazon.com/images/I/51XV+EqMToL.jpg",
       Size: "regular",
-      Edition: "regular",
+      Edition: "general",
       description: "Funko - POP! Games Star Wars Jedi: Fallen Order! Cal Kestis With BD-1"
    
    
@@ -420,14 +420,14 @@ async function seed() {
   // Creating Users
   await Promise.all(funkos.map(funko => {
 
-     FunkoPop.create(funko)
+    return FunkoPop.create(funko)
 
   }))
 
 
   const users = await Promise.all([
-    User.create({ username: 'cody', password: '123' }),
-    User.create({ username: 'murphy', password: '123' }),
+    User.create({ username: 'cody', password: '123', firstName:'Cody', lastName:'Wagner', email:'codyWagner@gmail.com' }),
+    User.create({ username: 'murphy', password: '123', firstName:'Murphy', lastName:'White', email:'murphyWhite@gmail.com' }),
   ])
 
   console.log(`seeded ${users.length} users`)
