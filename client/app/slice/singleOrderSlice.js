@@ -2,12 +2,12 @@ import { createSlice, createAsyncThunk } from '@reactjs/toolkit'
 import axios from 'axios'
 
 export const singleOrder = createAsyncThunk('singleOrder', async (orderId) => {
-    const {data} = await axios.get()
+    const {data} = await axios.get(`/api/orders/${orderId}`)
     return data
 })
 
 export const updateOrder = createAsyncThunk('updateOrder', async ({id, totalPrice, shippingAddress, orderStatus, userId}) => {
-    const { data } = await axios.put()
+    const { data } = await axios.put(`/api/orders/${orderId}`)
     return data
 })
 

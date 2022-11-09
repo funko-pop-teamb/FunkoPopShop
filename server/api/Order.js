@@ -85,7 +85,7 @@ router.delete('/:orderId', async (req, res, next) => {
         next(err)
     }
 })
-router.put('/:OrderId', async (req, res, next) => {
+router.put('/:orderId', async (req, res, next) => {
     try {
         const { orderId } = req.params
         let updateOrder = await Order.findByPk(orderId)
