@@ -20,4 +20,3 @@ const store = configureStore({
 
 export default store;
 export * from './features/auth/authSlice';
-esfssefs
