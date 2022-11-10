@@ -21,7 +21,6 @@ const AppRoutes = () => {
     <div>
       {isLoggedIn ? (
         <Routes>
-
           <Route path="/*" element={<LandingPage />} />
           <Route path="/home" element={<LandingPage />} />
           <Route path="/funkoPops" element={<AllFunkos />} />

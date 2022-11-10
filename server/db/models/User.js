@@ -7,7 +7,8 @@ const SALT_ROUNDS = 5;
 
 const User = db.define("user", {
   userType: {type:
-    Sequelize.ENUM('admin', 'general')
+    Sequelize.ENUM('admin', 'general'),
+    defaultValue: 'general'
   },
   username: {
     type: Sequelize.STRING,
