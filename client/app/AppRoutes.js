@@ -13,7 +13,8 @@ import { fetchSingleUser } from './slice/singleUserSlice';
 const AppRoutes = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.me.id);
   const dispatch = useDispatch();
-
+// const {userType}=useSelector((state)=>  state.auth.me)
+// console.log('*******'+userType)
 
 useEffect(() => {
     dispatch(me());
@@ -23,7 +24,6 @@ useEffect(() => {
     <div>
       {isLoggedIn ? (
         <Routes>
-
 
           <Route path="/*" element={<Home />} />
           {/* <Route path="/home" element={<LandingPage />} /> */}
