@@ -25,7 +25,7 @@ const AppRoutes = () => {
         <Routes>
           <Route path="/*" element={<LandingPage />} />
           <Route to="/home" element={<LandingPage />} />
-          <Route to="/allFunko" element={<AllFunkos />} />
+          <Route to="/funkoPops" element={<AllFunkos />} />
         </Routes>
       ) : (
         <Routes>
@@ -41,6 +41,7 @@ const AppRoutes = () => {
             path="/signup"
             element={<AuthForm name="signup" displayName="Sign Up" />}
           />
+          <Route path="/funkoPops" element={<AllFunkos />} />
         </Routes>
       )}
     </div>

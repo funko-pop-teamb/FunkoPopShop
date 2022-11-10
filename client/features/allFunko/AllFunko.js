@@ -30,7 +30,6 @@ const AllFunkos = () => {
                         <h2 className='fName'>{funko.name}</h2>
                         <h3 className='fCategory'>Category: {funko.category}</h3>
                         <h3 className='fPrice'>Price: ${funko.price}</h3>
-                        { }
                     </div>
                 ))}
             </div>
