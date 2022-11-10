@@ -1,6 +1,5 @@
-import { createSlice, createAsyncThunk } from '@reactjs/toolkit'
-import axios from 'axios'
-
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 
 export const fetchOrders = createAsyncThunk('fetchOrders', async () => {
     const { data } = await axios.get('/api/orders')
@@ -11,7 +10,6 @@ export const filteredOrders = createAsyncThunk('filteredOrders', async () => {
     const { data } = await axios.get(`/api/orders/filter/${userId}`)
     return data
 })
-
 export const addOrder = createAsyncThunk('addOrder', async () => {
     const { data } = axios.post('/api/orders')
     return data
@@ -22,15 +20,13 @@ export const deleteOrder = createAsyncThunk('deleteOrder', async () => {
     return data
 })
 
-const ordersSlice = createSlice({
-    name: 'orders',
+const allOrderSlice = createSlice ({
+    name: orders,
     initialState: {
         orders: [],
-        loading: false
     },
-    reducers: {},
+    reducers:{},
     extraReducers: (builder) => {
-
         builder.addCase(fetchOrders.pending, (state, action) => {
             state.loading = true
         })
@@ -45,7 +41,8 @@ const ordersSlice = createSlice({
             const newState = state.orders.filter((order) => order.id !== action.payload)
             return newState
         })
+
     }
 })
 
-export default ordersSlice.reducer
+export default allOrderSlice.reducer

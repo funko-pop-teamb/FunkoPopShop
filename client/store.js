@@ -5,13 +5,20 @@ import usersSlice from './app/slice/usersSlice';
 import singleUserSlice from './app/slice/singleUserSlice';
 import allFunkoPopReducer from './app/slice/allFunkoSlice'
 import singleFunkoPopReducer  from './app/slice/oneFunkoSlice';
+import allOrderReducer from './app/slice/allOrderSlice';
+import singleOrderReducer from './app/slice/singleOrderSlice';
 
 const store = configureStore({
-  reducer: { auth: authReducer,
+  reducer: { 
+    auth: authReducer,
     usersSlice,
     singleUserSlice,
     allFunkoPops:allFunkoPopReducer,
-    singleFunkoPop:singleFunkoPopReducer },
+    singleFunkoPop:singleFunkoPopReducer,
+    allOrder: allOrderReducer,
+    singleOrder: singleOrderReducer,
+  },
+
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
