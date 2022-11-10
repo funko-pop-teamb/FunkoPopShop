@@ -495,11 +495,7 @@ const Orders = [
 
   }))
 
-  await Promise.all(Orders.map(Order => {
-
-    return OrderDB.create(Order)
-
-  }))
+ 
 
 
 
@@ -522,7 +518,12 @@ const Orders = [
       email: "murphyWhite@gmail.com",
     }),
   ]);
+  
+  await Promise.all(Orders.map(Order => {
 
+    return OrderDB.create(Order)
+
+  }))
   console.log(`seeded ${users.length} users`)
   console.log(`seeded successfully`)
   return {
