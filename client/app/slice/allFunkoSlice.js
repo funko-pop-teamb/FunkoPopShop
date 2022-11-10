@@ -31,8 +31,8 @@ export const deleteFunkoPop = createAsyncThunk(
       console.log(err);
     }
   });
-export const fetchFunkPopByCategory = createAsyncThunk(
-  "fetchFunkPopByCategory", async ({category}) => {
+export const fetchFunkoPopByCategory = createAsyncThunk(
+  "fetchFunkoPopByCategory", async (category) => {
     try {
       const { data } = await axios.get(`/api/funkoPop/filter/${category}`);
       return data;
@@ -41,8 +41,8 @@ export const fetchFunkPopByCategory = createAsyncThunk(
     }
   });
 
-  export const fetchFunkPopByFunkoId = createAsyncThunk(
-    "fetchFunkPopByFunkoId", async ({funkoId}) => {
+  export const fetchFunkoPopByFunkoId = createAsyncThunk(
+    "fetchFunkoPopByFunkoId", async (funkoId) => {
       try {
         const { data } = await axios.get(`/api/funkoPop/${funkoId}`);
         return data;
@@ -67,10 +67,10 @@ const allFunkoPopsSlice = createSlice({
     .addCase(deleteFunkoPop.fulfilled, (state, action) => {
       return action.payload;
     })
-    .addCase(fetchFunkPopByCategory.fulfilled, (state, action) => {
+    .addCase(fetchFunkoPopByCategory.fulfilled, (state, action) => {
       return action.payload;
     })
-    .addCase(fetchFunkPopByFunkoId.fulfilled, (state, action) => {
+    .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
       return action.payload;
     })
 
