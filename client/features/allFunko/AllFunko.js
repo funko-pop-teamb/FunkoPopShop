@@ -1,23 +1,28 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchFunkoPops } from '../../app/slice/allFunkoSlice'
-import { fetchSingleUser } from '../../app/slice/singleUserSlice'
-import { Link } from 'react-router-dom'
+import { deleteFunkoPop, fetchFunkoPops } from '../../app/slice/allFunkoSlice'
+import { me } from '../auth/authSlice'
+import { Link, useParams } from 'react-router-dom'
 
 
 
 const AllFunkos = () => {
 
     const funkos = useSelector((state) => { return state.allFunkoPops })
-    const singleUser = useSelector((state) => { return state.singleUserSlice.info.type })
-    console.log(singleUser)
-    
+    const {userType, id, firstName, lastName, email, username } = useSelector((state) => state.auth.me)
+    console.log(userType)
+
     const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(fetchFunkoPops())
-
+        dispatch(me())
     }, [])
+
+    const handleDelete = async (funkoId) => {
+        dispatch(deleteFunkoPop(funkoId))
+        dispatch(fetchFunkoPops())
+    }
 
     return (
         <>
@@ -30,6 +35,7 @@ const AllFunkos = () => {
                         <h2 className='fName'>{funko.name}</h2>
                         <h3 className='fCategory'>Category: {funko.category}</h3>
                         <h3 className='fPrice'>Price: ${funko.price}</h3>
+                        {userType === 'admin' ? <button className= 'deleteF' type='button' onClick={(event)=> {handleDelete(funko.id), fetchFunkoPops()}}>Delete Funko</button> : null}
                     </div>
                 ))}
             </div>

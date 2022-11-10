@@ -23,6 +23,7 @@ const currentUser=useSelector(fetchSingleUser())
       {isLoggedIn ? (
         <Routes>
 
+
           <Route path="/*" element={<Home />} />
           {/* <Route path="/home" element={<LandingPage />} /> */}
           <Route path="/funkoPops" element={<AllFunkos />} />
