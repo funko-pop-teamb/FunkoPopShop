@@ -19,8 +19,8 @@ const AllFunkos = () => {
         dispatch(me())
     }, [])
 
-    const handleDelete = async (funko) => {
-        dispatch(deleteFunkoPop(funko))
+    const handleDelete = async (funkoId) => {
+        dispatch(deleteFunkoPop(funkoId))
         dispatch(fetchFunkoPops())
     }
 
@@ -35,7 +35,7 @@ const AllFunkos = () => {
                         <h2 className='fName'>{funko.name}</h2>
                         <h3 className='fCategory'>Category: {funko.category}</h3>
                         <h3 className='fPrice'>Price: ${funko.price}</h3>
-                        {userType === 'admin' ? <button className= 'deleteF' type='button' onClick={()=> {handleDelete(funko.id)}}>Delete Funko</button> : null}
+                        {userType === 'admin' ? <button className= 'deleteF' type='button' onClick={(event)=> {handleDelete(funko.id), fetchFunkoPops()}}>Delete Funko</button> : null}
                     </div>
                 ))}
             </div>
