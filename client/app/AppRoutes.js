@@ -13,8 +13,9 @@ import { fetchSingleUser } from './slice/singleUserSlice';
 const AppRoutes = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.me.id);
   const dispatch = useDispatch();
-const currentUser=useSelector(fetchSingleUser())
-  useEffect(() => {
+
+
+useEffect(() => {
     dispatch(me());
   }, []);
 

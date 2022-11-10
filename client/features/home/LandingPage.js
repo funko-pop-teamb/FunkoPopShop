@@ -10,7 +10,7 @@ const LandingPage = () => {
 
   const Funkos = useSelector(selectFunkoPops)
   const dispatch = useDispatch();
-  const [filteringMethod, setFilteringMethod] = useState('')
+   
 
 
 
@@ -18,26 +18,23 @@ const LandingPage = () => {
     dispatch(fetchFunkoPops())
   }, [])
 
-  const filteringMethods = ['Disney', 'Movies']
+
 
   async function handleFilterChange(category) {
-    console.log('working')
-    setFilteringMethod(category)
-    //console.log(fetchFunkoPopByCategory(category))
+    if (category == 'All'){
+      return  dispatch(fetchFunkoPops())
+    }
     dispatch(fetchFunkoPopByCategory(category))
   }
-
-  console.log(Funkos)
 
   return (
     <>
       <div className="headerHome">
         <center> <img src="https://www.crystalcommerce.com/blog/wp-content/uploads/sites/2/2019/12/billboard_funko-pop-1024x264.jpg" width={1250} /></center>
       </div>
-
       <div>
         <div className='sideNavBar'>
-          <NavLink to='/funkoPops'> All </NavLink>
+        <div onClick={(evt) => { handleFilterChange('All') }}> All </div>
           <div onClick={(evt) => { handleFilterChange('Music Icons') }}> Music Icons</div>
           <div onClick={(evt) => { handleFilterChange('Disney') }}> Disney</div>
           <div onClick={(evt) => { handleFilterChange('Movies') }}> Movies</div>

@@ -4,6 +4,7 @@ import axios from "axios";
 export const fetchSingleUser = createAsyncThunk("singleUser", async (id) => {
   try {
     const { data } = await axios.get(`/api/users/${id}`);
+    console.log(data)
     return data;
   } catch (err) {
     console.log(err);
