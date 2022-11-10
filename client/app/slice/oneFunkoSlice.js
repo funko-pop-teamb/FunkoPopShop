@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchSingleFunkoPop = createAsyncThunk(
-    "fetchSingleFunkPop", async ({ funkoId }) => {
+    "fetchSingleFunkPop", async ( funkoId  ) => {
         try {
             const { data } = await axios.get(`/api/funkoPop/${funkoId}`);
             return data;
