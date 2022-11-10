@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import AuthForm from '../features/auth/AuthForm';
 import { AllFunkos, LandingPage } from '../features/allfeatures'
 import { me } from '../store';
+import Home from '../features/home/Home.js'
 
 /*
  * COMPONENT
@@ -22,8 +23,8 @@ const AppRoutes = () => {
       {isLoggedIn ? (
         <Routes>
 
-          <Route path="/*" element={<LandingPage />} />
-          <Route path="/home" element={<LandingPage />} />
+          <Route path="/*" element={<Home />} />
+          {/* <Route path="/home" element={<LandingPage />} /> */}
           <Route path="/funkoPops" element={<AllFunkos />} />
         </Routes>
       ) : (
