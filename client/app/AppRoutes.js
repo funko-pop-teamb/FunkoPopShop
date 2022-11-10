@@ -2,9 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import AuthForm from '../features/auth/AuthForm';
-import Home from '../features/home/Home';
-import LandingPage from '../features/home/LandingPage';
-import AllFunkos from '../features/allFunko/AllFunko'
+import { AllFunkos, LandingPage } from '../features/allfeatures'
 import { me } from '../store';
 
 /*
@@ -25,8 +23,8 @@ const AppRoutes = () => {
         <Routes>
 
           <Route path="/*" element={<LandingPage />} />
-          <Route to="/home" element={<LandingPage />} />
-          <Route to="/funkoPops" element={<AllFunkos />} />
+          <Route path="/home" element={<LandingPage />} />
+          <Route path="/funkoPops" element={<AllFunkos />} />
         </Routes>
       ) : (
         <Routes>
