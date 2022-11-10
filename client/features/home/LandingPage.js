@@ -8,6 +8,7 @@ import { fetchFunkoPopByCategory } from '../../app/slice/allFunkoSlice'
  */
 const LandingPage = () => {
 
+    
     const Funkos = useSelector(selectFunkoPops)
     const dispatch = useDispatch();
 
