@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import AuthForm from '../features/auth/AuthForm';
+import SingleFunko from  '../features/singleFunko/SingleFunko';
+import Home from '../features/home/Home';
 import { AllFunkos, LandingPage } from '../features/allfeatures'
 import { me } from '../store';
 import Home from '../features/home/Home.js'
@@ -26,6 +28,8 @@ useEffect(() => {
         <Routes>
 
           <Route path="/*" element={<Home />} />
+
+          <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
           {/* <Route path="/home" element={<LandingPage />} /> */}
           <Route path="/funkoPops" element={<AllFunkos />} />
         </Routes>
