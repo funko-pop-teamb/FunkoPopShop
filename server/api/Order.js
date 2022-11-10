@@ -3,25 +3,25 @@ const { models: { Order } } = require('../db')
 
 module.exports = router
 
-router.get('/', async (req,res, next) => {
-try {
+router.get('/', async (req, res, next) => {
+    try {
 
-    res.send(await Order.findAll())
+        res.send(await Order.findAll())
 
-}catch (err){
-    console.log("Error in GET/api/Orders")
+    } catch (err) {
+        console.log("Error in GET/api/Orders")
 
-}
+    }
 })
 
 
 
 router.get('/filter/:orderId', async (req, res, next) => {
-    try{
+    try {
         const { orderId } = req.params
         res.json(await Order.findAll({
 
-            where: { id: orderId}
+            where: { id: orderId }
 
         }))
 
@@ -34,11 +34,11 @@ router.get('/filter/:orderId', async (req, res, next) => {
 
 })
 router.get('/filter/:userId', async (req, res, next) => {
-    try{
+    try {
         const { userId } = req.params
         res.json(await Order.findAll({
 
-            where: { id: userId}
+            where: { id: userId }
 
         }))
 

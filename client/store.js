@@ -3,17 +3,24 @@ import logger from 'redux-logger';
 import authReducer from './features/auth/authSlice';
 import usersSlice from './app/slice/usersSlice';
 import singleUserSlice from './app/slice/singleUserSlice';
-import allFunkoPopsSlice from './app/slice/allFunkoSlice';
-import singleFunkoPopSlice from './app/slice/oneFunkoSlice';
+import allFunkoPopReducer from './app/slice/allFunkoSlice'
+import singleFunkoPopReducer  from './app/slice/oneFunkoSlice';
+import allOrderReducer from './app/slice/allOrderSlice';
+import singleOrderReducer from './app/slice/singleOrderSlice';
+
 
 const store = configureStore({
   reducer: { 
     auth: authReducer,
-    users:usersSlice,
-    singleUser:singleUserSlice,
-    funkoPops:allFunkoPopsSlice,
-    singleFunkoPop:singleFunkoPopSlice,
+    usersSlice,
+    singleUserSlice,
+    allFunkoPops:allFunkoPopReducer,
+    singleFunkoPop:singleFunkoPopReducer,
+    allOrder: allOrderReducer,
+    singleOrder: singleOrderReducer,
   },
+
+
   
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
