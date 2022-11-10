@@ -43,9 +43,9 @@ const AllFunkos = () => {
             <div className='allFunkos'>
                 {funkos && funkos.map((funko) => (
                     <div key={funko.id} className='fCard'>
-                        {/* <Link key={funko.id} to{`/funkoPops/${funko.id}`}></Link> */}
+                        <Link key={funko.id} to={`/funkoPops/${funko.id}`}>
                         <img src={funko.imageUrl} className='fImage' />
-                        <h2 className='fName'>{funko.name}</h2>
+                        <h2 className='fName'>{funko.name}</h2></Link>
                         <h3 className='fCategory'>Category: {funko.category}</h3>
                         <h3 className='fPrice'>Price: ${funko.price}</h3>
 
