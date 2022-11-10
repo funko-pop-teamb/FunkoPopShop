@@ -451,7 +451,7 @@ const funkos = [
     name: "Ahsoka Tano",
     category: "Star Wars",
     price: "12.50",
-    imageUrl: "https://m.media-amazon.com/images/I/615db0m8I0L.jpg",
+    imageUrl: "https://m.media-amazon.com/images/I/71Td0CPs2GL.jpg",
     size: "regular",
     edition: "general",
     description: "Funko POP! The Mandalorian: Ahsoka (Hooded) figure",

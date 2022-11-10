@@ -4,7 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import AuthForm from '../features/auth/AuthForm';
 import { AllFunkos, LandingPage } from '../features/allfeatures'
 import { me } from '../store';
-
+import Home from '../features/home/Home.js'
+import { fetchSingleUser } from './slice/singleUserSlice';
 /*
  * COMPONENT
  */
@@ -12,7 +13,7 @@ import { me } from '../store';
 const AppRoutes = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.me.id);
   const dispatch = useDispatch();
-
+const currentUser=useSelector(fetchSingleUser())
   useEffect(() => {
     dispatch(me());
   }, []);
@@ -21,8 +22,10 @@ const AppRoutes = () => {
     <div>
       {isLoggedIn ? (
         <Routes>
-          <Route path="/*" element={<LandingPage />} />
-          <Route path="/home" element={<LandingPage />} />
+
+
+          <Route path="/*" element={<Home />} />
+          {/* <Route path="/home" element={<LandingPage />} /> */}
           <Route path="/funkoPops" element={<AllFunkos />} />
         </Routes>
       ) : (
