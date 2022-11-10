@@ -1,0 +1,1 @@
+export {default as AllFunkos} from './allFunko/AllFunko'
