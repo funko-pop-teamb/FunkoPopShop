@@ -12,11 +12,9 @@ export const fetchFunkoPops = createAsyncThunk(
   });
 
 export const addFunkoPop = createAsyncThunk(
-  "addFunkoPop", async ({name,category,price,imageUrl,size,edition, description}) => {
+  "addFunkoPop", async (payload) => {
     try {
-      const { data } = await axios.post(`/api/funkoPop`, {
-        name,category,price,imageUrl,size,edition, description
-      });
+      const { data } = await axios.post(`/api/funkoPop`, (payload));
       return data;
     } catch (err) {
       console.log(err);
@@ -41,15 +39,15 @@ export const fetchFunkoPopByCategory = createAsyncThunk(
     }
   });
 
-  export const fetchFunkoPopByFunkoId = createAsyncThunk(
-    "fetchFunkoPopByFunkoId", async (funkoId) => {
-      try {
-        const { data } = await axios.get(`/api/funkoPop/${funkoId}`);
-        return data;
-      } catch (err) {
-        console.log(err);
-      }
-    });
+export const fetchFunkoPopByFunkoId = createAsyncThunk(
+  "fetchFunkoPopByFunkoId", async (funkoId) => {
+    try {
+      const { data } = await axios.get(`/api/funkoPop/${funkoId}`);
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
+  });
 
 
 const allFunkoPopsSlice = createSlice({
@@ -58,21 +56,21 @@ const allFunkoPopsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-    .addCase(fetchFunkoPops.fulfilled, (state, action) => {
-      return action.payload;
-    })
-    .addCase(addFunkoPop.fulfilled, (state, action) => {
-      return action.payload;
-    })
-    .addCase(deleteFunkoPop.fulfilled, (state, action) => {
-      return action.payload;
-    })
-    .addCase(fetchFunkoPopByCategory.fulfilled, (state, action) => {
-      return action.payload;
-    })
-    .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
-      return action.payload;
-    })
+      .addCase(fetchFunkoPops.fulfilled, (state, action) => {
+        return action.payload;
+      })
+      .addCase(addFunkoPop.fulfilled, (state, action) => {
+        return action.payload;
+      })
+      .addCase(deleteFunkoPop.fulfilled, (state, action) => {
+        return action.payload;
+      })
+      .addCase(fetchFunkoPopByCategory.fulfilled, (state, action) => {
+        return action.payload;
+      })
+      .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
+        return action.payload;
+      })
 
   },
 });
