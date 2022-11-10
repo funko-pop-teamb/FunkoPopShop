@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { selectFunkoPops, fetchFunkoPops } from '../../app/slice/allFunkoSlice';
 import {fetchFunkoPopByCategory} from '../../app/slice/allFunkoSlice'
 /**
@@ -23,12 +23,10 @@ const LandingPage = () => {
    async function handleFilterChange(category) {
     console.log('working')
     setFilteringMethod(category)
-    console.log(fetchFunkoPopByCategory(category))
+    //console.log(fetchFunkoPopByCategory(category))
      dispatch(fetchFunkoPopByCategory(category))
     }
 
-
-    
   console.log(Funkos)
 
   return (
@@ -39,7 +37,7 @@ const LandingPage = () => {
 
     <div>
         <div className='sideNavBar'>
-                    <div onClick={(evt)=> {Funkos.map(Funko)}}> All</div>   
+                     <NavLink to='/allFunko'> All </NavLink>  
                     <div onClick={(evt)=> {handleFilterChange('Music Icons')}}> Music Icons</div> 
                     <div onClick={(evt)=> {handleFilterChange('Disney')}}> Disney</div> 
                     <div onClick={(evt)=> {handleFilterChange('Movies')}}> Movies</div> 

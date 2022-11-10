@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { AllFunkos } from '../features/allfeatures';
 import AuthForm from '../features/auth/AuthForm';
 import Home from '../features/home/Home';
+import LandingPage from '../features/home/LandingPage';
+import AllFunkos from '../features/allFunko/AllFunko'
 import { me } from '../store';
 
 /*
@@ -22,8 +23,10 @@ const AppRoutes = () => {
     <div>
       {isLoggedIn ? (
         <Routes>
-          <Route path="/*" element={<Home />} />
-          <Route to="/home" element={<Home />} />
+          <Route path="/*" element={<LandingPage />} />
+          <Route to="/home" element={<LandingPage />} />
+          <Route to="/allFunko" element={<AllFunkos />} />
+
         </Routes>
       ) : (
         <Routes>
@@ -38,10 +41,6 @@ const AppRoutes = () => {
           <Route
             path="/signup"
             element={<AuthForm name="signup" displayName="Sign Up" />}
-          />
-          <Route
-            path="/funkoPops"
-            element={<AllFunkos name="funkoPop" displayName="All Funkos" />}
           />
         </Routes>
       )}
