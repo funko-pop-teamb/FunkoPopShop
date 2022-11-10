@@ -37,7 +37,7 @@ const LandingPage = () => {
 
       <div>
         <div className='sideNavBar'>
-          <NavLink to='/allFunko'> All </NavLink>
+          <NavLink to='/funkoPops'> All </NavLink>
           <div onClick={(evt) => { handleFilterChange('Music Icons') }}> Music Icons</div>
           <div onClick={(evt) => { handleFilterChange('Disney') }}> Disney</div>
           <div onClick={(evt) => { handleFilterChange('Movies') }}> Movies</div>
