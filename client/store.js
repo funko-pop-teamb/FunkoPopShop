@@ -8,6 +8,7 @@ import singleFunkoPopReducer  from './app/slice/oneFunkoSlice';
 import allOrderReducer from './app/slice/allOrderSlice';
 import singleOrderReducer from './app/slice/singleOrderSlice';
 
+
 const store = configureStore({
   reducer: { 
     auth: authReducer,
@@ -19,6 +20,8 @@ const store = configureStore({
     singleOrder: singleOrderReducer,
   },
 
+
+  
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
