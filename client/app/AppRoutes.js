@@ -5,7 +5,7 @@ import AuthForm from '../features/auth/AuthForm';
 import { AllFunkos, LandingPage } from '../features/allfeatures'
 import { me } from '../store';
 import Home from '../features/home/Home.js'
-
+import { fetchSingleUser } from './slice/singleUserSlice';
 /*
  * COMPONENT
  */
@@ -13,7 +13,7 @@ import Home from '../features/home/Home.js'
 const AppRoutes = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.me.id);
   const dispatch = useDispatch();
-
+const currentUser=useSelector(fetchSingleUser())
   useEffect(() => {
     dispatch(me());
   }, []);
