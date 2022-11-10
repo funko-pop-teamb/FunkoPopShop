@@ -21,7 +21,6 @@ router.get('/:userId', async (req, res, next) => {
   try {
     const { userId } = req.params
     const oneUser = await User.findOne({
-      // attributes: ['id', 'username','firstName','lastName','email'],
         where: {
             id: userId,
           },
