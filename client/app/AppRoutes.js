@@ -6,7 +6,6 @@ import SingleFunko from  '../features/singleFunko/SingleFunko';
 import Home from '../features/home/Home';
 import { AllFunkos, LandingPage } from '../features/allfeatures'
 import { me } from '../store';
-import Home from '../features/home/Home.js'
 import { fetchSingleUser } from './slice/singleUserSlice';
 /*
  * COMPONENT

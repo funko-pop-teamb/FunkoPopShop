@@ -20,9 +20,8 @@ const AllFunkos = () => {
     }, [])
 
     const handleDelete = async (funkoId) => {
-        dispatch(deleteFunkoPop(funkoId))
-      await dispatch(fetchFunkoPops())
-      console.log(funkos)
+       await dispatch(deleteFunkoPop(funkoId))
+       dispatch(fetchFunkoPops())
     }
 
     return (
