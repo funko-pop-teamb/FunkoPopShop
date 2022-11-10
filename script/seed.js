@@ -476,8 +476,8 @@ const Orders = [
 {
   totalPrice: "30.00",
   shippingAddress: "101 main street",
-  orderStatus: "Pending"
-
+  orderStatus: "Pending",
+  // userId:1,
 } ]
 
 /**
@@ -507,6 +507,7 @@ const Orders = [
   const users = await Promise.all([
     User.create({
       username: "cody",
+      userType:'admin',
       password: "123",
       firstName: "Cody",
       lastName: "Wagner",
@@ -514,6 +515,7 @@ const Orders = [
     }),
     User.create({
       username: "murphy",
+      userType:'general',
       password: "123",
       firstName: "Murphy",
       lastName: "White",
