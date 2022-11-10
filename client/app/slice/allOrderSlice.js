@@ -21,7 +21,7 @@ export const deleteOrder = createAsyncThunk('deleteOrder', async () => {
 })
 
 const allOrderSlice = createSlice ({
-    name: orders,
+    name: 'orders',
     initialState: {
         orders: [],
     },

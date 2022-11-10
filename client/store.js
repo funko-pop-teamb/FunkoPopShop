@@ -19,9 +19,6 @@ const store = configureStore({
     allOrder: allOrderReducer,
     singleOrder: singleOrderReducer,
   },
-
-
-  
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
