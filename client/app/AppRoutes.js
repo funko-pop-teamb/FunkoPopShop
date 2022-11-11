@@ -3,9 +3,9 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import AuthForm from '../features/auth/AuthForm';
 import Home from '../features/home/Home';
-import { AllFunkos, LandingPage, SingleFunko } from '../features/allfeatures'
+import { AllFunkos, LandingPage, SingleFunko, AddFunko } from '../features/allfeatures'
 import { me } from '../store';
-import { fetchSingleUser } from './slice/singleUserSlice';
+
 /*
  * COMPONENT
  */
@@ -13,10 +13,10 @@ import { fetchSingleUser } from './slice/singleUserSlice';
 const AppRoutes = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.me.id);
   const dispatch = useDispatch();
-// const {userType}=useSelector((state)=>  state.auth.me)
-// console.log('*******'+userType)
+  // const {userType}=useSelector((state)=>  state.auth.me)
+  // console.log('*******'+userType)
 
-useEffect(() => {
+  useEffect(() => {
     dispatch(me());
   }, []);
 
@@ -29,7 +29,12 @@ useEffect(() => {
 
           <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
           {/* <Route path="/home" element={<LandingPage />} /> */}
-          <Route path="/funkoPops" element={<AllFunkos />} />
+          <Route path="/funkoPops" element={
+            <>
+              <AllFunkos />
+              <AddFunko />
+            </>
+          } />
         </Routes>
       ) : (
         <Routes>
