@@ -31,7 +31,7 @@ useEffect(() => {
           <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
           {/* <Route path="/home" element={<LandingPage />} /> */}
           <Route path="/funkoPops" element={<AllFunkos />} />
-          <Route path="/cart/:userId" element={<Cart />} />
+          <Route path="/cart/:userId/:cartId" element={<Cart />} />
         </Routes>
       ) : (
         <Routes>

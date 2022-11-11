@@ -22,7 +22,7 @@ export const fetchAllCartFunkos = createAsyncThunk(
 
 const singleOrderWithFunkoPopSlice = createSlice({
   name: "funkoPops",
-  initialState: {},
+  initialState: [],
   reducers: {},
   extraReducers: (builder) => {
     builder

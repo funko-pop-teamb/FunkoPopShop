@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { filteredOrdersByStatus } from '../../app/slice/singleOrderSlice';
 import { logout } from '../../store';
 
 const Navbar = () => {
@@ -12,6 +13,9 @@ const Navbar = () => {
     navigate('/login');
   };
   const { userType, id } = useSelector((state) => state.auth.me)
+  //allows us to access orderId in cart
+  dispatch(filteredOrdersByStatus(id))
+  const cartId=useSelector((state)=>  {return state.singleOrder.order.id})
 
   return (
     <div>
@@ -22,7 +26,7 @@ const Navbar = () => {
             {/* The navbar will show these links after you log in */}
             <Link to="/home">Home</Link>
             <Link to='/funkoPops'>All Funko</Link>
-            <Link to={`/cart/${id}`}>Cart</Link>
+            <Link to={`/cart/${id}/${cartId}`}>Cart</Link>
             <Link to='/account'>Account</Link>
 
             <button type="button" onClick={logoutAndRedirectHome}>

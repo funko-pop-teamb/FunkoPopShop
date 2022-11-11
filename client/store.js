@@ -18,7 +18,7 @@ const store = configureStore({
     singleFunkoPop:singleFunkoPopReducer,
     allOrder: allOrderReducer,
     singleOrder: singleOrderReducer,
-    cartProduct:singleOrderWithFunkoPopReducer
+    cart:singleOrderWithFunkoPopReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
