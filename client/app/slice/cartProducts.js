@@ -19,7 +19,17 @@ export const fetchAllCartFunkos = createAsyncThunk(
         console.log(err);
       }
     });
-
+    export const addItemToCart = createAsyncThunk(
+      "addItemToCart", async ({FunkoPopId, orderId,quantity,funkoPrice}) => {
+        try {
+          const { data } = await axios.post(`/api/orderFunkoPop`,{
+            FunkoPopId, orderId,quantity,funkoPrice
+          });
+          return data;
+        } catch (err) {
+          console.log(err);
+        }
+      });
 const singleOrderWithFunkoPopSlice = createSlice({
   name: "funkoPops",
   initialState: {

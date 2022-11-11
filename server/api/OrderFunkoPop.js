@@ -64,7 +64,6 @@ router.get('/filterByOrderIdAndUserId/:orderId/:funkoId', async (req, res, next)
 //adding new item in cart
 router.post('/', async (req, res, next) => {
   try {
-    
     const newItem = await User.create(req.body)
     res.json(newItem)
   } catch (err) {
@@ -79,7 +78,7 @@ router.put('/:orderId/:funkoId', async (req, res, next) => {
     const user = await User.findOne({
       where:{
         orderId:orderId,
-        userId:userId
+        userId:userId,
       }
     })
     await user.destroy()
