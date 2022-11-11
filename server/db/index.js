@@ -13,8 +13,8 @@ User.hasMany(Order)
 Order.belongsTo(User)
 
 // const Order_FunkoPop = Sequelize.define('Order_FunkoPop', {timestamp: false} )
-FunkoPop.belongsToMany(Order, { through: Order_FunkoPop })
-Order.belongsToMany(FunkoPop,  { through: Order_FunkoPop })
+FunkoPop.belongsToMany(Order, { through: Order_FunkoPop, as:'FunkoPopId' })
+Order.belongsToMany(FunkoPop,  { through: Order_FunkoPop,as:'orderId' })
 
 module.exports = {
   db,

@@ -507,39 +507,35 @@ const Orders = [
   {
     totalPrice: "50.00",
     shippingAddress: "123 First street",
-    orderStatus: "Cart",
+    orderStatus: "Complete",
     userId: 2,
   },
 ]
 
-
-
-
-
 const OrderDetails = [
   {
     orderId: 1,
-    funkoId: 1,
+    FunkoPopId: 1,
     quantity: 2,
     funkoPrice: 15,
-    FunkoPopId: 1
   },
   {
     orderId: 2,
-    funkoId: 24,
+    FunkoPopId: 24,
     quantity: 2,
     funkoPrice: 20,
     FunkoPopId: 24
   },
   {
     orderId: 2,
-    funkoId: 25,
+    FunkoPopId: 25,
     quantity: 3,
     funkoPrice: 20,
     FunkoPopId: 25
   }
-
 ]
+
+
 /**
  * seed - this function clears the database, updates tables to
  *      match the models, and populates the database.
@@ -550,12 +546,8 @@ async function seed() {
 
   // Creating Users
   await Promise.all(funkos.map(funko => {
-
     return FunkoPop.create(funko)
-
   }))
-
-
 
   const users = await Promise.all([
     User.create({
@@ -585,16 +577,20 @@ async function seed() {
   await Promise.all(OrderDetails.map(OrderDetails => {
 
     return Order_FunkoPop.create(OrderDetails)
-
+    
   }))
+  
+
   console.log(`seeded ${users.length} users`)
   console.log(`seeded successfully`)
+
   return {
     users: {
       cody: users[0],
       murphy: users[1]
     }
   }
+
 }
 
 

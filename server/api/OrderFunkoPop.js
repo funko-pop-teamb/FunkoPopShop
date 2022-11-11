@@ -1,11 +1,13 @@
 const router = require('express').Router()
-const { models: { Order_FunkoPop } } = require('../db')
+const { models: { Order_FunkoPop,FunkoPop,Order } } = require('../db')
 module.exports = router
 
 //get all data
 router.get('/', async (req, res, next) => {
   try {
-    const orderProducts = await Order_FunkoPop.findAll()
+    const orderProducts = await Order_FunkoPop.findAll({
+
+    })
     res.json(orderProducts)
   } catch (err) {
     next(err)
@@ -18,8 +20,9 @@ router.get('/filterByUserId/:funkoId', async (req, res, next) => {
     const {funkoId}=req.params
     const orderProducts = await Order_FunkoPop.findAll({
       where:{
-        funkoId:funkoId
-      }
+        FunkoPopId:funkoId
+      },
+
     })
     res.json(orderProducts)
   } catch (err) {
@@ -34,7 +37,8 @@ router.get('/filterByOrderId/:orderId', async (req, res, next) => {
     const orderProducts = await Order_FunkoPop.findAll({
       where:{
         orderId:orderId
-      }
+      },
+      // include:[FunkoPop]
     })
     res.json(orderProducts)
   } catch (err) {
@@ -48,7 +52,7 @@ router.get('/filterByOrderIdAndUserId/:orderId/:funkoId', async (req, res, next)
     const orderProducts = await Order_FunkoPop.findAll({
       where:{
         orderId:orderId,
-        funkoId:funkoId
+        FunkoPopId:funkoId
       }
     })
     res.json(orderProducts)

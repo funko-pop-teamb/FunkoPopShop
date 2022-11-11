@@ -30,17 +30,23 @@ const Cart = () => {
                     {cart&& cart.length 
                     ? cart.map((item) => (
                         <div >
-                            <div> Quantity: {item.quantity}</div>
-                            <div> funkoId: {item.funkoId}</div>
+                            <div className='eachItem'> 
+                            <span> funkoPop Id: {item.FunkoPopId}</span>
+                            <span> Qty: {item.quantity}</span>
+                            <span> Price per item: {item.funkoPrice}</span>
+                            <span> Total: {item.quantity*item.funkoPrice}</span>
+                            </div>
                         </div>
 
                     )) :null
                     }
                 </div>
-
+                
+                    <button >Continue Shopping</button>
+                    <button> Check Out</button>
 
             </div>
-<div> Total Price:{totalPrice}</div>
+<div> Cart total:{totalPrice}</div>
         </>
     )
 }
