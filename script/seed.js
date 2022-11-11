@@ -6,6 +6,7 @@ const {
 } = require("../server/db");
 const FunkoPop = require("../server/db/models/FunkoPop");
 const OrderDB = require('../server/db/models/Order')
+const Order_FunkoPop = require("../server/db/models/Order_FunkoPop")
 
 const funkos = [
   {
@@ -478,25 +479,72 @@ const funkos = [
 
 
   }
-  
+
 
 
 
 ];
 
 const Orders = [
-{
-  totalPrice: "30.00",
-  shippingAddress: "101 main street",
-  orderStatus: "Pending",
-  // userId:1,
-} ]
+  {
+    totalPrice: "30.00",
+    shippingAddress: "101 main street",
+    orderStatus: "Pending",
+    userId: 1,
+  },
+  {
+    totalPrice: "100.00",
+    shippingAddress: "123 main street",
+    orderStatus: "Cart",
+    userId: 2,
+  },
+  {
+    totalPrice: "24.00",
+    shippingAddress: "101 Red street",
+    orderStatus: "Shipping",
+    userId: 1,
+  },
+  {
+    totalPrice: "50.00",
+    shippingAddress: "123 First street",
+    orderStatus: "Cart",
+    userId: 2,
+  },
+]
 
+
+
+
+
+const OrderDetails = [
+  {
+    orderId: 1,
+    funkoId: 1,
+    quantity: 2,
+    funkoPrice: 15,
+    FunkoPopId: 1
+  },
+  {
+    orderId: 2,
+    funkoId: 24,
+    quantity: 2,
+    funkoPrice: 20,
+    FunkoPopId: 24
+  },
+  {
+    orderId: 2,
+    funkoId: 25,
+    quantity: 3,
+    funkoPrice: 20,
+    FunkoPopId: 25
+  }
+
+]
 /**
  * seed - this function clears the database, updates tables to
  *      match the models, and populates the database.
  */
- async function seed() {
+async function seed() {
   await db.sync({ force: true }) // clears db and matches models to tables
   console.log('db synced!')
 
@@ -512,7 +560,7 @@ const Orders = [
   const users = await Promise.all([
     User.create({
       username: "cody",
-      userType:'admin',
+      userType: 'admin',
       password: "123",
       firstName: "Cody",
       lastName: "Wagner",
@@ -520,17 +568,23 @@ const Orders = [
     }),
     User.create({
       username: "murphy",
-      userType:'general',
+      userType: 'general',
       password: "123",
       firstName: "Murphy",
       lastName: "White",
       email: "murphyWhite@gmail.com",
     }),
   ]);
-  
+
   await Promise.all(Orders.map(Order => {
 
     return OrderDB.create(Order)
+
+  }))
+
+  await Promise.all(OrderDetails.map(OrderDetails => {
+
+    return Order_FunkoPop.create(OrderDetails)
 
   }))
   console.log(`seeded ${users.length} users`)

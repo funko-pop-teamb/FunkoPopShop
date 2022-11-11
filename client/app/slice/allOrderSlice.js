@@ -10,6 +10,7 @@ export const filteredOrders = createAsyncThunk('filteredOrders', async () => {
     const { data } = await axios.get(`/api/orders/filter/${userId}`)
     return data
 })
+
 export const addOrder = createAsyncThunk('addOrder', async () => {
     const { data } = axios.post('/api/orders')
     return data
@@ -34,6 +35,7 @@ const allOrderSlice = createSlice ({
             state.loading = false
             state.orders = action.payload
         })
+   
         builder.addCase(addOrder.fulfilled, (state, action) => {
             state.orders.push(action.payload)
         })

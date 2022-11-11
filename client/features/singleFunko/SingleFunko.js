@@ -32,10 +32,12 @@ const SingleFunko = () => {
     dispatch(me());
   }, [dispatch, funkoId]);
 
+
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     await dispatch(
       updateFunkoPop({
+        funkoId,
         name,
         category,
         price,
@@ -45,7 +47,7 @@ const SingleFunko = () => {
         description,
       })
     );
-    useNavigate(`/funkoPops/${funkoId}`);
+    // useNavigate(`/funkoPops/${funkoId}`);
   };
 
   const handleDelete = async () => {

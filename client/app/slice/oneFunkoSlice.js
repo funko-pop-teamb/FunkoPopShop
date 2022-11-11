@@ -22,6 +22,7 @@ export const updateFunkoPop = createAsyncThunk(
                 edition,
                 description
             });
+            console.log(data)
             return data;
         } catch (err) {
             console.log(err);

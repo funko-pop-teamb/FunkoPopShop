@@ -12,6 +12,7 @@ router.use('/users', require('./users'))
 router.use('/funkoPop', require('./funkoPop'))
 
 router.use('/orders', require('./order'))
+router.use('/orderFunkoPop', require('./OrderFunkoPop'))
 
 
 router.use((req, res, next) => {
