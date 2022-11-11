@@ -55,21 +55,22 @@ const SingleFunko = () => {
   return (
     <>
       <div id="single-funko">
-        <h1>{name}</h1>
-        <img src={imageUrl} />
-        <h4>${price}</h4>
-        <h4>Category:{category}</h4>
+        <h1>{singleFunko.name}</h1>
+        <img src={singleFunko.imageUrl} />
+        <h4>${singleFunko.price}</h4>
+        <h4>Category: {singleFunko.category}</h4>
         <h4>
-          Edition:{edition} / Size:{size}
+          Edition: {singleFunko.edition} / Size: {singleFunko.size}
         </h4>
-        <hr></hr>
-        <h3>About me: {description}</h3>
         <button type="submit">Add to Cart</button>
+        <hr></hr>
+        <h3>About me: {singleFunko.description}</h3>
         <hr></hr>
         {userType === "admin" ? (
           <div className="admin-buttons">
+            <h3>Admin:</h3>
             <button onClick={handleDelete} className="delete">
-              Delete
+              Delete Funko
             </button>
 
             <form id="update-funko-form" onSubmit={handleSubmit}>
