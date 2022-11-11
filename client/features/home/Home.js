@@ -2,6 +2,8 @@ import React, {useEffect} from 'react';
 import { useSelector, useDispatch, } from 'react-redux';
 import { fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice';
 import { selectSingleFunkoPop } from '../../app/slice/oneFunkoSlice';
+import { Link, useParams } from 'react-router-dom'
+
 /**
  * COMPONENT
  */
@@ -16,15 +18,18 @@ useEffect(()=>{
 },[])
 const oneFunko = useSelector((state) => { return state.singleFunkoPop })
 
-const funko = useSelector(selectSingleFunkoPop)
+// const funko = useSelector(selectSingleFunkoPop)
 console.log(oneFunko)
 return (
     <div>
         Funko of the month!
-        <img src={funko.imageUrl} className='fImage' />
-        <h2 className='fName'>{funko.name}</h2>
-        <h3 className='fCategory'>Category: {funko.category}</h3>
-        <h3 className='fPrice'>Price: ${funko.price}</h3>
+        <Link key={oneFunko.id} to={`/funkoPops/${oneFunko.id}`}>
+
+        <img src={oneFunko.imageUrl} className='fImage' />
+        <h2 className='fName'>{oneFunko.name}</h2>
+        <h3 className='fCategory'>Category: {oneFunko.category}</h3>
+        <h3 className='fPrice'>Price: ${oneFunko.price}</h3>
+        </Link>
     </div>
   );
 };

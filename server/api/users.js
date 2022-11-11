@@ -51,6 +51,7 @@ router.put('/:userId', async (req, res, next) => {
     next(err)
   }
 })
+
 //delete user
 router.delete('/:userId', async (req, res, next) => {
   try {
