@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { postUser } from '../../app/slice/usersSlice'
-import { useNavigate, useNavigation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
     const [firstName, setFirstName] = useState('')
@@ -11,13 +11,14 @@ const SignUp = () => {
     const [email, setEmail] = useState('')
 
     const dispatch = useDispatch()
-    //const navigate = useNavigation()
+    const navigate = useNavigate()
 
     const handleSubmit = async (event) => {
         event.preventDefault()
         dispatch(
             postUser({ firstName, lastName, username, password, email })
         )
+        navigate('/login')
     }
 
     return (
