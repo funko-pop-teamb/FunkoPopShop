@@ -3,14 +3,15 @@ import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom'
 import { selectFunkoPops, fetchFunkoPops } from '../../app/slice/allFunkoSlice';
 import { fetchFunkoPopByCategory } from '../../app/slice/allFunkoSlice'
+
 /**
  * COMPONENT
  */
 const LandingPage = () => {
 
-    
     const Funkos = useSelector(selectFunkoPops)
     const dispatch = useDispatch();
+
 
     useEffect(() => {
         dispatch(fetchFunkoPops())
@@ -24,6 +25,7 @@ const LandingPage = () => {
         }
     }
 
+
     return (
         <>
             <div className="headerHome">
@@ -31,14 +33,14 @@ const LandingPage = () => {
             </div>
             <div>
                 <div className='sideNavBar'>
-                    <div onClick={(evt) => { handleFilterChange('All') }}> All </div>
-                    <div onClick={(evt) => { handleFilterChange('Music Icons') }}> Music Icons</div>
-                    <div onClick={(evt) => { handleFilterChange('Disney') }}> Disney</div>
-                    <div onClick={(evt) => { handleFilterChange('Movies') }}> Movies</div>
-                    <div onClick={(evt) => { handleFilterChange('TV') }}> TV</div>
-                    <div onClick={(evt) => { handleFilterChange('DC Comics') }}> DC Comics</div>
-                    <div onClick={(evt) => { handleFilterChange('Marvel') }}> Marvel</div>
-                    <div onClick={(evt) => { handleFilterChange('Star Wars') }}> Star Wars</div>
+                    <div onClick={(evt) => { handleFilterChange('All') }}><NavLink to='/funkoPops'> All </NavLink></div>
+                    <div onClick={(evt) => { handleFilterChange('Music Icons') }}> <NavLink to='/funkoPops'>Music Icons</NavLink></div>
+                    <div onClick={(evt) => { handleFilterChange('Disney') }}><NavLink to='/funkoPops'> Disney</NavLink></div>
+                    <div onClick={(evt) => { handleFilterChange('Movies') }}><NavLink to='/funkoPops'> Movies</NavLink></div>
+                    <div onClick={(evt) => { handleFilterChange('TV') }}> <NavLink to='/funkoPops'>TV</NavLink></div>
+                    <div onClick={(evt) => { handleFilterChange('DC Comics') }}> <NavLink to='/funkoPops'>DC Comics</NavLink></div>
+                    <div onClick={(evt) => { handleFilterChange('Marvel') }}> <NavLink to='/funkoPops'> Marvel</NavLink></div>
+                    <div onClick={(evt) => { handleFilterChange('Star Wars') }}> <NavLink to='/funkoPops'> Star Wars</NavLink></div>
                 </div>
                 <div> </div>
             </div>

@@ -466,6 +466,18 @@ const funkos = [
     description:
       "Funko - POP! Games Star Wars Jedi: Fallen Order! Cal Kestis With BD-1",
   },
+  {
+    name: "Iron Man",
+    category: "Marvel",
+    price: "70.00",
+    imageUrl: "https://m.media-amazon.com/images/I/61-IpUOEa4L.jpg",
+    size: "jumbo",
+    edition: "exclusive",
+    description:
+      "Iron Man Mark 43 from Avengers Age of Ultron Figure stands approximately 10-inches tall Glows in the dark",
+
+
+  }
   
 
 
