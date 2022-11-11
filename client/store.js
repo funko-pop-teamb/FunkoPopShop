@@ -7,7 +7,7 @@ import allFunkoPopReducer from './app/slice/allFunkoSlice'
 import singleFunkoPopReducer  from './app/slice/oneFunkoSlice';
 import allOrderReducer from './app/slice/allOrderSlice';
 import singleOrderReducer from './app/slice/singleOrderSlice';
-
+import singleOrderWithFunkoPopReducer from './app/slice/cartProducts'
 
 const store = configureStore({
   reducer: { 
@@ -18,6 +18,7 @@ const store = configureStore({
     singleFunkoPop:singleFunkoPopReducer,
     allOrder: allOrderReducer,
     singleOrder: singleOrderReducer,
+    cartProduct:singleOrderWithFunkoPopReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });

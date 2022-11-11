@@ -16,6 +16,23 @@ router.get('/', async (req, res, next) => {
 
 
 
+router.get('/filter/status/:userId/cart', async (req, res, next) => {
+    try {
+        const { userId } = req.params
+        res.send(await Order.findOne({
+
+            where: { orderStatus: 'Cart', 
+                userId:userId }
+
+        }))
+
+    } catch (err) {
+
+        console.log("Error in GET/api/orderId")
+
+    }
+
+})
 router.get('/filter/:orderId', async (req, res, next) => {
     try {
         const { orderId } = req.params
@@ -30,7 +47,6 @@ router.get('/filter/:orderId', async (req, res, next) => {
         console.log("Error in GET/api/orderId")
 
     }
-
 
 })
 router.get('/filter/:userId', async (req, res, next) => {

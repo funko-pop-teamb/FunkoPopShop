@@ -10,7 +10,6 @@ const AllFunkos = () => {
 
     let funkos = useSelector((state) => { return state.allFunkoPops })
     const { userType, id, firstName, lastName, email, username } = useSelector((state) => state.auth.me)
-    console.log(userType)
 
     const [name, setName] = useState('')
     const [category, setCategory] = useState('')
@@ -34,11 +33,9 @@ const AllFunkos = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-        
         await dispatch(addFunkoPop({name, category, price, imageUrl, size, edition, description}))
         const funkos = useSelector((state) => { return state.allFunkoPops })
         dispatch(fetchFunkoPops())
-
     }
 
     return (

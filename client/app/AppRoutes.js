@@ -6,6 +6,7 @@ import Home from '../features/home/Home';
 import { AllFunkos, LandingPage, SingleFunko } from '../features/allfeatures'
 import { me } from '../store';
 import { fetchSingleUser } from './slice/singleUserSlice';
+import Cart from '../features/cart/Cart';
 /*
  * COMPONENT
  */
@@ -30,6 +31,7 @@ useEffect(() => {
           <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
           {/* <Route path="/home" element={<LandingPage />} /> */}
           <Route path="/funkoPops" element={<AllFunkos />} />
+          <Route path="/cart/:userId" element={<Cart />} />
         </Routes>
       ) : (
         <Routes>
@@ -46,6 +48,8 @@ useEffect(() => {
             element={<AuthForm name="signup" displayName="Sign Up" />}
           />
           <Route path="/funkoPops" element={<AllFunkos />} />
+          <Route path="/cart" element={<Cart />} />
+
         </Routes>
       )}
     </div>

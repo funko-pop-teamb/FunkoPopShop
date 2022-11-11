@@ -11,6 +11,7 @@ const Navbar = () => {
     dispatch(logout());
     navigate('/login');
   };
+  const { userType, id } = useSelector((state) => state.auth.me)
 
   return (
     <div>
@@ -21,6 +22,9 @@ const Navbar = () => {
             {/* The navbar will show these links after you log in */}
             <Link to="/home">Home</Link>
             <Link to='/funkoPops'>All Funko</Link>
+            <Link to={`/cart/${id}`}>Cart</Link>
+            <Link to='/account'>Account</Link>
+
             <button type="button" onClick={logoutAndRedirectHome}>
               Logout
             </button>
