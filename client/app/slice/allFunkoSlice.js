@@ -16,7 +16,6 @@ export const addFunkoPop = createAsyncThunk(
     try {
       const { data } = await axios.post(`/api/funkoPop`, {
         name, category, price, imageUrl, size, edition, description
-
       });
       return data;
     } catch (err) {
