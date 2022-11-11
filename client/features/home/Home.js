@@ -2,6 +2,8 @@ import React, {useEffect} from 'react';
 import { useSelector, useDispatch, } from 'react-redux';
 import { fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice';
 import { selectSingleFunkoPop } from '../../app/slice/oneFunkoSlice';
+import { Link, useParams } from 'react-router-dom'
+
 /**
  * COMPONENT
  */
@@ -21,10 +23,13 @@ console.log(oneFunko)
 return (
     <div>
         Funko of the month!
+        <Link key={oneFunko.id} to={`/funkoPops/${oneFunko.id}`}>
+
         <img src={oneFunko.imageUrl} className='fImage' />
         <h2 className='fName'>{oneFunko.name}</h2>
         <h3 className='fCategory'>Category: {oneFunko.category}</h3>
         <h3 className='fPrice'>Price: ${oneFunko.price}</h3>
+        </Link>
     </div>
   );
 };

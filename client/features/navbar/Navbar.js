@@ -16,6 +16,7 @@ const Navbar = () => {
   //allows us to access orderId in cart
   dispatch(filteredOrdersByStatus(id))
   const cartId=useSelector((state)=>  {return state.singleOrder.order.id})
+console.log('****cartId'+cartId)
 
   return (
     <div>
