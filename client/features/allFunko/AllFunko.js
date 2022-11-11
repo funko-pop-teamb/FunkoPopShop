@@ -10,15 +10,14 @@ const AllFunkos = () => {
 
     let funkos = useSelector((state) => { return state.allFunkoPops })
     const { userType, id, firstName, lastName, email, username } = useSelector((state) => state.auth.me)
-    console.log(userType)
 
-    const [name, setName] = useState('')
-    const [category, setCategory] = useState('')
-    const [price, setPrice] = useState('')
-    const [imageUrl, setImageUrl] = useState('')
-    const [size, setSize] = useState('')
-    const [edition, setEdition] = useState('')
-    const [description, setDescription] = useState('')
+    // const [name, setName] = useState('')
+    // const [category, setCategory] = useState('')
+    // const [price, setPrice] = useState('')
+    // const [imageUrl, setImageUrl] = useState('')
+    // const [size, setSize] = useState('')
+    // const [edition, setEdition] = useState('')
+    // const [description, setDescription] = useState('')
 
     const dispatch = useDispatch()
 
@@ -32,17 +31,18 @@ const AllFunkos = () => {
        dispatch(fetchFunkoPops())
     }
 
-    const handleSubmit = async (event) => {
-        event.preventDefault()
+    // const handleSubmit = async (event) => {
+    //     event.preventDefault()
         
-        await dispatch(addFunkoPop({name, category, price, imageUrl, size, edition, description}))
-        const funkos = useSelector((state) => { return state.allFunkoPops })
-        dispatch(fetchFunkoPops())
+    //     await dispatch(addFunkoPop({name, category, price, imageUrl, size, edition, description}))
+    //     const funkos = useSelector((state) => { return state.allFunkoPops })
+    //     dispatch(fetchFunkoPops())
 
-    }
+    // }
 
     return (
-        <>{userType === 'admin' ?
+        <>
+        {/* {userType === 'admin' ?
         <div className='addFunko'>
             <h3 className='addOneHeader'>Add A Funko</h3>
             <form className='funkoForm' onSubmit={handleSubmit}>
@@ -72,7 +72,7 @@ const AllFunkos = () => {
                 <button className='clearbtn' type='button'>Clear</button>
             </form>
 
-        </div> : null}
+        </div> : null} */}
             <h1 className='header'>Funko Gallery</h1>
             <div className='allFunkos'>
                 {funkos && funkos.map((funko) => (
