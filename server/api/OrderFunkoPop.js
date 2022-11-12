@@ -6,7 +6,7 @@ module.exports = router
 router.get('/', async (req, res, next) => {
   try {
     const orderProducts = await Order_FunkoPop.findAll({
-
+      include:[FunkoPop, Order]
     })
     res.json(orderProducts)
   } catch (err) {
@@ -38,7 +38,7 @@ router.get('/filterByOrderId/:orderId', async (req, res, next) => {
       where:{
         orderId:orderId
       },
-      // include:[FunkoPop]
+      include:[FunkoPop]
     })
     res.json(orderProducts)
   } catch (err) {
@@ -64,7 +64,7 @@ router.get('/filterByOrderIdAndUserId/:orderId/:funkoId', async (req, res, next)
 //adding new item in cart
 router.post('/', async (req, res, next) => {
   try {
-    const newItem = await User.create(req.body)
+    const newItem = await Order_FunkoPop.create(req.body)
     res.json(newItem)
   } catch (err) {
     next(err)
@@ -75,7 +75,7 @@ router.post('/', async (req, res, next) => {
 router.put('/:orderId/:funkoId', async (req, res, next) => {
   try {
     const {orderId, userId}=req.params
-    const user = await User.findOne({
+    const user = await Order_FunkoPop.findOne({
       where:{
         orderId:orderId,
         userId:userId,
@@ -92,7 +92,7 @@ router.put('/:orderId/:funkoId', async (req, res, next) => {
 router.delete('/:orderId/:funkoId', async (req, res, next) => {
   try {
     const {orderId, userId}=req.params
-    const user = await User.findOne({
+    const user = await Order_FunkoPop.findOne({
       where:{
         orderId:orderId,
         userId:userId
