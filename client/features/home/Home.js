@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import { useSelector, useDispatch, } from 'react-redux';
 import { fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice';
-import { selectSingleFunkoPop } from '../../app/slice/oneFunkoSlice';
 import { Link, useParams } from 'react-router-dom'
 
 /**
