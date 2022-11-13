@@ -34,6 +34,7 @@ const PersonalAccount = () => {
      
         let userId = me.id
         
+        
         await dispatch(editUser({userId, username, firstName, lastName, email}))
         await dispatch(fetchSingleUser(me.id))
 
