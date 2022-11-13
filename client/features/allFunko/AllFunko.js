@@ -12,6 +12,7 @@ const AllFunkos = () => {
 
     let funkos = useSelector((state) => { return state.allFunkoPops })
     const { userType, id, firstName, lastName, email, username } = useSelector((state) => state.auth.me)
+    console.log(id)
 
     const dispatch = useDispatch()
 
@@ -25,13 +26,13 @@ const AllFunkos = () => {
        dispatch(fetchFunkoPops())
     }
     dispatch(filteredOrdersByStatus(id))
-    const cartId=useSelector((state)=>  {return state.singleOrder.order.id})
+    const cartId = useSelector((state)=>  {return state.singleOrder.order.id})
   
     const addToCart = async ()=>{
       await  dispatch(addItemToCart(20,2,1,9))
       console.log('done')
-
     }
+
     return (
         <>
       
