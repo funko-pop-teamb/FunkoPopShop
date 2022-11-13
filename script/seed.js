@@ -491,24 +491,31 @@ const Orders = [
     shippingAddress: "101 main street",
     orderStatus: "Pending",
     userId: 1,
+    id:1
   },
   {
     totalPrice: "100.00",
     shippingAddress: "123 main street",
     orderStatus: "Cart",
     userId: 2,
+    id:2
+
   },
   {
     totalPrice: "24.00",
     shippingAddress: "101 Red street",
     orderStatus: "Shipping",
-    userId: 1,
+    userId: 2,
+    id:3
+
   },
   {
     totalPrice: "50.00",
     shippingAddress: "123 First street",
     orderStatus: "Complete",
     userId: 2,
+    id:4
+
   },
 ]
 
@@ -557,6 +564,7 @@ async function seed() {
       firstName: "Cody",
       lastName: "Wagner",
       email: "codyWagner@gmail.com",
+      id:1
     }),
     User.create({
       username: "murphy",
@@ -565,6 +573,7 @@ async function seed() {
       firstName: "Murphy",
       lastName: "White",
       email: "murphyWhite@gmail.com",
+      id:2
     }),
   ]);
 

@@ -8,15 +8,16 @@ const Order = db.define('orders', {
   shippingAddress: {
     type: Sequelize.STRING,
     allowNull: false,
-    defaultValue: '',
+    validate: {
+      notEmpty: true,
+    },
   },
   orderStatus: {
-    type: Sequelize.ENUM({
-      values:['Cart', 'Pending', 'Shipping', 'Complete']
-    }),
-    defaultValue: 'Cart',
+    type: Sequelize.ENUM('Cart', 'Pending', 'Shipping', 'Complete')
   }
 
 });
 
+
 module.exports = Order
+

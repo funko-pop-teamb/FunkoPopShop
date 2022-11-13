@@ -25,11 +25,11 @@ export const deleteUser = createAsyncThunk("/api/users", async (id) => {
 });
 
 export const editUser = createAsyncThunk(
-  "editUser", async({userId, username, password, firstname, lastname, email}) => {
+  "editUser", async({userId, username, firstName, lastName, email}) => {
     try{
 
-      const {data} = await axios.put(`/api/users${userId}`, {username, password,
-      firstname, lastname,email })
+      const {data} = await axios.put(`/api/users/${userId}`, {username,
+      firstName, lastName, email })
 
       return data;
     }catch(err) {
@@ -64,4 +64,11 @@ const usersSlice = createSlice({
     })
   },
 });
+
+export const selectSIngleUser = (state) => {
+
+  return state.usersSlice
+
+}
+
 export default usersSlice.reducer;

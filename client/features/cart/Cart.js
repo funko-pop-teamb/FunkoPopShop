@@ -22,6 +22,16 @@ const Cart = () => {
 
     }, [])
     
+
+const cartTotal= ()=>{
+let sum=0
+    for(let i=0; i<cart.length; i++){
+        let itemTotal=cart[i].funkoPrice* cart[i].quantity
+        sum+=itemTotal
+}
+return sum
+}
+
     return (
         <>
             <div>Cart
@@ -46,7 +56,7 @@ const Cart = () => {
                     <button> Check Out</button>
 
             </div>
-<div> Cart total:{totalPrice}</div>
+<div> Cart total:{cartTotal()}</div>
         </>
     )
 }
