@@ -11,7 +11,7 @@ export const fetchSingleFunkoPop = createAsyncThunk(
         }
     });
 export const updateFunkoPop = createAsyncThunk(
-    "updateFunkoPop", async ({ funkoId, name, category, price, imageUrl, size, edition, description }) => {
+    "updateFunkoPop", async ({ funkoId, name, category, price, imageUrl, size, edition, description, qtyForCart }) => {
         try {
             const { data } = await axios.put(`/api/funkoPop/${funkoId}`, {
                 name,
@@ -20,7 +20,8 @@ export const updateFunkoPop = createAsyncThunk(
                 imageUrl,
                 size,
                 edition,
-                description
+                description,
+                qtyForCart
             });
             console.log(data)
             return data;

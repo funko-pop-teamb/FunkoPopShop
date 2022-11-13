@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { filteredOrdersByStatus } from '../../app/slice/singleOrderSlice';
@@ -15,7 +15,11 @@ const Navbar = () => {
   const { userType, id } = useSelector((state) => state.auth.me)
   //allows us to access orderId in cart
   console.log('********'+id)
-  dispatch(filteredOrdersByStatus(id))
+  useEffect(()=> {
+
+    dispatch(filteredOrdersByStatus(id))
+  }
+  )
   const cartId=useSelector((state)=>  {return state.singleOrder.order.id})
 
   return (
