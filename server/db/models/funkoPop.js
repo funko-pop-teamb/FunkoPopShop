@@ -57,6 +57,11 @@ const FunkoPop = db.define('FunkoPop', {
 
 
 
+    },
+    qtyForCart:{
+        type: Sequelize.INTEGER,
+        defaultValue:1
+
     }
 })
 

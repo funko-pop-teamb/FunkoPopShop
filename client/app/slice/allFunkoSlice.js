@@ -50,7 +50,25 @@ export const fetchFunkoPopByCategory = createAsyncThunk(
         console.log(err);
       }
     });
-
+    // export const updateFunkoPops = createAsyncThunk(
+    //   "updateFunkoPop", async ({ funkoId, name, category, price, imageUrl, size, edition, description, qtyForCart }) => {
+    //       try {
+    //           const { data } = await axios.put(`/api/funkoPop/${funkoId}`, {
+    //               name,
+    //               category,
+    //               price,
+    //               imageUrl,
+    //               size,
+    //               edition,
+    //               description,
+    //               qtyForCart
+    //           });
+    //           console.log(data)
+    //           return data;
+    //       } catch (err) {
+    //           console.log(err);
+    //       }
+    //   });
 
 const allFunkoPopsSlice = createSlice({
   name: "funkoPops",
@@ -73,6 +91,9 @@ const allFunkoPopsSlice = createSlice({
     .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
       return action.payload;
     })
+    // .addCase(updateFunkoPops.fulfilled, (state, action) => {
+    //   return action.payload;
+  // })
 
   },
 });

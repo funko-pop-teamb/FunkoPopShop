@@ -489,7 +489,7 @@ const Orders = [
   {
     totalPrice: "30.00",
     shippingAddress: "101 main street",
-    orderStatus: "Pending",
+    orderStatus: "Cart",
     userId: 1,
     id:1
   },
