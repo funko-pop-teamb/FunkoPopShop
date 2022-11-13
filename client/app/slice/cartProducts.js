@@ -25,6 +25,7 @@ export const fetchAllCartFunkos = createAsyncThunk(
           const { data } = await axios.post(`/api/orderFunkoPop`,{
             FunkoPopId, orderId,quantity,funkoPrice
           });
+          console.log('*******'+FunkoPopId)
           return data;
         } catch (err) {
           console.log(err);
