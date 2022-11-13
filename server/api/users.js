@@ -46,6 +46,7 @@ router.post('/', async (req, res, next) => {
 //updating user information
 router.put('/:userId', async (req, res, next) => {
   try {
+    
     const user = await User.findByPk(req.params.userId)
     res.send(await user.update(req.body))
   } catch (err) {
