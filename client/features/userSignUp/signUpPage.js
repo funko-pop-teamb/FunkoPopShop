@@ -18,9 +18,8 @@ const SignUp = () => {
 
     const [orderStatus, setOrderStatus] = useState('Cart')
     const [userId, setUserId] = useState(id)
-    const [shippingAddress, setShippingAddress] = useState('')
+    const [shippingAddress, setShippingAddress] = useState('123 Lane Road')
     const [totalPrice, setTotalPrice] = useState(0)
-
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -30,9 +29,9 @@ const SignUp = () => {
         await dispatch(
             postUser({ firstName, lastName, username, password, email })
         )
-        await dispatch(
-            addOrder({ orderStatus, userId, shippingAddress, totalPrice })
-        )
+        // await dispatch(
+        //     addOrder({ orderStatus, userId, shippingAddress, totalPrice })
+        // )
         navigate('/login')
     }
 
