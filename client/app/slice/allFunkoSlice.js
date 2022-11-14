@@ -76,6 +76,7 @@ const allFunkoPopsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+<<<<<<< HEAD
       .addCase(fetchFunkoPops.fulfilled, (state, action) => {
         return action.payload;
       })
@@ -91,6 +92,23 @@ const allFunkoPopsSlice = createSlice({
       .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
         return action.payload;
       })
+=======
+    .addCase(fetchFunkoPops.fulfilled, (state, action) => {
+      return action.payload;
+    })
+    .addCase(addFunkoPop.fulfilled, (state, action) => {
+      state.push(action.payload)
+    })
+    .addCase(deleteFunkoPop.fulfilled, (state, action) => {
+      return action.payload;
+    })
+    .addCase(fetchFunkoPopByCategory.fulfilled, (state, action) => {
+      return action.payload;
+    })
+    .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
+      return action.payload;
+    })
+>>>>>>> 9b659cfb30820c771ac831d02d482c31979cbba7
     // .addCase(updateFunkoPops.fulfilled, (state, action) => {
     //   return action.payload;
     // })

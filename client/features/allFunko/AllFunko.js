@@ -64,6 +64,7 @@ const AllFunkos = () => {
             const quantity = funko.qtyForCart
             const funkoPrice = funko.price
 
+
             await searchingLoop(funko)
 
             await dispatch(addItemToCart({ FunkoPopId, orderId, quantity, funkoPrice }))
@@ -71,6 +72,10 @@ const AllFunkos = () => {
 
             await dispatch(fetchAllCartFunkos(orderId))
         }
+
+      await dispatch(fetchAllCartFunkos(orderId))
+    //     console.log('&&&&&&'+cart)
+
 
     }
 
