@@ -47,6 +47,8 @@ const singleOrderWithFunkoPopSlice = createSlice({
 
   },
 });
+
+
 export const selectOrderFunkoPop = (state) => {
   return state.singleOrderProduct;
 };
