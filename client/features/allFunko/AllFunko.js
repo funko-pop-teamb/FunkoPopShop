@@ -55,6 +55,7 @@ const AllFunkos = () => {
       console.log('****'+funko.name)
 
       await dispatch(fetchAllCartFunkos(orderId))
+    //     console.log('&&&&&&'+cart)
 
     }
 
