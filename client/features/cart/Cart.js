@@ -6,6 +6,7 @@ import { Link, useParams } from 'react-router-dom'
 import { fetchOrders, } from '../../app/slice/allOrderSlice'
 import { singleOrder } from '../../app/slice/singleOrderSlice'
 import { fetchAllCartFunkos, filteredOrdersByStatus } from '../../app/slice/cartProducts'
+import { fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice'
 
 
 const Cart = () => {
@@ -14,12 +15,13 @@ const Cart = () => {
     const { id, orderStatus, totalPrice } = useSelector((state) => { return state.singleOrder.order })
     const cart = useSelector((state) => state.cart.items)
 
+    //const isLoggedIn = useSelector((state) => {return state.auth.me.id})
+
     console.log("######" + cart)
     const { userId, cartId } = useParams()
     useEffect(() => {
         dispatch(filteredOrdersByStatus(userId))
         dispatch(fetchAllCartFunkos(cartId))
-
     }, [])
 
 

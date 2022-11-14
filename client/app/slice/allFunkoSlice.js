@@ -41,34 +41,34 @@ export const fetchFunkoPopByCategory = createAsyncThunk(
     }
   });
 
-  export const fetchFunkoPopByFunkoId = createAsyncThunk(
-    "fetchFunkoPopByFunkoId", async (funkoId) => {
-      try {
-        const { data } = await axios.get(`/api/funkoPop/${funkoId}`);
-        return data;
-      } catch (err) {
-        console.log(err);
-      }
-    });
-    // export const updateFunkoPops = createAsyncThunk(
-    //   "updateFunkoPop", async ({ funkoId, name, category, price, imageUrl, size, edition, description, qtyForCart }) => {
-    //       try {
-    //           const { data } = await axios.put(`/api/funkoPop/${funkoId}`, {
-    //               name,
-    //               category,
-    //               price,
-    //               imageUrl,
-    //               size,
-    //               edition,
-    //               description,
-    //               qtyForCart
-    //           });
-    //           console.log(data)
-    //           return data;
-    //       } catch (err) {
-    //           console.log(err);
-    //       }
-    //   });
+export const fetchFunkoPopByFunkoId = createAsyncThunk(
+  "fetchFunkoPopByFunkoId", async (funkoId) => {
+    try {
+      const { data } = await axios.get(`/api/funkoPop/${funkoId}`);
+      return data;
+    } catch (err) {
+      console.log(err);
+    }
+  });
+// export const updateFunkoPops = createAsyncThunk(
+//   "updateFunkoPop", async ({ funkoId, name, category, price, imageUrl, size, edition, description, qtyForCart }) => {
+//       try {
+//           const { data } = await axios.put(`/api/funkoPop/${funkoId}`, {
+//               name,
+//               category,
+//               price,
+//               imageUrl,
+//               size,
+//               edition,
+//               description,
+//               qtyForCart
+//           });
+//           console.log(data)
+//           return data;
+//       } catch (err) {
+//           console.log(err);
+//       }
+//   });
 
 const allFunkoPopsSlice = createSlice({
   name: "funkoPops",
@@ -76,6 +76,23 @@ const allFunkoPopsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
+<<<<<<< HEAD
+      .addCase(fetchFunkoPops.fulfilled, (state, action) => {
+        return action.payload;
+      })
+      .addCase(addFunkoPop.fulfilled, (state, action) => {
+        state.push(action.payload);
+      })
+      .addCase(deleteFunkoPop.fulfilled, (state, action) => {
+        return action.payload;
+      })
+      .addCase(fetchFunkoPopByCategory.fulfilled, (state, action) => {
+        return action.payload;
+      })
+      .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
+        return action.payload;
+      })
+=======
     .addCase(fetchFunkoPops.fulfilled, (state, action) => {
       return action.payload;
     })
@@ -91,9 +108,10 @@ const allFunkoPopsSlice = createSlice({
     .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
       return action.payload;
     })
+>>>>>>> 9b659cfb30820c771ac831d02d482c31979cbba7
     // .addCase(updateFunkoPops.fulfilled, (state, action) => {
     //   return action.payload;
-  // })
+    // })
 
   },
 });

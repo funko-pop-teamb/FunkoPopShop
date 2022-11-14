@@ -20,3 +20,4 @@ const Order = db.define('orders', {
 
 
 module.exports = Order
+
