@@ -48,14 +48,14 @@ const AllFunkos = () => {
             }
         }
     }
-    const guestCart = []
+    const allItems = []
     const addToCart = async (funko) => {
         if (!id) {
             const item = await dispatch(fetchSingleFunkoPop(funko.id))
-            guestCart.push(item)
-            localStorage.setItem('cart', JSON.stringify(guestCart))
-            let allItems = JSON.parse(localStorage.getItem('cart'))
-            console.log(allItems)
+            allItems.push(item)
+            localStorage.setItem('cart', JSON.stringify(allItems))
+            let guestCart = JSON.parse(localStorage.getItem('cart'))
+            console.log(guestCart)
 
         } else {
             // in /cart component localStorage.getItem('cart')
