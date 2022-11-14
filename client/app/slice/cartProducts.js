@@ -11,7 +11,7 @@ export const fetchAllCartFunkos = createAsyncThunk(
     }
   });
   export const updateOneOrderOneFunko = createAsyncThunk(
-    "fetchSingleOrderProduct", async (funkoId,orderId) => {
+    "fetchSingleOrderProduct", async ({funkoId,orderId, quantity}) => {
       try {
         const { data } = await axios.get(`/api/orderFunkoPop/filterByOrderIdAndUserId/${orderId}/${funkoId}`);
         return data;
@@ -25,26 +25,40 @@ export const fetchAllCartFunkos = createAsyncThunk(
           const { data } = await axios.post(`/api/orderFunkoPop`,{
             FunkoPopId, orderId,quantity,funkoPrice
           });
-          console.log('*******'+FunkoPopId)
           return data;
         } catch (err) {
           console.log(err);
         }
       });
+      export const filteredOrdersByStatus = createAsyncThunk('filteredOrdersByStatus', async (userId) => {
+        try {
+        const { data } = await axios.get(`/api/orders/filter/status/${userId}/cart`)
+        return data
+    } catch (err) {
+        console.log(err);
+    }
+    })
 const singleOrderWithFunkoPopSlice = createSlice({
   name: "funkoPops",
   initialState: {
     items:[],
-    funkoPops:[]
+    cart:[]
   },
   reducers: {},
   extraReducers: (builder) => {
     builder
     .addCase(fetchAllCartFunkos.fulfilled, (state, action) => {
-      return action.payload;
+      state.items= action.payload;
     })
-   
-
+    .addCase(updateOneOrderOneFunko.fulfilled, (state, action) => {
+      state.items= action.payload;
+    })
+    .addCase(addItemToCart.fulfilled, (state, action) => {
+      state.items.push(action.payload)
+    })
+    .addCase(filteredOrdersByStatus.fulfilled, (state, action) => {
+      state.cart = action.payload
+  })
   },
 });
 

@@ -5,8 +5,8 @@ import AuthForm from '../features/auth/AuthForm';
 import Home from '../features/home/Home';
 import { AllFunkos, LandingPage, SingleFunko, AddFunko, SignUp } from '../features/allfeatures'
 import { me } from '../store';
-
 import Cart from '../features/cart/Cart';
+import { fetchAllCartFunkos, filteredOrdersByStatus } from './slice/cartProducts';
 
 /*
  * COMPONENT
@@ -17,9 +17,13 @@ const AppRoutes = () => {
   const dispatch = useDispatch();
   // const {userType}=useSelector((state)=>  state.auth.me)
   // console.log('*******'+userType)
-
-  useEffect(() => {
+  const {  id} = useSelector((state) => state.auth.me)
+  const {cart, items} = useSelector((state) =>  state.cart )
+  useEffect(async () => {
     dispatch(me());
+    await dispatch(filteredOrdersByStatus(id))
+    await dispatch(fetchAllCartFunkos(cart.id))
+
   }, []);
 
   return (
