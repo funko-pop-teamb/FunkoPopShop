@@ -10,6 +10,8 @@ const SignUp = () => {
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
 
+    const []
+
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
