@@ -9,14 +9,14 @@ export const singleOrder = createAsyncThunk('singleOrder', async (orderId) => {
         console.log(err);
     }
 });
-export const filteredOrdersByStatus = createAsyncThunk('filteredOrdersByStatus', async (userId) => {
-    try {
-    const { data } = await axios.get(`/api/orders/filter/status/${userId}/cart`)
-    return data
-} catch (err) {
-    console.log(err);
-}
-})
+// export const filteredOrdersByStatus = createAsyncThunk('filteredOrdersByStatus', async (userId) => {
+//     try {
+//     const { data } = await axios.get(`/api/orders/filter/status/${userId}/cart`)
+//     return data
+// } catch (err) {
+//     console.log(err);
+// }
+// })
 
 export const updateOrder = createAsyncThunk('updateOrder', async ({ id, totalPrice, shippingAddress, orderStatus, userId }) => {
     try {
@@ -44,9 +44,9 @@ const singleOrderSlice = createSlice({
             state.loading = false
             state.order = action.payload
         });
-        builder.addCase(filteredOrdersByStatus.fulfilled, (state, action) => {
-            state.order = action.payload
-        })
+        // builder.addCase(filteredOrdersByStatus.fulfilled, (state, action) => {
+        //     state.order = action.payload
+        // })
         builder.addCase(updateOrder.fulfilled, (state, action) => {
             state.order = action.payload
         });

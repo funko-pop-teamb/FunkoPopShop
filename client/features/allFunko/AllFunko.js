@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { deleteFunkoPop, fetchFunkoPops, addFunkoPop, selectFunkoPops, updateFunkoPops } from '../../app/slice/allFunkoSlice'
 import { me } from '../auth/authSlice'
 import { Link, useParams } from 'react-router-dom'
-import { addItemToCart, fetchAllCartFunkos } from '../../app/slice/cartProducts'
-import { filteredOrdersByStatus } from '../../app/slice/singleOrderSlice'
+import { addItemToCart, fetchAllCartFunkos, filteredOrdersByStatus, updateOneOrderOneFunko } from '../../app/slice/cartProducts'
 import { updateFunkoPop } from '../../app/slice/oneFunkoSlice'
 
 
@@ -12,6 +11,7 @@ import { updateFunkoPop } from '../../app/slice/oneFunkoSlice'
 const AllFunkos = () => {
 
     let funkos = useSelector((state) => { return state.allFunkoPops })
+
     const { userType, id, firstName, lastName, email, username } = useSelector((state) => state.auth.me)
     console.log(id)
 
@@ -19,8 +19,8 @@ const AllFunkos = () => {
 
     useEffect(() => {
         dispatch(fetchFunkoPops())
-        dispatch(me())
-        dispatch(filteredOrdersByStatus(id))
+        // dispatch(me())
+        // dispatch(filteredOrdersByStatus(id))
 
     }, [])
 
@@ -32,20 +32,32 @@ const AllFunkos = () => {
        dispatch(fetchFunkoPops())
     }
 
-    const cartId=useSelector((state)=>  {return state.singleOrder.order.id})
-    const cart= useSelector(selectFunkoPops)
+    const {cart,items,}=useSelector((state)=>  {return state.cart})
 
+
+    const searchingLoop=(funko)=> {
+        let FunkoPopId=funko.id
+        let orderId=cart.id
+        let quantity=funko.quantity+1
+        for (let i=0; i<items.length;i++){
+            if (funko.id===items[i].id){
+                dispatch(updateOneOrderOneFunko(FunkoPopId, orderId,quantity))
+                
+            }
+        }
+    }
     const addToCart = async (funko)=>{
         const FunkoPopId=funko.id
-         const orderId=cartId
+         const orderId=cart.id
          const quantity=funko.qtyForCart
          const funkoPrice=funko.price
+  
+          await searchingLoop(funko)
 
       await  dispatch(addItemToCart({FunkoPopId, orderId,quantity,funkoPrice}))
       console.log('****'+funko.name)
 
       await dispatch(fetchAllCartFunkos(orderId))
-        console.log('&&&&&&'+cart)
 
     }
 

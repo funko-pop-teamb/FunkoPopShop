@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { filteredOrdersByStatus } from '../../app/slice/singleOrderSlice';
+import { filteredOrdersByStatus } from '../../app/slice/cartProducts';
 import { logout } from '../../store';
 
 const Navbar = () => {
@@ -14,13 +14,12 @@ const Navbar = () => {
   };
   const { userType, id } = useSelector((state) => state.auth.me)
   //allows us to access orderId in cart
-  console.log('********'+id)
   useEffect(()=> {
 
     dispatch(filteredOrdersByStatus(id))
   }
   )
-  const cartId=useSelector((state)=>  {return state.singleOrder.order.id})
+  const cartId=useSelector((state)=>  {return state.cart.cart.id})
 
   return (
     <div>
