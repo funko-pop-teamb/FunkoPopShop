@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import AuthForm from '../features/auth/AuthForm';
 import Home from '../features/home/Home';
-import { AllFunkos, LandingPage, SingleFunko, AddFunko, SignUp } from '../features/allfeatures'
+import { AllFunkos, LandingPage, SingleFunko, AddFunko, SignUp, PersonalAccount } from '../features/allfeatures'
 import { me } from '../store';
 import Cart from '../features/cart/Cart';
 import { fetchAllCartFunkos, filteredOrdersByStatus } from './slice/cartProducts';
@@ -32,6 +32,7 @@ const AppRoutes = () => {
         <Routes>
 
           <Route path="/*" element={<Home />} />
+          <Route path= "/account" element = {<PersonalAccount />} />
 
           <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
           {/* <Route path="/home" element={<LandingPage />} /> */}
@@ -60,6 +61,7 @@ const AppRoutes = () => {
             element={<SignUp name="signup" displayName="Sign Up" />}
           />
           <Route path="/funkoPops" element={<AllFunkos />} />
+          
           <Route path="/cart" element={<Cart />} />
 
         </Routes>
