@@ -1,10 +1,13 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 
 
 import { fetchSingleUser } from "../../app/slice/singleUserSlice";
 import { editUser } from "../../app/slice/usersSlice";
 
+
+    
 
 
 
@@ -13,7 +16,9 @@ const PersonalAccount = () => {
 
     const  me  = useSelector((state) => state.auth.me)
 
-
+   
+    
+    
    
 
     
@@ -29,18 +34,24 @@ const PersonalAccount = () => {
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
 
+
+    function refreshPage() {
+        window.location.reload(false);
+      }
+
     const editAccount = async (evt) => {
         evt.preventDefault()
      
         let userId = me.id
-        
+
         
         await dispatch(editUser({userId, username, firstName, lastName, email}))
         await dispatch(fetchSingleUser(me.id))
-
+        
+        
 
     }
-
+    
     
 
 
@@ -77,7 +88,8 @@ const PersonalAccount = () => {
                 <label htmlFor = "email">Email:</label>
                 <input value = {email} onChange = {(evt) => 
                 setEmail(evt.target.value)} />
-            <button type='submit'>Update</button>
+            <button type='submit'onClick={refreshPage} >Update</button>
+        
             </form>
 
     </div>
