@@ -80,7 +80,7 @@ const allFunkoPopsSlice = createSlice({
       return action.payload;
     })
     .addCase(addFunkoPop.fulfilled, (state, action) => {
-      return action.payload;
+      state.push(action.payload)
     })
     .addCase(deleteFunkoPop.fulfilled, (state, action) => {
       return action.payload;
