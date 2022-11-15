@@ -7,6 +7,7 @@ import { AllFunkos, LandingPage, SingleFunko, AddFunko, SignUp, PersonalAccount 
 import { me } from '../store';
 import Cart from '../features/cart/Cart';
 import { fetchAllCartFunkos, filteredOrdersByStatus } from './slice/cartProducts';
+import CheckOut from '../features/cart/CheckOut';
 
 /*
  * COMPONENT
@@ -37,13 +38,9 @@ const AppRoutes = () => {
           {/* <Route path="/home" element={<LandingPage />} /> */}
 
           <Route path="/cart/:userId/:cartId" element={<Cart />} />
+          <Route path="/cart/checkout/:userId/:cartId" element={<CheckOut />} />
 
-          <Route path="/funkoPops" element={
-            <>
-              <AllFunkos />
-              <AddFunko />
-            </>
-          } />
+          <Route path="/funkoPops" element={<><AllFunkos /><AddFunko /></>} />
         </Routes>
       ) : (
         <Routes>
