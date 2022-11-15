@@ -106,7 +106,7 @@ const allFunkoPopsSlice = createSlice({
     // })
     // .addCase(updateFunkoPops.fulfilled, (state, action) => {
     //   return action.payload;
-  // })
+    // })
 
   },
 });
