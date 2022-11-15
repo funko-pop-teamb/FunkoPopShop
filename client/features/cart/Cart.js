@@ -13,7 +13,7 @@ const Cart = () => {
     const dispatch = useDispatch();
     // let {totalPrice, shippingAddress}=useSelector((state)=>  {return state.singleOrder.order})
     const { id, orderStatus, totalPrice } = useSelector((state) => { return state.singleOrder.order })
-    const cart = useSelector((state) => state.cart.items)
+    const items = useSelector((state) => state.cart.items)
 
 
     //const isLoggedIn = useSelector((state) => {return state.auth.me.id})
@@ -27,8 +27,8 @@ const Cart = () => {
 
     const cartTotal = () => {
         let sum = 0
-        for (let i = 0; i < cart.length; i++) {
-            let itemTotal = cart[i].funkoPrice * cart[i].quantity
+        for (let i = 0; i < items.length; i++) {
+            let itemTotal = items[i].funkoPrice * items[i].quantity
             sum += itemTotal
         }
         return sum
@@ -58,8 +58,8 @@ const Cart = () => {
         <>
             <div>Cart
                 <div>
-                    {cart && cart.length
-                        ? cart.map((item) => (
+                    {items && items.length
+                        ? items.map((item) => (
                             <div >
                                     <img src={item.FunkoPop.imageUrl} className='fImage' />
                                     <div><Link  to={`/funkoPops/${item.FunkoPop.id}`}> Name: {item.FunkoPop.name}</Link></div>

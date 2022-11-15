@@ -13,7 +13,6 @@ const Home = () => {
 
 useEffect(()=>{
   dispatch(fetchSingleFunkoPop(41))
-  console.log(fetchSingleFunkoPop(41))
 },[])
 const oneFunko = useSelector((state) => { return state.singleFunkoPop })
 
