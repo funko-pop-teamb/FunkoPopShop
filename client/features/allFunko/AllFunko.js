@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { deleteFunkoPop, fetchFunkoPops, addFunkoPop, selectFunkoPops, updateFunkoPops } from '../../app/slice/allFunkoSlice'
 import { logout, me } from '../auth/authSlice'
 import { Link, useParams } from 'react-router-dom'
-import { addItemToCart, fetchAllCartFunkos, filteredOrdersByStatus, updateOneOrderOneFunko } from '../../app/slice/cartProducts'
+import { addItemToCart, fetchAllCartFunkos, filteredOrdersByStatus, updateOneOrderOneFunko, addToLocalCart} from '../../app/slice/cartProducts'
 import { updateFunkoPop, fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice'
 
 
@@ -20,9 +20,20 @@ const AllFunkos = () => {
     const dispatch = useDispatch()
 
     let orderId = cart.id
-    useEffect(() => {
+
+    const loadToPage = async() => {
+    if (!id) {
+        dispatch(fetchFunkoPops())
+    } else {
         dispatch(fetchFunkoPops())
         dispatch(fetchAllCartFunkos(orderId))
+    }
+}
+
+    useEffect(() => {
+        loadToPage()
+        // dispatch(fetchFunkoPops())
+        // dispatch(fetchAllCartFunkos(orderId))
         // dispatch(me())
         // dispatch(filteredOrdersByStatus(id))
     }, [])
@@ -52,16 +63,17 @@ const AllFunkos = () => {
 
 
 
-    const allItems = []
+     //const allItems = []
     const addToCart = async (funko) => {
         if (!id) {
             const item = await dispatch(fetchSingleFunkoPop(funko.id))
-            allItems.push(item)
-            localStorage.setItem('cart', JSON.stringify(allItems))
-            let guestCart = JSON.parse(localStorage.getItem('cart'))
-            console.log(guestCart)
-        } else {
+            await dispatch(addToLocalCart(item))
+
+            // localStorage.setItem('cart', JSON.stringify(allItems))
+            // let guestCart = JSON.parse(localStorage.getItem('cart'))
+            // console.log(guestCart)
             // in /cart component localStorage.getItem('cart')
+        } else {
             let FunkoPopId = funko.id
             orderId = cart.id
             let quantity = 1
@@ -75,9 +87,8 @@ const AllFunkos = () => {
             } else {
                 await dispatch(addItemToCart({ FunkoPopId, orderId, quantity, funkoPrice }))
             }
+            await dispatch(fetchAllCartFunkos(orderId))
         }
-        await dispatch(fetchAllCartFunkos(orderId))
-
     }
 
     return (

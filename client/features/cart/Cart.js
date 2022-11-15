@@ -29,6 +29,7 @@ const Cart = () => {
 
     const cartTotal = () => {
         let sum = 0
+
         for (let i = 0; i < items.length; i++) {
             let itemTotal = items[i].funkoPrice * items[i].quantity
             sum += itemTotal
