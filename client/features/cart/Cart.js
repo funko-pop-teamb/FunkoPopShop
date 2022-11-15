@@ -14,14 +14,16 @@ const Cart = () => {
     // let {totalPrice, shippingAddress}=useSelector((state)=>  {return state.singleOrder.order})
     const { id, orderStatus, totalPrice } = useSelector((state) => { return state.singleOrder.order })
     const items = useSelector((state) => state.cart.items)
+    const cartId = useSelector((state) => state.cart.cart.id)
+    const userId= useSelector((state) => state.auth.me.id)
 
 
     //const isLoggedIn = useSelector((state) => {return state.auth.me.id})
 
-    const { userId, cartId } = useParams()
+    // const { userId, cartId } = useParams()
     useEffect(() => {
-        dispatch(filteredOrdersByStatus(userId))
-        dispatch(fetchAllCartFunkos(cartId))
+        // dispatch(filteredOrdersByStatus(userId))
+        // dispatch(fetchAllCartFunkos(cartId))
     }, [])
 
 
@@ -75,11 +77,8 @@ const Cart = () => {
                     }
                 </div>
 
-                <button><Link to='/funkoPops'>
-                    Continue Shopping
-                    </Link>
-                    </button>
-                <button><Link to={`/cart/checkout/${userId}/${cartId}`}>  Check Out</Link></button>
+                <button><Link to='/funkoPops'>Continue Shopping</Link> </button>
+                <button><Link to='/cart/checkout'>  Check Out</Link></button>
             </div>
             <div> Cart total:{cartTotal()}</div>
         </>

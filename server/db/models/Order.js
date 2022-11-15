@@ -4,17 +4,20 @@ const db = require('../db');
 const Order = db.define('orders', {
   totalPrice: {
     type: Sequelize.FLOAT,
+    defaultValue:0
   },
   shippingAddress: {
     type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true,
-    },
+   defaultValue:null
   },
   orderStatus: {
     type: Sequelize.ENUM('Cart', 'Pending', 'Shipping', 'Complete')
+  },
+  shippingName:{
+    type: Sequelize.STRING,
+
   }
+
 
 });
 
