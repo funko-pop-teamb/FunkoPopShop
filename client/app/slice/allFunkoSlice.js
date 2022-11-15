@@ -41,6 +41,16 @@ export const fetchFunkoPopByCategory = createAsyncThunk(
     }
   });
 
+  export const fetchFunkoPopBySize = createAsyncThunk(
+    "fetchFunkoPopBySize", async (size) => {
+      try {
+        const { data } = await axios.get(`/api/funkoPop/sort/${size}`);
+        return data;
+      } catch (err) {
+        console.log(err);
+      }
+    });
+
   export const fetchFunkoPopByFunkoId = createAsyncThunk(
     "fetchFunkoPopByFunkoId", async (funkoId) => {
       try {
@@ -89,6 +99,9 @@ const allFunkoPopsSlice = createSlice({
       return action.payload;
     })
     .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
+      return action.payload;
+    })
+    .addCase(fetchFunkoPopBySize.fulfilled, (state, action) => {
       return action.payload;
     })
     // .addCase(updateFunkoPops.fulfilled, (state, action) => {

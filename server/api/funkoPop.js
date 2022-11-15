@@ -22,6 +22,18 @@ router.get('/filter/:category', async (req, res, next) => {
     }
 })
 
+router.get('/sort/:size', async (req, res, next) => {
+    try {
+        const { size } = req.params
+        res.json(await FunkoPop.findAll( {
+
+            where: { size: size }
+        }))
+    } catch (err) {
+
+    }
+})
+
 router.get('/:funkoId', async (req, res, next) => {
     try {
         const { funkoId } = req.params
