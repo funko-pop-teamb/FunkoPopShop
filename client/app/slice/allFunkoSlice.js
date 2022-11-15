@@ -44,12 +44,32 @@ export const fetchFunkoPopByCategory = createAsyncThunk(
   // export const fetchFunkoPopBySize = createAsyncThunk(
   //   "fetchFunkoPopBySize", async (size) => {
   //     try {
-  //       const { data } = await axios.get(`/api/funkoPop/sort/${size}`);
+  //       const { data } = await axios.get(`/api/funkoPop/filter/${size}`);
   //       return data;
   //     } catch (err) {
   //       console.log(err);
   //     }
   //   });
+
+  //   export const fetchFunkoPopByName = createAsyncThunk(
+  //     "fetchFunkoPopByName", async (name) => {
+  //       try {
+  //         const { data } = await axios.get(`/api/funkoPop/filter/${name}`);
+  //         return data;
+  //       } catch (err) {
+  //         console.log(err);
+  //       }
+  //     });
+
+  //     export const fetchFunkoPopByPrice = createAsyncThunk(
+  //       "fetchFunkoPopByPrice", async (price) => {
+  //         try {
+  //           const { data } = await axios.get(`/api/funkoPop/filter/${price}`);
+  //           return data;
+  //         } catch (err) {
+  //           console.log(err);
+  //         }
+  //       });
 
   export const fetchFunkoPopByFunkoId = createAsyncThunk(
     "fetchFunkoPopByFunkoId", async (funkoId) => {
@@ -98,12 +118,18 @@ const allFunkoPopsSlice = createSlice({
     .addCase(fetchFunkoPopByCategory.fulfilled, (state, action) => {
       return action.payload;
     })
-    .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
-      return action.payload;
-    })
     // .addCase(fetchFunkoPopBySize.fulfilled, (state, action) => {
     //   return action.payload;
     // })
+    // .addCase(fetchFunkoPopByName.fulfilled, (state, action) => {
+    //   return action.payload;
+    // })
+    // .addCase(fetchFunkoPopByPrice.fulfilled, (state, action) => {
+    //   return action.payload;
+    // })
+    .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
+      return action.payload;
+    })
     // .addCase(updateFunkoPops.fulfilled, (state, action) => {
     //   return action.payload;
     // })
