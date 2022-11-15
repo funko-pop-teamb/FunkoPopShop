@@ -23,7 +23,6 @@ export const updateFunkoPop = createAsyncThunk(
                 description,
                 qtyForCart
             });
-            console.log(data)
             return data;
         } catch (err) {
             console.log(err);

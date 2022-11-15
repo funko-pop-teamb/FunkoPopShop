@@ -4,8 +4,8 @@ import { deleteFunkoPop, fetchFunkoPops, addFunkoPop } from '../../app/slice/all
 import { me } from '../auth/authSlice'
 import { Link, useParams } from 'react-router-dom'
 import { fetchOrders, } from '../../app/slice/allOrderSlice'
-import { singleOrder } from '../../app/slice/singleOrderSlice'
-import { fetchAllCartFunkos, filteredOrdersByStatus } from '../../app/slice/cartProducts'
+import { singleOrder, updateOrder } from '../../app/slice/singleOrderSlice'
+import { fetchAllCartFunkos, filteredOrdersByStatus, updateOneOrderOneFunko } from '../../app/slice/cartProducts'
 import { fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice'
 
 
@@ -14,6 +14,7 @@ const Cart = () => {
     // let {totalPrice, shippingAddress}=useSelector((state)=>  {return state.singleOrder.order})
     const { id, orderStatus, totalPrice } = useSelector((state) => { return state.singleOrder.order })
     const cart = useSelector((state) => state.cart.items)
+
 
     //const isLoggedIn = useSelector((state) => {return state.auth.me.id})
 
@@ -34,6 +35,15 @@ const Cart = () => {
         return sum
     }
 
+    const removeOne=async (item)=>{
+        let orderId= cartId
+        let FunkoPopId=item.FunkoPopId
+        let quantity=item.quantity-1
+       await dispatch(updateOneOrderOneFunko({orderId, FunkoPopId, quantity}))
+        dispatch(fetchAllCartFunkos(orderId))
+
+    }
+
     return (
         <>
             <div>Cart
@@ -45,6 +55,8 @@ const Cart = () => {
                                     <img src={item.FunkoPop.imageUrl} className='fImage' />
                                     <div> Name: {item.FunkoPop.name}</div>
                                     {/* <div> funkoPop Id: {item.FunkoPopId}</div> */}
+                                   <button onClick={()=>removeOne(item)}>remove one</button>
+                                   <button onClick={()=>removeOne(item)}>remove all</button>
                                     <div> Qty: {item.quantity}</div>
                                     <div> Price per item: {item.funkoPrice}</div>
                                     <div> Total: {item.quantity * item.funkoPrice}</div>
@@ -54,7 +66,10 @@ const Cart = () => {
                     }
                 </div>
 
-                <button >Continue Shopping</button>
+                <button><Link to='/funkoPops'>
+                    Continue Shopping
+                    </Link>
+                    </button>
                 <button> Check Out</button>
 
             </div>

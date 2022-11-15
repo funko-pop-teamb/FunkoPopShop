@@ -11,9 +11,9 @@ export const fetchAllCartFunkos = createAsyncThunk(
     }
   });
   export const updateOneOrderOneFunko = createAsyncThunk(
-    "fetchSingleOrderProduct", async ({funkoId,orderId, quantity}) => {
+    "updateOneOrderOneFunko", async ({FunkoPopId,orderId, quantity, funkoPrice}) => {
       try {
-        const { data } = await axios.get(`/api/orderFunkoPop/filterByOrderIdAndUserId/${orderId}/${funkoId}`);
+        const { data } = await axios.put(`/api/orderFunkoPop/filterByOrderIdAndFunkoId/${orderId}/${FunkoPopId}`,{quantity,funkoPrice});
         return data;
       } catch (err) {
         console.log(err);
