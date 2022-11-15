@@ -13,22 +13,24 @@ const Cart = () => {
     const dispatch = useDispatch();
     // let {totalPrice, shippingAddress}=useSelector((state)=>  {return state.singleOrder.order})
     const { id, orderStatus, totalPrice } = useSelector((state) => { return state.singleOrder.order })
-    const cart = useSelector((state) => state.cart.items)
+    const items = useSelector((state) => state.cart.items)
+    const cartId = useSelector((state) => state.cart.cart.id)
+    const userId= useSelector((state) => state.auth.me.id)
 
 
     //const isLoggedIn = useSelector((state) => {return state.auth.me.id})
 
-    const { userId, cartId } = useParams()
+    // const { userId, cartId } = useParams()
     useEffect(() => {
-        dispatch(filteredOrdersByStatus(userId))
-        dispatch(fetchAllCartFunkos(cartId))
+        // dispatch(filteredOrdersByStatus(userId))
+        // dispatch(fetchAllCartFunkos(cartId))
     }, [])
 
 
     const cartTotal = () => {
         let sum = 0
-        for (let i = 0; i < cart.length; i++) {
-            let itemTotal = cart[i].funkoPrice * cart[i].quantity
+        for (let i = 0; i < items.length; i++) {
+            let itemTotal = items[i].funkoPrice * items[i].quantity
             sum += itemTotal
         }
         return sum
@@ -58,8 +60,8 @@ const Cart = () => {
         <>
             <div>Cart
                 <div>
-                    {cart && cart.length
-                        ? cart.map((item) => (
+                    {items && items.length
+                        ? items.map((item) => (
                             <div >
                                     <img src={item.FunkoPop.imageUrl} className='fImage' />
                                     <div><Link  to={`/funkoPops/${item.FunkoPop.id}`}> Name: {item.FunkoPop.name}</Link></div>
@@ -75,11 +77,8 @@ const Cart = () => {
                     }
                 </div>
 
-                <button><Link to='/funkoPops'>
-                    Continue Shopping
-                    </Link>
-                    </button>
-                <button><Link to={`/cart/checkout/${userId}/${cartId}`}>  Check Out</Link></button>
+                <button><Link to='/funkoPops'>Continue Shopping</Link> </button>
+                <button><Link to='/cart/checkout'>  Check Out</Link></button>
             </div>
             <div> Cart total:{cartTotal()}</div>
         </>

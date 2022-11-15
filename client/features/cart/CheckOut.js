@@ -1,12 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
+import { addOrder } from '../../app/slice/allOrderSlice';
 import { filteredOrdersByStatus } from '../../app/slice/cartProducts';
+import { updateOrder } from '../../app/slice/singleOrderSlice';
 import { logout } from '../../store';
 
 const CheckOut = () => {
   
+  const cart = useSelector((state) => state.cart.cart)
+  const items = useSelector((state) => state.cart.items)
+  const me = useSelector((state) => state.auth.me)
 
+  const dispatch=useDispatch()
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [streetAddress, setStreetAddress] = useState('')
@@ -18,13 +24,21 @@ const CheckOut = () => {
 
 const handleSubmit=(evt)=>{
 evt.preventDefault()
+const orderId=cart.id
+const shippingAddress=streetAddress+" "+apt+" "+city+" "+state+" "+zipCode
+let orderStatus="Complete"
+let orderPrice=100
+dispatch(updateOrder({orderId, shippingAddress, orderStatus}))
+
+let userId=me.id
+dispatch(addOrder({userId}))
 }
   return (
     <div>
      <form id="shipping-form" onSubmit={handleSubmit}>
       <div >Shipping Info:</div>
       <div>
-        <label htmlFor="firstName" className='formField'>First Name:</label>
+        {/* <label htmlFor="firstName" className='formField'>First Name:</label>
         <input
           name="firstName"
           value={firstName}
@@ -35,7 +49,7 @@ evt.preventDefault()
           name="lastName"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
-        />
+        /> */}
         <label htmlFor="streetAddress" className='formField'>Street Address</label>
         <input
           name="streetAddress"
