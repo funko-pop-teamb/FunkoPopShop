@@ -34,7 +34,7 @@ router.get('/:funkoId', async (req, res, next) => {
 
 //LINKS FOR SEARCH/SORT DROPDOWN MENU
 
-router.get('/sort/:byName', async (req, res, next) => {
+router.get('/sort/byName', async (req, res, next) => {
     try {
         res.send(await FunkoPop.findAll({order: [
             ["name", "ASC"],
@@ -44,7 +44,7 @@ router.get('/sort/:byName', async (req, res, next) => {
     }
 })
 
-router.get('/sort/:priceLow', async (req, res, next) => {
+router.get('/sort/priceLow', async (req, res, next) => {
     try {
         res.send(await FunkoPop.findAll({order: [
             ["price", "ASC"],
@@ -54,7 +54,7 @@ router.get('/sort/:priceLow', async (req, res, next) => {
     }
 })
 
-router.get('/sort/:priceHigh', async (req, res, next) => {
+router.get('/sort/priceHigh', async (req, res, next) => {
     try {
         res.send(await FunkoPop.findAll({order: [
             ["price", "DESC"],
@@ -64,7 +64,7 @@ router.get('/sort/:priceHigh', async (req, res, next) => {
     }
 })
 
-router.get('/sort/:mini', async (req, res, next) => {
+router.get('/sort/mini', async (req, res, next) => {
     try {
         // const { mini } = req.params
         res.json(await FunkoPop.findAll( {
@@ -76,7 +76,7 @@ router.get('/sort/:mini', async (req, res, next) => {
     }
 })
 
-router.get('/sort/:regular', async (req, res, next) => {
+router.get('/sort/regular', async (req, res, next) => {
     try {
         // const { regular } = req.params
         res.json(await FunkoPop.findAll( {
@@ -88,7 +88,7 @@ router.get('/sort/:regular', async (req, res, next) => {
     }
 })
 
-router.get('/sort/:jumbo', async (req, res, next) => {
+router.get('/sort/jumbo', async (req, res, next) => {
     try {
         // const { jumbo } = req.params
         res.json(await FunkoPop.findAll( {

@@ -60,7 +60,7 @@ export const fetchFunkosByName = createAsyncThunk(
   "fetchFunkosByName",
   async () => {
     try {
-      const { data } = await axios.get(`/api/funkoPop/sort/:byName`);
+      const { data } = await axios.get(`/api/funkoPop/sort/byName`);
       return data;
     } catch (err) {
       console.log(err);
@@ -72,7 +72,7 @@ export const fetchFunkosByPriceLow = createAsyncThunk(
   "fetchFunkosByPriceLow",
   async () => {
     try {
-      const { data } = await axios.get(`/api/funkoPop/sort/:priceLow`);
+      const { data } = await axios.get(`/api/funkoPop/sort/priceLow`);
       return data;
     } catch (err) {
       console.log(err);
@@ -84,7 +84,7 @@ export const fetchFunkosByPriceHigh = createAsyncThunk(
   "fetchFunkosByPriceHigh",
   async () => {
     try {
-      const { data } = await axios.get(`/api/funkoPop/sort/:priceHigh`);
+      const { data } = await axios.get(`/api/funkoPop/sort/priceHigh`);
       return data;
     } catch (err) {
       console.log(err);
@@ -96,7 +96,7 @@ export const fetchMiniFunkos = createAsyncThunk(
   "fetchMiniFunkos",
   async () => {
     try {
-      const { data } = await axios.get(`/api/funkoPop/sort/:mini`);
+      const { data } = await axios.get(`/api/funkoPop/sort/mini`);
       return data;
     } catch (err) {
       console.log(err);
@@ -108,7 +108,7 @@ export const fetchRegularFunkos = createAsyncThunk(
   "fetchRegularFunkos",
   async () => {
     try {
-      const { data } = await axios.get(`/api/funkoPop/sort/:regular`);
+      const { data } = await axios.get(`/api/funkoPop/sort/regular`);
       return data;
     } catch (err) {
       console.log(err);
@@ -120,7 +120,7 @@ export const fetchJumboFunkos = createAsyncThunk(
   "fetchJumboFunkos",
   async () => {
     try {
-      const { data } = await axios.get(`/api/funkoPop/sort/:jumbo`);
+      const { data } = await axios.get(`/api/funkoPop/sort/jumbo`);
       return data;
     } catch (err) {
       console.log(err);
