@@ -95,7 +95,7 @@ const AllFunkos = () => {
                         {/* <button onClick={()=>{qtyValueDecrease( funko)}} >-</button> QTY:{funko.qtyForCart} 
                         <button onClick={()=>{qtyValueIncrease( funko)}} >+</button> */}
 
-                        <button onClick={() => { addToCart(funko) }} >Add to 1 Cart</button>
+                        <button onClick={() => { addToCart(funko) }} >Add 1 to Cart</button>
                         {userType === 'admin' ? <button className='deleteF' type='button'
                             onClick={(event) => { handleDelete(funko.id) }}>Delete Funko</button> : null}
                     </div>

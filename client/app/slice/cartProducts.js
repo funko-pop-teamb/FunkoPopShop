@@ -38,6 +38,14 @@ export const fetchAllCartFunkos = createAsyncThunk(
         console.log(err);
     }
     })
+    export const removeFunkoPop = createAsyncThunk('removeFunkoPop', async ({orderId, funkoId}) => {
+      try {
+      const { data } = await axios.delete(`/api/orderFunkoPop/${orderId}/${funkoId}`)
+      return data
+  } catch (err) {
+      console.log(err);
+  }
+  })
 const singleOrderWithFunkoPopSlice = createSlice({
   name: "funkoPops",
   initialState: {
@@ -59,6 +67,9 @@ const singleOrderWithFunkoPopSlice = createSlice({
     .addCase(filteredOrdersByStatus.fulfilled, (state, action) => {
       state.cart = action.payload
   })
+    // .addCase(removeFunkoPop.fulfilled, (state, action) => {
+    //   const newState = state.items.filter((item) => item.id !== action.payload.id)
+    //   return newState})
   },
 });
 

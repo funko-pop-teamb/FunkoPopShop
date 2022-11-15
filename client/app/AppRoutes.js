@@ -7,6 +7,7 @@ import { AllFunkos, LandingPage, SingleFunko, AddFunko, SignUp, PersonalAccount 
 import { me } from '../store';
 import Cart from '../features/cart/Cart';
 import { fetchAllCartFunkos, filteredOrdersByStatus } from './slice/cartProducts';
+import CheckOut from '../features/cart/CheckOut';
 
 /*
  * COMPONENT
@@ -22,7 +23,7 @@ const AppRoutes = () => {
   useEffect(async () => {
     dispatch(me());
     await dispatch(filteredOrdersByStatus(id))
-    await dispatch(fetchAllCartFunkos(cart.id))
+    // await dispatch(fetchAllCartFunkos(cart.id))
 
   }, []);
 
@@ -36,14 +37,10 @@ const AppRoutes = () => {
           <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
           {/* <Route path="/home" element={<LandingPage />} /> */}
 
-          <Route path="/cart/:userId/:cartId" element={<Cart />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart/checkout" element={<CheckOut />} />
 
-          <Route path="/funkoPops" element={
-            <>
-              <AllFunkos />
-              <AddFunko />
-            </>
-          } />
+          <Route path="/funkoPops" element={<><AllFunkos /><AddFunko /></>} />
         </Routes>
       ) : (
         <Routes>

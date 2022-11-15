@@ -88,11 +88,11 @@ router.post('/', async (req, res, next) => {
 //updating cart information
 router.put('/:orderId/:funkoId', async (req, res, next) => {
   try {
-    const {orderId, userId}=req.params
+    const {orderId, funkoId}=req.params
     const funko = await Order_FunkoPop.findOne({
       where:{
         orderId:orderId,
-        userId:userId,
+        FunkoPopId:funkoId,
       }
     })
     
@@ -105,11 +105,11 @@ router.put('/:orderId/:funkoId', async (req, res, next) => {
 //delete item in cart
 router.delete('/:orderId/:funkoId', async (req, res, next) => {
   try {
-    const {orderId, userId}=req.params
+    const {orderId, funkoId}=req.params
     const funko = await Order_FunkoPop.findOne({
       where:{
         orderId:orderId,
-        userId:userId
+        FunkoPopId:funkoId
       }
     })
     await funko.destroy()

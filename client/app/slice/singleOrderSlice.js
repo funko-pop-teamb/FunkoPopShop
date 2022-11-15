@@ -10,9 +10,9 @@ export const singleOrder = createAsyncThunk('singleOrder', async (orderId) => {
     }
 });
 
-export const updateOrder = createAsyncThunk('updateOrder', async ({ id, totalPrice, shippingAddress, orderStatus, userId }) => {
+export const updateOrder = createAsyncThunk('updateOrder', async ({ orderId, totalPrice, shippingAddress, orderStatus, userId }) => {
     try {
-        const { data } = await axios.put(`/api/orders/${orderId}`, { id, totalPrice, shippingAddress, orderStatus, userId })
+        const { data } = await axios.put(`/api/orders/${orderId}`, { totalPrice, shippingAddress, orderStatus, userId })
         return data
     } catch (err) {
         console.log(err)
