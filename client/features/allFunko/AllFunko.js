@@ -3,15 +3,15 @@ import { useDispatch, useSelector } from 'react-redux'
 import { deleteFunkoPop, fetchFunkoPops, addFunkoPop, selectFunkoPops, updateFunkoPops } from '../../app/slice/allFunkoSlice'
 import { logout, me } from '../auth/authSlice'
 import { Link, useParams } from 'react-router-dom'
-import { addItemToCart, fetchAllCartFunkos, filteredOrdersByStatus, updateOneOrderOneFunko } from '../../app/slice/cartProducts'
+import { addItemToCart, fetchAllCartFunkos, filteredOrdersByStatus, updateOneOrderOneFunko, addToLocalCart} from '../../app/slice/cartProducts'
 import { updateFunkoPop, fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice'
 
 
 
 const AllFunkos = () => {
 
-    let funkos = useSelector((state) =>  state.allFunkoPops )
-    const {cart, items}=useSelector((state)=>   state.cart)
+    let funkos = useSelector((state) => state.allFunkoPops)
+    const { cart, items } = useSelector((state) => state.cart)
 
     const { userType, id, firstName, lastName, email, username } = useSelector((state) => state.auth.me)
     const isLoggedIn = useSelector((state) => { return state.auth.me.id })
@@ -19,18 +19,29 @@ const AllFunkos = () => {
 
     const dispatch = useDispatch()
 
-  let orderId=cart.id
-    useEffect(  () => {
+    let orderId = cart.id
+
+    const loadToPage = async() => {
+    if (!id) {
+        dispatch(fetchFunkoPops())
+    } else {
         dispatch(fetchFunkoPops())
         dispatch(fetchAllCartFunkos(orderId))
+    }
+}
+
+    useEffect(() => {
+        loadToPage()
+        // dispatch(fetchFunkoPops())
+        // dispatch(fetchAllCartFunkos(orderId))
         // dispatch(me())
         // dispatch(filteredOrdersByStatus(id))
     }, [])
 
 
     const handleDelete = async (funkoId) => {
-       await dispatch(deleteFunkoPop(funkoId))
-      await dispatch(fetchFunkoPops())
+        await dispatch(deleteFunkoPop(funkoId))
+        await dispatch(fetchFunkoPops())
     }
     //items= funkoPops in the current cart
     // const  item=useSelector((state)=>   state.cart.items)
@@ -50,34 +61,34 @@ const AllFunkos = () => {
     //     }
     //     await dispatch(fetchAllCartFunkos(orderId))
 
-        
 
-    const allItems = []
+
+     //const allItems = []
     const addToCart = async (funko) => {
         if (!id) {
             const item = await dispatch(fetchSingleFunkoPop(funko.id))
-            allItems.push(item)
-            localStorage.setItem('cart', JSON.stringify(allItems))
-            let guestCart = JSON.parse(localStorage.getItem('cart'))
-            console.log(guestCart)
-        } else {
-            // in /cart component localStorage.getItem('cart')
-            let FunkoPopId=funko.id
-            orderId=cart.id
-           let quantity=1
-           let funkoPrice=funko.price
-          if (items.filter(e=> e.FunkoPopId===funko.id).length>0){
-              let index=items.findIndex(e=> 
-                   e.FunkoPopId===funko.id
-              )
-              quantity=items[index].quantity+1
-              await dispatch(updateOneOrderOneFunko({FunkoPopId, orderId, quantity}))
-          } else {
-              await  dispatch(addItemToCart({FunkoPopId, orderId,quantity,funkoPrice}))
-          }
-        }
-      await dispatch(fetchAllCartFunkos(orderId))
+            await dispatch(addToLocalCart(item))
 
+            // localStorage.setItem('cart', JSON.stringify(allItems))
+            // let guestCart = JSON.parse(localStorage.getItem('cart'))
+            // console.log(guestCart)
+            // in /cart component localStorage.getItem('cart')
+        } else {
+            let FunkoPopId = funko.id
+            orderId = cart.id
+            let quantity = 1
+            let funkoPrice = funko.price
+            if (items.filter(e => e.FunkoPopId === funko.id).length > 0) {
+                let index = items.findIndex(e =>
+                    e.FunkoPopId === funko.id
+                )
+                quantity = items[index].quantity + 1
+                await dispatch(updateOneOrderOneFunko({ FunkoPopId, orderId, quantity }))
+            } else {
+                await dispatch(addItemToCart({ FunkoPopId, orderId, quantity, funkoPrice }))
+            }
+            await dispatch(fetchAllCartFunkos(orderId))
+        }
     }
 
     return (

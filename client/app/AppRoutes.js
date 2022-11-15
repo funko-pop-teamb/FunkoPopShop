@@ -57,6 +57,8 @@ const AppRoutes = () => {
             element={<SignUp name="signup" displayName="Sign Up" />}
           />
           <Route path="/funkoPops" element={<AllFunkos />} />
+
+          <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
           
           <Route path="/cart" element={<Cart />} />
 
