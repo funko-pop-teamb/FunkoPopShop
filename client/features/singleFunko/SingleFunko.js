@@ -9,6 +9,7 @@ import {
   selectSingleFunkoPop,
   updateFunkoPop,
 } from "../../app/slice/oneFunkoSlice";
+import { addItemToCart, fetchAllCartFunkos, updateOneOrderOneFunko } from "../../app/slice/cartProducts";
 
 const SingleFunko = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,7 @@ const SingleFunko = () => {
 
   const singleFunko = useSelector(selectSingleFunkoPop);
   const { userType } = useSelector((state) => state.auth.me);
+  const {cart, items}=useSelector((state)=>   state.cart)
 
   // const { name, imageUrl, price, category, size, edition, description } =
   //   singleFunko;
@@ -53,6 +55,32 @@ const SingleFunko = () => {
   const handleDelete = async () => {
     await dispatch(deleteFunkoPop(funkoId));
   };
+  const addToCart = async (funko) => {
+    // if (!id) {
+    //     const item = await dispatch(fetchSingleFunkoPop(funko.id))
+    //     allItems.push(item)
+    //     localStorage.setItem('cart', JSON.stringify(allItems))
+    //     let guestCart = JSON.parse(localStorage.getItem('cart'))
+    //     console.log(guestCart)
+    // } else {
+        // in /cart component localStorage.getItem('cart')
+        let FunkoPopId=funko.id
+        let orderId=cart.id
+       let quantity=1
+       let funkoPrice=funko.price
+      if (items.filter(e=> e.FunkoPopId===funko.id).length>0){
+          let index=items.findIndex(e=> 
+               e.FunkoPopId===funko.id
+          )
+          quantity=items[index].quantity+1
+          await dispatch(updateOneOrderOneFunko({FunkoPopId, orderId, quantity}))
+      } else {
+          await  dispatch(addItemToCart({FunkoPopId, orderId,quantity,funkoPrice}))
+      }
+    // }
+  await dispatch(fetchAllCartFunkos(orderId))
+
+}
 
   return (
     <>
@@ -64,7 +92,7 @@ const SingleFunko = () => {
         <h4>
           Edition: {singleFunko.edition} / Size: {singleFunko.size}
         </h4>
-        <button type="submit">Add to Cart</button>
+        <button onClick={()=> addToCart(singleFunko)}>Add to Cart</button>
         <hr></hr>
         <h3>About me: {singleFunko.description}</h3>
         <hr></hr>
