@@ -10,7 +10,7 @@ import { updateFunkoPop, fetchSingleFunkoPop } from '../../app/slice/oneFunkoSli
 
 const AllFunkos = () => {
 
-    let funkos = useSelector((state) =>  state.allFunkoPops )
+    let funkos = useSelector((state) =>  state.allFunkoPops)
     const {cart, items}=useSelector((state)=>   state.cart)
 
     const { userType, id, firstName, lastName, email, username } = useSelector((state) => state.auth.me)

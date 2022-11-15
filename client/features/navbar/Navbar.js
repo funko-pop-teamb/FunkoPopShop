@@ -26,78 +26,31 @@ const Navbar = () => {
   const { userType, id } = useSelector((state) => state.auth.me);
   //
   const funkos = useSelector(selectFunkoPops);
-
-  // const [data, setData] = useState([]);
-  // const [funkos, setFunkos] = useState([]);
   const [sortType, setSortType] = useState("");
-  //
-
-  //
-  useEffect(() => {
-    //
-
-    // const sortViews = async () => {
-    //   const types = {
-    //     priceLow: 'price',
-    //     priceHigh: 'price',
-    //     byName: 'name',
-    //     mini: 'mini',
-    //     regular: 'regular',
-    //     jumbo: 'jumbo',
-    //   };
-    //   const sortProperty = types[type];
-   
-
   
-    //   if (sortProperty === types[priceLow] || types[byName]){
-    //     const sorted =  [...funkos].sort((a, b) => a[sortProperty] - b[sortProperty]);
-    //     await setData(sorted);
-    //   } else if (sortProperty === types[priceHigh]){
-    //     const revSort =  [...funkos].sort((a, b) => b[sortProperty] - a[sortProperty]);
-    //     await setData(revSort);
-    //   } else if (sortProperty === types[mini] || types[regular] || types[jumbo]){
-    //     const findSize =  [... funkos].filter((funko) => funko[size] == sortProperty);
-    //     await setData(findSize)
-    //   }
-    // };
-    //  sortViews(sortType);
-    //
-    //allows us to access orderId in cart
+  useEffect(() => {
     dispatch(filteredOrdersByStatus(id));
-    // dispatch(fetchFunkoPops());
   }, []);
 
   //*add a handleChange instead to to handle onChange drop down menu??
-  
-
-  // const sortTypes = [
-  //   "default",
-  //   "priceLow",
-  //   "priceHigh",
-  //   "byName",
-  //   "mini",
-  //   "regular",
-  //   "jumbo",
-  // ];
-
   const handleChange = async (evt) => {
     evt.preventDefault();
     setSortType({[evt.target.name]: evt.target.value});
 
     if (evt.target.value === "priceLow") {
-      dispatch(fetchFunkosByPriceLow());
+      await dispatch(fetchFunkosByPriceLow());
     } else if (evt.target.value === "priceHigh") {
-      dispatch(fetchFunkosByPriceHigh());
+      await dispatch(fetchFunkosByPriceHigh());
     } else if (evt.target.value === "byName") {
-      dispatch(fetchFunkosByName());
+      await dispatch(fetchFunkosByName());
     } else if (evt.target.value === "mini") {
-      dispatch(fetchMiniFunkos());
+      await dispatch(fetchMiniFunkos());
     } else if (evt.target.value === "regular") {
-      dispatch(fetchRegularFunkos());
+      await dispatch(fetchRegularFunkos());
     } else if (evt.target.value === "jumbo") {
-      dispatch(fetchJumboFunkos());
+      await dispatch(fetchJumboFunkos());
     } else {
-      dispatch(fetchFunkoPops());
+      await dispatch(fetchFunkoPops());
     }
   };
 

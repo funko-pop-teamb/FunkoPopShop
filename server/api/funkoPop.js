@@ -69,7 +69,7 @@ router.get('/sort/mini', async (req, res, next) => {
         // const { mini } = req.params
         res.json(await FunkoPop.findAll( {
 
-            where: { size: mini }
+            where: { size: 'mini' }
         }))
     } catch (err) {
 
@@ -81,7 +81,7 @@ router.get('/sort/regular', async (req, res, next) => {
         // const { regular } = req.params
         res.json(await FunkoPop.findAll( {
 
-            where: { size: regular }
+            where: { size: 'regular' }
         }))
     } catch (err) {
 
@@ -93,7 +93,7 @@ router.get('/sort/jumbo', async (req, res, next) => {
         // const { jumbo } = req.params
         res.json(await FunkoPop.findAll( {
 
-            where: { size: jumbo }
+            where: { size: 'jumbo' }
         }))
     } catch (err) {
 
