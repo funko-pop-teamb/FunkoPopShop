@@ -21,8 +21,6 @@ const AddFunko = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
         await dispatch(addFunkoPop({ name, category, price, imageUrl, size, edition, description }))
-        dispatch(fetchFunkoPops())
-
     }
 
     return (
