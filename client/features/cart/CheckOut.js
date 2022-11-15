@@ -13,6 +13,7 @@ const CheckOut = () => {
   const me = useSelector((state) => state.auth.me)
 
   const dispatch=useDispatch()
+  const navigate=useNavigate()
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [streetAddress, setStreetAddress] = useState('')
@@ -29,9 +30,9 @@ const shippingAddress=streetAddress+" "+apt+" "+city+" "+state+" "+zipCode
 let orderStatus="Complete"
 let orderPrice=100
 dispatch(updateOrder({orderId, shippingAddress, orderStatus}))
-
-let userId=me.id
-dispatch(addOrder({userId}))
+navigate('/cart/checkout/complete')
+// let userId=me.id
+// dispatch(addOrder({userId}))
 }
   return (
     <div>

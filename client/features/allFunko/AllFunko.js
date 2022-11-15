@@ -21,7 +21,7 @@ const AllFunkos = () => {
 
   let orderId=cart.id
     useEffect(  () => {
-        dispatch(fetchFunkoPops())
+         dispatch(fetchFunkoPops())
         dispatch(fetchAllCartFunkos(orderId))
         // dispatch(me())
         // dispatch(filteredOrdersByStatus(id))

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { filteredOrdersByStatus } from '../../app/slice/cartProducts';
 import { authenticate } from '../../store';
 
 /**
@@ -17,7 +18,7 @@ const AuthForm = ({ name, displayName }) => {
     const formName = evt.target.name;
     const username = evt.target.username.value;
     const password = evt.target.password.value;
-    dispatch(authenticate({ username, password, method: formName }));
+    dispatch(authenticate({ username, password, method: formName }))        
   };
 
   return (

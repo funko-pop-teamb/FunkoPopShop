@@ -37,7 +37,7 @@ router.get('/:userId', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     const newUsers = await User.create(req.body)
-    res.json(newUsers)
+    res.send(newUsers)
   } catch (err) {
     next(err)
   }
