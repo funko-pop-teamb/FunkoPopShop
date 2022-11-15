@@ -17,7 +17,7 @@ const AppRoutes = () => {
   const dispatch = useDispatch();
   // const {userType}=useSelector((state)=>  state.auth.me)
   // console.log('*******'+userType)
-  const {  id} = useSelector((state) => state.auth.me)
+  const { id } = useSelector((state) => state.auth.me)
   const {cart, items} = useSelector((state) =>  state.cart )
   useEffect(async () => {
     dispatch(me());
@@ -30,7 +30,6 @@ const AppRoutes = () => {
     <div>
       {isLoggedIn ? (
         <Routes>
-
           <Route path="/*" element={<Home />} />
           <Route path= "/account" element = {<PersonalAccount />} />
 

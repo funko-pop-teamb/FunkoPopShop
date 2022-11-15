@@ -17,9 +17,11 @@ const Navbar = () => {
   useEffect(()=> {
 
     dispatch(filteredOrdersByStatus(id))
+    // dispatch(fetchAllCartFunkos(cartId))
+
   }
   )
-  const cartId=useSelector((state)=>  {return state.cart.cart.id})
+  const cartId=useSelector((state)=>  state.cart.cart.id)
 
   return (
     <div>
@@ -42,6 +44,7 @@ const Navbar = () => {
             <Link to="/login">Login</Link>
             <Link to="/signup">Sign Up</Link>
             <Link to='/funkoPops'>All Funko</Link>
+            {/* <Link to={`/cart`}>Cart</Link> */}
           </div>
         )}
       </nav>

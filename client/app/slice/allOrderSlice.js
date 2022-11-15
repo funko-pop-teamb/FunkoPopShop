@@ -11,8 +11,8 @@ export const filteredOrders = createAsyncThunk('filteredOrders', async () => {
     return data
 })
 
-export const addOrder = createAsyncThunk('addOrder', async () => {
-    const { data } = axios.post('/api/orders')
+export const addOrder = createAsyncThunk('addOrder', async (totalPrice, orderStatus, userId, shippingAddress) => {
+    const { data } = axios.post('/api/orders', {totalPrice, orderStatus, userId, shippingAddress})
     return data
 })
 
