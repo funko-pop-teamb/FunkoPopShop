@@ -22,6 +22,85 @@ router.get('/filter/:category', async (req, res, next) => {
     }
 })
 
+router.get('/:funkoId', async (req, res, next) => {
+    try {
+        const { funkoId } = req.params
+        res.send(await FunkoPop.findByPk(funkoId))
+    } catch (err) {
+        console.log('Error in GET/api/funkoPop/:id', err)
+        next(err)
+    }
+})
+
+//LINKS FOR SEARCH/SORT DROPDOWN MENU
+
+router.get('/sort/:byName', async (req, res, next) => {
+    try {
+        res.send(await FunkoPop.findAll({order: [
+            ["name", "ASC"],
+            ],}))
+    } catch (err) {
+
+    }
+})
+
+router.get('/sort/:priceLow', async (req, res, next) => {
+    try {
+        res.send(await FunkoPop.findAll({order: [
+            ["price", "ASC"],
+            ],}))
+    } catch (err) {
+        
+    }
+})
+
+router.get('/sort/:priceHigh', async (req, res, next) => {
+    try {
+        res.send(await FunkoPop.findAll({order: [
+            ["price", "DESC"],
+            ],}))
+    } catch (err) {
+        
+    }
+})
+
+router.get('/sort/:mini', async (req, res, next) => {
+    try {
+        // const { mini } = req.params
+        res.json(await FunkoPop.findAll( {
+
+            where: { size: mini }
+        }))
+    } catch (err) {
+
+    }
+})
+
+router.get('/sort/:regular', async (req, res, next) => {
+    try {
+        // const { regular } = req.params
+        res.json(await FunkoPop.findAll( {
+
+            where: { size: regular }
+        }))
+    } catch (err) {
+
+    }
+})
+
+router.get('/sort/:jumbo', async (req, res, next) => {
+    try {
+        // const { jumbo } = req.params
+        res.json(await FunkoPop.findAll( {
+
+            where: { size: jumbo }
+        }))
+    } catch (err) {
+
+    }
+})
+
+
 
 // router.get('/filter/:size', async (req, res, next) => {
 //     try {
@@ -34,16 +113,6 @@ router.get('/filter/:category', async (req, res, next) => {
 
 //     }
 // })
-
-router.get('/:funkoId', async (req, res, next) => {
-    try {
-        const { funkoId } = req.params
-        res.send(await FunkoPop.findByPk(funkoId))
-    } catch (err) {
-        console.log('Error in GET/api/funkoPop/:id', err)
-        next(err)
-    }
-})
 
 router.post('/', async (req, res, next) => {
     try {
