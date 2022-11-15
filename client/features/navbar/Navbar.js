@@ -83,7 +83,7 @@ const Navbar = () => {
                 <option value="jumbo">Jumbos</option>
               </select>
             </div>
-            <Link to={`/cart/${id}/${cartId}`}>Cart</Link>
+            <Link to={`/cart/`}>Cart</Link>
             <Link to="/account">Account</Link>
             <button type="button" onClick={logoutAndRedirectHome}>
               Logout
@@ -94,7 +94,8 @@ const Navbar = () => {
             {/* The navbar will show these links before you log in */}
             <Link to="/login">Login</Link>
             <Link to="/signup">Sign Up</Link>
-            <Link to="/funkoPops">All Funko</Link>
+            <Link to='/funkoPops'>All Funko</Link>
+            <Link to='/cart'>Cart</Link>
           </div>
         )}
       </nav>
