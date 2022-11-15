@@ -36,6 +36,8 @@ const Navbar = () => {
   const handleChange = async (evt) => {
     evt.preventDefault();
     setSortType({[evt.target.name]: evt.target.value});
+    // {[evt.target.name]: evt.target.value}
+    // value={sortType.dropDown} name='dropDown'
 
     if (evt.target.value === "priceLow") {
       await dispatch(fetchFunkosByPriceLow());
