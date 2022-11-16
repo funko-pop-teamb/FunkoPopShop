@@ -11,15 +11,14 @@ const Home = () => {
   // const username = useSelector((state) => state.auth.me.username);
 
   const dispatch = useDispatch()
-  const { userType, id } = useSelector((state) => state.auth.me);
-
+  const me = useSelector((state) => state.auth.me);
+console.log('*****'+me.order_funkoPops)
 useEffect(()=>{
   dispatch(fetchSingleFunkoPop(61))
-  dispatch(filteredOrdersByStatus(id));
+  dispatch(filteredOrdersByStatus(me.id));
 
 },[])
 const oneFunko = useSelector((state) => { return state.singleFunkoPop })
-
 
 
 // const funko = useSelector(selectSingleFunkoPop)

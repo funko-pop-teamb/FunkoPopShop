@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const { models: { User, Order }} = require('../db')
+const Order_FunkoPop = require('../db/models/Order_FunkoPop')
 module.exports = router
 
 //get all exisiting usersId  username firstName lastName and email
@@ -26,7 +27,7 @@ router.get('/:userId', async (req, res, next) => {
             id: userId,
           },
           attributes: { exclude: ['password'] },
-          
+          include:[Order_FunkoPop]
     })
     res.json(oneUser)
   } catch (err) {

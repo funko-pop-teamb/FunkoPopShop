@@ -88,3 +88,7 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+.allOrderImage{
+  height: 10vh;
+}

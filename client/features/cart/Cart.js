@@ -19,6 +19,8 @@ const Cart = () => {
 
     const stored = JSON.parse(localStorage.getItem('cart'))
 
+    // console.log(stored)
+
     const loadTocart = async () => {
         if (!id) {
             return stored
@@ -34,6 +36,8 @@ const Cart = () => {
     useEffect(() => {
         loadTocart()
 
+        // dispatch(filteredOrdersByStatus(id))
+        // dispatch(fetchAllCartFunkos(cartId))
     }, [])
 
 
@@ -120,7 +124,6 @@ const Cart = () => {
                     )) : null
                     }
                     </div>
-
                         :
 
                         <div>
@@ -144,6 +147,8 @@ const Cart = () => {
                 <button><Link to='/funkoPops'>Continue Shopping</Link> </button>
                 <button><Link to='/cart/checkout'>  Check Out</Link></button>
                 <div> Cart total:{cartTotal()}</div>
+
+
             </div>
         </>
     )
