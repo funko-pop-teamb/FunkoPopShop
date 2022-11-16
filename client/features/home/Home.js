@@ -16,8 +16,9 @@ useEffect(()=>{
 },[])
 const oneFunko = useSelector((state) => { return state.singleFunkoPop })
 
+
+
 // const funko = useSelector(selectSingleFunkoPop)
-console.log(oneFunko)
 return (
     <div>
         Funko of the month!
