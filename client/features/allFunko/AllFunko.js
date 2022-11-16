@@ -88,7 +88,6 @@ const AllFunkos = () => {
     }
     return (
         <>
-
             <h1 className='header'>Funko Gallery</h1>
             <input type="text" value={search} onChange={(e)=>{setSearch(e.target.value)}} placeholder="Search..."></input>
             <button onClick={(e)=>handleSearch(e)}>Search</button>
