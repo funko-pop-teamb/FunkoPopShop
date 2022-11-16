@@ -12,7 +12,7 @@ const Home = () => {
   const dispatch = useDispatch()
 
 useEffect(()=>{
-  dispatch(fetchSingleFunkoPop(41))
+  dispatch(fetchSingleFunkoPop(61))
 },[])
 const oneFunko = useSelector((state) => { return state.singleFunkoPop })
 
@@ -20,8 +20,8 @@ const oneFunko = useSelector((state) => { return state.singleFunkoPop })
 
 // const funko = useSelector(selectSingleFunkoPop)
 return (
-    <div>
-        Funko of the month!
+    <div className='featuredFunko'>
+        <h2 className='fTitle'>Funko of the Month!</h2>
         <Link key={oneFunko.id} to={`/funkoPops/${oneFunko.id}`}>
 
         <img src={oneFunko.imageUrl} className='fImage' />
