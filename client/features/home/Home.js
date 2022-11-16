@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import { useSelector, useDispatch, } from 'react-redux';
 import { fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice';
 import { Link, useParams } from 'react-router-dom'
+import { filteredOrdersByStatus } from '../../app/slice/cartProducts';
 
 /**
  * COMPONENT
@@ -10,9 +11,12 @@ const Home = () => {
   // const username = useSelector((state) => state.auth.me.username);
 
   const dispatch = useDispatch()
+  const { userType, id } = useSelector((state) => state.auth.me);
 
 useEffect(()=>{
   dispatch(fetchSingleFunkoPop(61))
+  dispatch(filteredOrdersByStatus(id));
+
 },[])
 const oneFunko = useSelector((state) => { return state.singleFunkoPop })
 
