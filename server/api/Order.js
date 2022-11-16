@@ -100,6 +100,7 @@ router.get('/:orderId', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
     try {
+        console.log(req.body)
         const newOrder = await Order.create(req.body)
         res.send(newOrder)
     } catch (err) {

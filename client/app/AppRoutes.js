@@ -66,6 +66,9 @@ const AppRoutes = () => {
           <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
           
           <Route path="/cart" element={<Cart />} />
+          <Route path="/cart/checkout" element={<CheckOut />} />
+          <Route path="/cart/checkout/complete" element={<PurchaseComplete/>} />
+
 
         </Routes>
       )}

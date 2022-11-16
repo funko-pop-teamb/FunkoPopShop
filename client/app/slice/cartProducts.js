@@ -52,16 +52,32 @@ const singleOrderWithFunkoPopSlice = createSlice({
   name: "funkoPops",
   initialState: {
     items: [],
-    cart: []
+    cart: [],
   },
   reducers: {
     addToLocalCart(state, action) {
-      console.log(state)
-      state.items.push(action.payload)
+      // const itemIndex = state.items.findIndex(
+      //   (item) => item.id === action.payload.id
+      // ); 
+      // if(itemIndex => 0) {
+      //   console.log(state.items[itemIndex])
+      //   //state.items[itemIndex].qtyForCart +=1
+      // } else {
+      {state.items.push(action.payload)
+      console.log(action)
       localStorage.setItem('cart', JSON.stringify(state.items))
-    },
+      //}
+      }
+  },
+    removeFromLocalCart(state, action) {
+      //need a removeFromLocalCart function
+      JSON.parse(localStorage.getItem('cart'))
+      
+      state.items.splice(action.payload, 1)
+      
+      localStorage.setItem('cart', JSON.stringify(state.items))
 
-    //need a removeFromLocalCart function
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -94,6 +110,7 @@ export const selectOrderFunkoPop = (state) => {
   return state.singleOrderProduct;
 };
 
-export const {addToLocalCart} = singleOrderWithFunkoPopSlice.actions
+export const {addToLocalCart, removeFromLocalCart} = singleOrderWithFunkoPopSlice.actions
+
 
 export default singleOrderWithFunkoPopSlice.reducer;
