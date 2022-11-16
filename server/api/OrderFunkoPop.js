@@ -22,7 +22,7 @@ router.get('/filterByUserId/:funkoId', async (req, res, next) => {
       where:{
         FunkoPopId:funkoId
       },
-
+include:[FunkoPop]
     })
     res.json(orderProducts)
   } catch (err) {

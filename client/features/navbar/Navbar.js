@@ -23,13 +23,14 @@ const Navbar = () => {
     dispatch(logout());
     navigate("/login");
   };
+  const items = useSelector((state) => state.cart.items)
+
   const { userType, id } = useSelector((state) => state.auth.me);
   //
   const funkos = useSelector(selectFunkoPops);
   const [sortType, setSortType] = useState("");
 
   useEffect(() => {
-    dispatch(filteredOrdersByStatus(id));
   }, []);
 
   //*add a handleChange instead to to handle onChange drop down menu??
@@ -103,9 +104,9 @@ const Navbar = () => {
                   <option value="regular">Regular</option>
                   <option value="jumbo">Jumbos</option>
                 </select>
-
+                
                 <Link to="/account">Account</Link>
-                <Link to={`/cart/`}>Cart</Link>
+                <Link to="/cart/">Cart({items.length})</Link>
                 <button type="button" onClick={logoutAndRedirectHome}>
                   Logout
                 </button>

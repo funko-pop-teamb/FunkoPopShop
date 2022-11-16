@@ -1,5 +1,7 @@
 const router = require('express').Router()
 const { models: { Order } } = require('../db')
+const FunkoPop = require('../db/models/FunkoPop')
+const Order_FunkoPop = require('../db/models/Order_FunkoPop')
 
 module.exports = router
 
@@ -22,7 +24,8 @@ router.get('/filter/status/:userId/cart', async (req, res, next) => {
         res.send(await Order.findOne({
 
             where: { orderStatus: 'Cart', 
-                userId:userId }
+                userId:userId },
+                include:[{model:Order_FunkoPop, include:[FunkoPop]}]
 
         }))
 
@@ -33,7 +36,24 @@ router.get('/filter/status/:userId/cart', async (req, res, next) => {
     }
 
 })
+router.get('/filter/status/:userId/complete', async (req, res, next) => {
+    try {
+        const { userId } = req.params
+        res.send(await Order.findAll({
 
+            where: { orderStatus: 'Complete', 
+                userId:userId },
+                include:[{model:Order_FunkoPop, include:[FunkoPop]}]
+
+        }))
+
+    } catch (err) {
+
+        console.log("Error in GET/api/orderId")
+
+    }
+
+})
 router.get('/filter/:orderId', async (req, res, next) => {
     try {
         const { orderId } = req.params

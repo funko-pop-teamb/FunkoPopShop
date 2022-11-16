@@ -13,7 +13,8 @@ export const fetchAllCartFunkos = createAsyncThunk(
 export const updateOneOrderOneFunko = createAsyncThunk(
   "updateOneOrderOneFunko", async ({ FunkoPopId, orderId, quantity, funkoPrice }) => {
     try {
-      const { data } = await axios.put(`/api/orderFunkoPop/filterByOrderIdAndFunkoId/${orderId}/${FunkoPopId}`, { quantity, funkoPrice });
+      const { data } = await axios.put(`/api/orderFunkoPop/filterByOrderIdAndFunkoId/${orderId}/${FunkoPopId}`, 
+      { quantity, funkoPrice });
       return data;
     } catch (err) {
       console.log(err);
@@ -33,6 +34,7 @@ export const addItemToCart = createAsyncThunk(
 export const filteredOrdersByStatus = createAsyncThunk('filteredOrdersByStatus', async (userId) => {
   try {
     const { data } = await axios.get(`/api/orders/filter/status/${userId}/cart`)
+    console.log(data)
     return data
   } catch (err) {
     console.log(err);
@@ -74,6 +76,12 @@ const singleOrderWithFunkoPopSlice = createSlice({
       })
       .addCase(filteredOrdersByStatus.fulfilled, (state, action) => {
         state.cart = action.payload
+        // let arr=action.payload.order_funkoPops
+        // for (let i=0;i<arr.length;i++){
+        //   console.log(arr[i])
+        //   state.items.push(arr[i].FunkoPop)
+        // }
+        state.items=action.payload.order_funkoPops
       })
     // .addCase(removeFunkoPop.fulfilled, (state, action) => {
     //   const newState = state.items.filter((item) => item.id !== action.payload.id)

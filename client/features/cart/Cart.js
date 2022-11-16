@@ -21,13 +21,13 @@ const Cart = () => {
 
     //const isLoggedIn = useSelector((state) => {return state.auth.me.id})
     const stored = JSON.parse(localStorage.getItem('cart'))
-    console.log(stored)
+    // console.log(stored)
 
     // const { userId, cartId } = useParams()
     useEffect(() => {
 
-        dispatch(filteredOrdersByStatus(id))
-        dispatch(fetchAllCartFunkos(cartId))
+        // dispatch(filteredOrdersByStatus(id))
+        // dispatch(fetchAllCartFunkos(cartId))
 
     }, [])
 
@@ -44,11 +44,6 @@ const Cart = () => {
 
     const removeOne = async (e, item) => {
         e.preventDefault()
-        //if(!id){
-            //fetchSingleFunkoPop
-            //dispatch removeFromLocalCart}
-
-
         let orderId = cartId
         let FunkoPopId = item.FunkoPopId
         let funkoId = item.FunkoPopId
@@ -107,9 +102,9 @@ const Cart = () => {
                     </div>}
 
 </div>
+            <div> Cart total:{cartTotal()}</div>
                 <button><Link to='/funkoPops'>Continue Shopping</Link> </button>
                 <button><Link to='/cart/checkout'>  Check Out</Link></button>
-            <div> Cart total:{cartTotal()}</div>
             </div>
         </>
     )

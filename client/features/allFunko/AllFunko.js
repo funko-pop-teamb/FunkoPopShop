@@ -5,13 +5,14 @@ import { logout, me } from '../auth/authSlice'
 import { Link, useParams } from 'react-router-dom'
 import { addItemToCart, fetchAllCartFunkos, filteredOrdersByStatus, updateOneOrderOneFunko, addToLocalCart} from '../../app/slice/cartProducts'
 import { updateFunkoPop, fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice'
-
+import {updateOrder} from '../../app/slice/singleOrderSlice'
 
 
 const AllFunkos = () => {
 
     let funkos = useSelector((state) => state.allFunkoPops)
-    const { cart, items } = useSelector((state) => state.cart)
+    const cart = useSelector((state) => state.cart.cart)
+    const items = useSelector((state) => state.cart.items)
 
     const { userType, id, firstName, lastName, email, username } = useSelector((state) => state.auth.me)
     const isLoggedIn = useSelector((state) => { return state.auth.me.id })
@@ -44,25 +45,9 @@ const AllFunkos = () => {
         await dispatch(deleteFunkoPop(funkoId))
         await dispatch(fetchFunkoPops())
     }
-    //items= funkoPops in the current cart
-    // const  item=useSelector((state)=>   state.cart.items)
-    // const addToCart = async (funko)=>{
-    //     let FunkoPopId=funko.id
-    //       orderId=cart.id
-    //      let quantity=1
-    //      let funkoPrice=funko.price
-    //     if (items.filter(e=> e.FunkoPopId===funko.id).length>0){
-    //         let index=items.findIndex(e=> 
-    //              e.FunkoPopId===funko.id
-    //         )
-    //         quantity=items[index].quantity+1
-    //         await dispatch(updateOneOrderOneFunko({FunkoPopId, orderId, quantity}))
-    //     } else {
-    //         await  dispatch(addItemToCart({FunkoPopId, orderId,quantity,funkoPrice}))
-    //     }
-    //     await dispatch(fetchAllCartFunkos(orderId))
+   
 
-
+console.log("*******"+orderId)
 
      //const allItems = []
     const addToCart = async (funko) => {
@@ -79,6 +64,8 @@ const AllFunkos = () => {
             orderId = cart.id
             let quantity = 1
             let funkoPrice = funko.price
+            let totalPrice=cart.totalPrice+funkoPrice
+            console.log(totalPrice+"^^^^^^^^")
             if (items.filter(e => e.FunkoPopId === funko.id).length > 0) {
                 let index = items.findIndex(e =>
                     e.FunkoPopId === funko.id
@@ -88,6 +75,8 @@ const AllFunkos = () => {
             } else {
                 await dispatch(addItemToCart({ FunkoPopId, orderId, quantity, funkoPrice }))
             }
+            await dispatch(updateOrder({orderId, totalPrice}))
+            await dispatch(filteredOrdersByStatus(id));
             await dispatch(fetchAllCartFunkos(orderId))
         }
     }
