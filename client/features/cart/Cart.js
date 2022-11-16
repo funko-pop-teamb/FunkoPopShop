@@ -43,6 +43,11 @@ const Cart = () => {
 
     const removeOne = async (e, item) => {
         e.preventDefault()
+        //if(!id){
+            //fetchSingleFunkoPop
+            //dispatch removeFromLocalCart}
+
+
         let orderId = cartId
         let FunkoPopId = item.FunkoPopId
         let funkoId = item.FunkoPopId
