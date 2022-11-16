@@ -28,11 +28,10 @@ evt.preventDefault()
 const orderId=cart.id
 const shippingAddress=streetAddress+" "+apt+" "+city+" "+state+" "+zipCode
 let orderStatus="Complete"
-let orderPrice=100
 dispatch(updateOrder({orderId, shippingAddress, orderStatus}))
 let userId=me.id
 await dispatch(addOrder({userId}))
-// navigate('/cart/checkout/complete')
+navigate('/cart/checkout/complete')
 }
   return (
     <div>

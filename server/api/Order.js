@@ -1,5 +1,7 @@
 const router = require('express').Router()
 const { models: { Order } } = require('../db')
+const FunkoPop = require('../db/models/FunkoPop')
+const Order_FunkoPop = require('../db/models/Order_FunkoPop')
 
 module.exports = router
 
@@ -22,7 +24,8 @@ router.get('/filter/status/:userId/cart', async (req, res, next) => {
         res.send(await Order.findOne({
 
             where: { orderStatus: 'Cart', 
-                userId:userId }
+                userId:userId },
+                include:[{model:Order_FunkoPop, include:[FunkoPop]}]
 
         }))
 

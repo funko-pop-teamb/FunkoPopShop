@@ -14,7 +14,9 @@ const PurchaseComplete = () => {
     const dispatch = useDispatch()
     
     let userId=me.id
-  
+  useEffect( ()=>{
+    dispatch(filteredOrdersByStatus(me.id));
+  },[])
 
     return (
         <>

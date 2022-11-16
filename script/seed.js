@@ -928,7 +928,7 @@ const funkos = [
 
 const Orders = [
   {
-    totalPrice: "30.00",
+    totalPrice: "100.00",
     shippingAddress: "101 main street",
     orderStatus: "Cart",
     userId: 1,
@@ -940,41 +940,37 @@ const Orders = [
     userId: 2,
 
   },
-  {
-    totalPrice: "24.00",
-    shippingAddress: "101 Red street",
-    orderStatus: "Shipping",
-    userId: 2,
-
-  },
-  {
-    totalPrice: "50.00",
-    shippingAddress: "123 First street",
-    orderStatus: "Complete",
-    userId: 2,
-  },
+  
 ]
 
 const OrderDetails = [
   {
     orderId: 1,
-    FunkoPopId: 1,
+    FunkoPopId: 60,
     quantity: 2,
     funkoPrice: 15,
+    userId:1
+  },
+  {
+    orderId: 1,
+    FunkoPopId: 85,
+    quantity: 1,
+    funkoPrice: 70,
+    userId:1
   },
   {
     orderId: 2,
-    FunkoPopId: 24,
+    FunkoPopId: 45,
     quantity: 2,
     funkoPrice: 20,
-    FunkoPopId: 24
+    userId:2
   },
   {
     orderId: 2,
-    FunkoPopId: 25,
+    FunkoPopId: 49,
     quantity: 3,
     funkoPrice: 20,
-    FunkoPopId: 25
+    userId:2
   }
 ]
 
