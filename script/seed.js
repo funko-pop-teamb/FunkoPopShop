@@ -395,6 +395,206 @@ const funkos = [
   },
 
   {
+    name: "The Joker as Santa pin",
+    category: "DC Comics",
+    price: "15",
+    imageUrl: "https://bbts1.azureedge.net/images/p/full/2022/11/8f2f9401-328d-420a-9b6e-9b3f7be8c208.jpg",
+    size: "mini",
+    edition: "exclusive",
+    description: "Ready for a holiday surprise? The Joker™ has packed a bag full of tricks to share with the city of Gotham. Bring this festive fiend home to your DC collection as a Pop! Pin, and there’s a 1 in 12 chance you may find the textured chase! Enamel pin features shiny gold-colored hardware and a built-in stand. Pin is approximately 4-inches tall. Chase variants are shipped at random. Receiving a chase with purchase is not guaranteed."  
+  },
+
+  {
+    name: "Batman as Ebenezer Scrooge pin",
+    category: "DC Comics",
+    price: "15",
+    imageUrl: "https://media.entertainmentearth.com/assets/images/13f8d87d8eca4bbbb08690b75c84fd4cxl.jpg",
+    size: "mini",
+    edition: "exclusive",
+    description: "Spirits of past, present, or future are no match for Pop! Pin Batman, dressed as Ebenezer Scrooge. Display your holiday spirit, in superhero style with this Funko Loungefly Pop! pin. The Winged Crusader™ in Pop! pin form, wears his pajamas over his Batsuit and carries a candle to light the way. Expand your DC Comics set in festive holiday fashion. Enamel pin features gold-colored hardware and a built-in stand. Pin is approximately 4-inches tall."  
+  },
+
+  {
+    name: "The Flash Holiday Dash pin",
+    category: "DC Comics",
+    price: "15",
+    imageUrl: "https://media.entertainmentearth.com/assets/images/db91c814fb244225be875b7da0626bdaxl.jpg",
+    size: "mini",
+    edition: "exclusive",
+    description: "Dash through the snow with a heroic favorite! The Flash™ is saving the holiday season dressed in a festive version of his hero suit. Bring home The Flash Holiday Dash Pop! Pin to host some reindeer games in your DC Comics collection! Enamel pin features shiny gold-colored hardware and a built-in stand. Pin is approximately 4-inches tall."
+  },
+
+  {
+    name: "Holiday Harley Quinn pin",
+    category: "DC Comics",
+    price: "15",
+    imageUrl: "https://media.entertainmentearth.com/assets/images/a3eebc145ae945db8a3ffd0bca6fa222xl.jpg",
+    size: "mini",
+    edition: "exclusive",
+    description: "Crush the holiday rush with this Pop! Pin Harley Quinn, dressed in festive style, waiting for her Puddin’. Punch up your holiday look by displaying your DC Superheroes fandom with Loungefly Funko Pop! Pin flair. Enamel pin features gold-colored hardware and a built-in stand. Pin is approximately 4-inches tall." 
+  },
+
+  {
+    name: "Spike Spiegel: Cowboy Bebop",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/58024_Animation_CowboyBebop_SpikewWeaponSword_POP_GLAM-WEB.png?v=1660946842",
+    size: "regular",
+    edition: "limited",
+    description: "Your Cowboy Bebop collection is at risk of falling prey to toxic fridge monsters born of spoiled Ganymede rock lobsters. Call in Pop! Spike Spiegel, armed with a net gun and sword, to hunt down and collect the bounty on collection intruders. He may even accept a good meal as payment if you're out of Woolongs. Vinyl figure is approximately 4.12-inches tall." 
+  },
+
+  {
+    name: "Jet Black: Cowboy Bepop",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://media.entertainmentearth.com/assets/images/2e4f02f4bf974f4ead18153f6a13f75bxl.jpg",
+    size: "regular",
+    edition: "limited",
+    description: "Help your Cowboy Bebop collection find a moment of zen with Pop! Jet holding one of his beloved Bonsai in hand, perfectly pruned. No Cowboy Bebop collection is complete without Pop! Jet Black. Vinyl figure is approximately 3.9-inches tall. " 
+  },
+
+  {
+    name: "Faye Valentine: Cowboy Bepop",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://media.entertainmentearth.com/assets/images/062cf352d4584a9eaf29aa1197d25fcdxl.jpg",
+    size: "regular",
+    edition: "limited",
+    description:"Feeling full of herself, Faye breaks away from Spike and Jet to try an capture the bounty they're after for herself. Following a lead which takes her to an opera house, Faye can be found in a red dress in Session # 5 'Ballad of Fallen Angels' in Cowboy Bebop. Don’t miss your chance to capture this criminal for your Cowboy Bebop collection as Pop! Faye Valentine (Red Dress). Whether she stands alone in your collection or with the rest of the Bebop crew, you won’t want to miss your chance to collect this bounty. Vinyl figure is approximately 4.28-inches tall."
+  },
+
+  {
+    name: "Ed & Ein on Scooter: Cowboy Bepop",
+    category: "Anime",
+    price: "5",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/59469_Animation_CowboyBebop_Ed_Keychain_GLAM-WEB.png?v=1660946836",
+    size: "mini",
+    edition: "exclusive",
+    description: "Ed and Ein are on the go. With Ein the pup packed, Edward is pushing off to pursue your Cowboy Bebop collection in Pop! Keychain form. Act fast to catch this Welsh Corgi data dog and the oh-so-mysterious hacker, as Pop! Keychain Ed and Ein on Scooter for your Cowboy Bebop collection. Vinyl keychain is approximately 4-inches long."  
+  },
+
+  {
+    name: "Tanjiro Kamado: Demon Slayer",
+    category: "Anime",
+    price: "15",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/49010_DemonSlayer_TanjiroKamado_POP_GLAM-WEB.png?v=1621894597",
+    size: "jumbo",
+    edition: "exclusive",
+    description:''  
+  },
+
+  {
+    name: "Nezuko Kamado: Demon Slayer",
+    category: "Anime",
+    price: "15",
+    imageUrl: "https://i5.walmartimages.com/asr/4d79dec3-4b0f-4612-b527-cdd0d3500038.2361298d8ab221be6da33e029c89cc63.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+    size: "jumbo",
+    edition: "exclusive",
+    description: "Only two of the Kamado family survived a demon attack, and now Tanjiro and Nezuko are out for revenge. Expand your Demon Slayer collection with Pop! Nezuko Kamado. Vinyl figure is approximately 3.5-inches tall."  
+  },
+
+  {
+    name: "Inosuke Hashibira: Demon Slayer pin",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://s7.orientaltrading.com/is/image/OrientalTrading/PDP_VIEWER_IMAGE/funko-pop-pin-demon-slayer-inosuke-hashibira~14287653$NOWA$",
+    size: "mini",
+    edition: "limited",
+    description: "Sharpen your demon-slaying skills with Inosuke Hashibira as this Loungefly Demon Slayer Pop! Pin. In the dark, Pop! Pin Inosuke Hashibira’s blue eyes glow! There’s a 1 in 12 chance you may find the flocked chase variant, which also has blue eyes that glow in the dark. Pin features molded details on the 3D swords, shiny silver-colored hardware, and a built-in stand. Enamel pin is approximately 4-inches tall."  
+  },
+
+  {
+    name: "Sasuke: Naruto Shippuden",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/6367_Naruto_Sasuke_POP_GLAM-WEB.png?v=1623080930",
+    size: "regular",
+    edition: "general",
+    description: "As one of the last surviving members of the Uchiha clan, Sasuke makes it his mission to avenge his people and becomes close friends with Naruto Uzumaki along the way. Your Naruto collection would not be complete without Pop! Sasuke standing beside Naruto. Collectible stands approximately 3.75-inches tall."  
+  },
+
+  {
+    name: "Pain: Naruto Shippuden",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/49807_Naruto_Pain_POP_GLAM-WEB.png?v=1615497181",
+    size: "regular",
+    edition: "general",
+    description: "Nagato sought to bring peace to a violent world, but ended up slipping down a dark path of trying to establish peace by force and taking on the name Pain. Add Pop! Pain to your Naruto: Shippuden collection so that Naruto can show him a better way to bring peace to the land. Vinyl figure is approximately 5-inches tall."  
+  },
+
+  {
+    name: "Kakashi: Naruto Shippuden",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/12450_Naruto_Kakashi_POP_GLAM-WEB.png?v=1611868656",
+    size: "regular",
+    edition: "general",
+    description: "Kakashi is a skilled and famed shinobi of Konoha. Bring Pop! Kakashi into your Naruto collection to help protect against another shinobi war within your collection’s ranks. Vinyl figure is approximately 5-inches tall."
+  },
+
+  {
+    name: "Naruto Uzumaki: Naruto Shippuden",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/1436_3266_8d784b0b61ea3a0_46626_Naruto_NarutoRunning_POP_GLAM-WEB.png?v=1615486607",
+    size: "regular",
+    edition: "general",
+    description: "Naruto is charging straight into your Naruto Shippuden set. Own your own Pop! Vinyl of Naruto in his iconic running stance. Collectible stands 3.75-inches tall." 
+  },
+
+  {
+    name: "Kurama: Naruto Shippuden",
+    category: "Anime",
+    price: "20",
+    imageUrl: "https://m.media-amazon.com/images/I/51TZ+IXxE7L.jpg",
+    size: "jumbo",
+    edition: "exclusive",
+    description: "Also known as the Nine-Tails, Kurama is a demon creature able to wield chakra to perform deadly attacks. This beast was sealed into Naruto Uzumaki but now is your chance to collect the creature for your Naruto collection as Super Pop! Kurama. Vinyl figure is 6-inches tall."
+  },
+
+  {
+    name: "Goku: Drago Ball Z",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FFunko-POP-Animation-Dragon-Ball%2Fdp%2FB07MZQ36RG&psig=AOvVaw1EugzZuYhf6kidplKgZ1_0&ust=1668688152980000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNiF6PbZsvsCFQAAAAAdAAAAABAG",
+    size: "regular",
+    edition: "general",
+    description: "As an infant, Goku was sent to destroy Earth but ended up becoming one of the planet's greatest heroes after a head injury rid the young Saiyan of his senselessly destructive nature. Your Dragon Ball Z collection wouldn't be the same without it's warrior protagonist, Goku, in Pop! form to protect it from attackers. Collectible stands approximately 3.75-inches tall."  
+  },
+
+  {
+    name: "Super Saiyan Goku: Drago Ball Z",
+    category: "Anime",
+    price: "15",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/48600_DragonBallZ_GokuSuperSaiyan_POP_GLAM-WEB.png?v=1604602489",
+    size: "regular",
+    edition: "exclusive",
+    description: "As an infant, Goku was sent to destroy Earth but ended up becoming one of the planet's greatest heroes after the young Saiyan was rid of his senselessly destructive nature. Your Dragon Ball Z collection wouldn't be the same without it's warrior protagonist Goku, in his first appearance in Super Saiyan form, as a Pop! to protect it from attackers. Vinyl figure is approximately 5-inches tall."  
+  },
+
+  {
+    name: "Aang with Momo: The Last Airbender",
+    category: "Anime",
+    price: "14",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/1436_4203_36463_Avatar_AangWithMomo_POP_WEB.png?v=1624918459",
+    size: "regular",
+    edition: "general",
+    description: "Aang was told he was the next Avatar at only 12 years old. While trying to flee, Aang was encased in ice and survived to be broken out after a century to restore balance to the world. Collect Pop! Aang and Momo to restore balance to your collection of Avatar: The Last Airbender. Vinyl figure is approximately 5.75-inches tall."  
+  },
+
+  {
+    name: "Haise Sasaki: Tokyo Ghoul:Re",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://media.gamestop.com/i/gamestop/11136189/Funko-POP-Animation-Tokyo-Ghoulre-Haise-Sasaki-Vinyl-Figure",
+    size: "regular",
+    edition: "limited",
+    description: "After being attacked Ken Kaneki is on the run and stuck between the worlds of humans and ghouls. Help Pop! Ken Kaneki, or Haise Sasaki, find where he belongs by adding him to your Tokyo Ghoul collection. Vinyl figure is approximately 3.75-inches tall."
+  },
+
+  {
     name: "Dr.Doom",
     category: "Marvel",
     price: "12.50",
