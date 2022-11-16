@@ -12,7 +12,7 @@ const Order = db.define('orders', {
   },
   orderStatus: {
     type: Sequelize.ENUM('Cart', 'Pending', 'Shipping', 'Complete'),
-    defaultValue: 'Cart'
+    defaultValue:'Cart'
   },
   shippingName: {
     type: Sequelize.STRING,

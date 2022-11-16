@@ -11,11 +11,11 @@ import { fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice'
 
 const PurchaseComplete = () => {
     const me = useSelector((state) => state.auth.me)
-    const dispatch = useDispatch();
-    useEffect(()=> {
+    const dispatch = useDispatch()
+    
     let userId=me.id
- dispatch(addOrder({userId}))
-    })
+  
+
     return (
         <>
         <div> Thank you for shopping with Funko Pop Shop!!</div>

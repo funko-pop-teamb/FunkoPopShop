@@ -23,16 +23,16 @@ const CheckOut = () => {
     const [zipCode, setZipCode] = useState('')
     const [paymentInfo, setPaymentInfo] = useState('')
 
-const handleSubmit=(evt)=>{
+const handleSubmit=async (evt)=>{
 evt.preventDefault()
 const orderId=cart.id
 const shippingAddress=streetAddress+" "+apt+" "+city+" "+state+" "+zipCode
 let orderStatus="Complete"
 let orderPrice=100
 dispatch(updateOrder({orderId, shippingAddress, orderStatus}))
-navigate('/cart/checkout/complete')
-// let userId=me.id
-// dispatch(addOrder({userId}))
+let userId=me.id
+await dispatch(addOrder({userId}))
+// navigate('/cart/checkout/complete')
 }
   return (
     <div>
