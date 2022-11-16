@@ -27,7 +27,7 @@ const Navbar = () => {
   //
   const funkos = useSelector(selectFunkoPops);
   const [sortType, setSortType] = useState("");
-  
+
   useEffect(() => {
     dispatch(filteredOrdersByStatus(id));
   }, []);
@@ -35,7 +35,7 @@ const Navbar = () => {
   //*add a handleChange instead to to handle onChange drop down menu??
   const handleChange = async (evt) => {
     evt.preventDefault();
-    setSortType({[evt.target.name]: evt.target.value});
+    setSortType({ [evt.target.name]: evt.target.value });
     // {[evt.target.name]: evt.target.value}
     // value={sortType.dropDown} name='dropDown'
 
@@ -61,46 +61,93 @@ const Navbar = () => {
   });
 
   return (
-    <div>
-      <nav>
-        {isLoggedIn ? (
-          <div>
-            {/* The navbar will show these links after you log in */}
-            <Link to="/home">Home</Link>
-            {/* <Link to='/funkoPops'>All Funko</Link> */}
-            <div>
-              <select id="search-bar" onChange={handleChange} value={sortType.dropDown} name='dropDown'>
-              <option value="default">
-                  -----
-                </option>
-                <option value="priceLow">
-                  Price Low to High
-                </option>
-                <option value="priceHigh">Price High to Low</option>
-                <option value="byName">A to Z</option>
-                <option value="mini">Minis</option>
-                <option value="regular">Regular</option>
-                <option value="jumbo">Jumbos</option>
-              </select>
+    <>
+      <div className="headerHome">
+        <center>
+          {" "}
+          <img
+            src="https://www.crystalcommerce.com/blog/wp-content/uploads/sites/2/2019/12/billboard_funko-pop-1024x264.jpg"
+            width={1400}
+            height={250}
+          />
+        </center>
+      </div>
+      <div>
+        <nav>
+          {isLoggedIn ? (
+            <div className="navBar">
+              {/* The navbar will show these links after you log in */}
+              <div className="navHome">
+                <Link to="/home">
+                  <img
+                    src="https://funkilandia.com/wp-content/uploads/2022/07/imagen_1.1.png"
+                    width={70}
+                    height={25}
+                  />
+                </Link>
+              </div>
+
+              <div className="navSelect">
+                <select
+                  id="search-bar"
+                  onChange={handleChange}
+                  value={sortType.dropDown}
+                  name="dropDown"
+                >
+                  <option value="default">-----</option>
+                  <option value="priceLow">Price Low to High</option>
+                  <option value="priceHigh">Price High to Low</option>
+                  <option value="byName">A to Z</option>
+                  <option value="mini">Minis</option>
+                  <option value="regular">Regular</option>
+                  <option value="jumbo">Jumbos</option>
+                </select>
+
+                <Link to="/account">Account</Link>
+                <Link to={`/cart/`}>Cart</Link>
+                <button type="button" onClick={logoutAndRedirectHome}>
+                  Logout
+                </button>
+              </div>
             </div>
-            <Link to={`/cart/`}>Cart</Link>
-            <Link to="/account">Account</Link>
-            <button type="button" onClick={logoutAndRedirectHome}>
-              Logout
-            </button>
-          </div>
-        ) : (
-          <div>
-            {/* The navbar will show these links before you log in */}
-            <Link to="/login">Login</Link>
-            <Link to="/signup">Sign Up</Link>
-            <Link to='/funkoPops'>All Funko</Link>
-            <Link to='/cart'>Cart</Link>
-          </div>
-        )}
-      </nav>
-      <hr />
-    </div>
+          ) : (
+            <div className="navBar">
+              {/* The navbar will show these links before you log in */}
+              <div className="navHome">
+              <Link to="/home">
+                  <img
+                    src="https://funkilandia.com/wp-content/uploads/2022/07/imagen_1.1.png"
+                    width={70}
+                    height={25}
+                  />
+                </Link>
+                <Link to="/signup">Sign Up</Link>
+              </div>
+
+              <div className="navSelect">
+                <select
+                  id="search-bar"
+                  onChange={handleChange}
+                  value={sortType.dropDown}
+                  name="dropDown"
+                >
+                  <option value="default">-----</option>
+                  <option value="priceLow">Price Low to High</option>
+                  <option value="priceHigh">Price High to Low</option>
+                  <option value="byName">A to Z</option>
+                  <option value="mini">Minis</option>
+                  <option value="regular">Regular</option>
+                  <option value="jumbo">Jumbos</option>
+                </select>
+
+                <Link to="/login">Login</Link>
+                <Link to="/cart">Cart</Link>
+              </div>
+            </div>
+          )}
+        </nav>
+      </div>
+    </>
   );
 };
 
