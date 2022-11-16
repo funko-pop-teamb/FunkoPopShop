@@ -57,7 +57,9 @@ const singleOrderWithFunkoPopSlice = createSlice({
       console.log(state)
       state.items.push(action.payload)
       localStorage.setItem('cart', JSON.stringify(state.items))
-    }
+    },
+
+    //need a removeFromLocalCart function
   },
   extraReducers: (builder) => {
     builder
