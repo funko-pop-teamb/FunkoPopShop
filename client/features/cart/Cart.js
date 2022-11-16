@@ -25,8 +25,9 @@ const Cart = () => {
 
     // const { userId, cartId } = useParams()
     useEffect(() => {
-        // dispatch(filteredOrdersByStatus(userId))
-        // dispatch(fetchAllCartFunkos(cartId))
+
+        dispatch(filteredOrdersByStatus(id))
+        dispatch(fetchAllCartFunkos(cartId))
 
     }, [])
 

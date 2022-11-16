@@ -13,6 +13,7 @@ const CheckOut = () => {
   const me = useSelector((state) => state.auth.me)
 
   const dispatch=useDispatch()
+  const navigate=useNavigate()
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [streetAddress, setStreetAddress] = useState('')
@@ -22,16 +23,16 @@ const CheckOut = () => {
     const [zipCode, setZipCode] = useState('')
     const [paymentInfo, setPaymentInfo] = useState('')
 
-const handleSubmit=(evt)=>{
+const handleSubmit=async (evt)=>{
 evt.preventDefault()
 const orderId=cart.id
 const shippingAddress=streetAddress+" "+apt+" "+city+" "+state+" "+zipCode
 let orderStatus="Complete"
 let orderPrice=100
 dispatch(updateOrder({orderId, shippingAddress, orderStatus}))
-
 let userId=me.id
-dispatch(addOrder({userId}))
+await dispatch(addOrder({userId}))
+// navigate('/cart/checkout/complete')
 }
   return (
     <div>

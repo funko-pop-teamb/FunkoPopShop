@@ -932,14 +932,12 @@ const Orders = [
     shippingAddress: "101 main street",
     orderStatus: "Cart",
     userId: 1,
-    id:1
   },
   {
     totalPrice: "100.00",
     shippingAddress: "123 main street",
     orderStatus: "Cart",
     userId: 2,
-    id:2
 
   },
   {
@@ -947,7 +945,6 @@ const Orders = [
     shippingAddress: "101 Red street",
     orderStatus: "Shipping",
     userId: 2,
-    id:3
 
   },
   {
@@ -955,8 +952,6 @@ const Orders = [
     shippingAddress: "123 First street",
     orderStatus: "Complete",
     userId: 2,
-    id:4
-
   },
 ]
 
@@ -983,40 +978,69 @@ const OrderDetails = [
   }
 ]
 
+// const users = [
+//   {
+//      username: "cody",
+//      userType: 'admin',
+//      password: "123",
+//      firstName: "Cody",
+//      lastName: "Wagner",
+//      email: "codyWagner@gmail.com",
+//    },
+//   {
+//      username: "murphy",
+//      userType: 'general',
+//      password: "123",
+//      firstName: "Murphy",
+//      lastName: "White",
+//      email: "murphyWhite@gmail.com",
+//    },
+//  ];
 
 /**
  * seed - this function clears the database, updates tables to
  *      match the models, and populates the database.
  */
+
+const funkoSeed=async ()=>{
+  await funkos.map(funko => {
+     FunkoPop.create(funko)
+ })
+}
+const orderSeed=async ()=>{
+  await Orders.map(Order => {
+
+     OrderDB.create(Order)
+
+     
+  })
+}
 async function seed() {
   await db.sync({ force: true }) // clears db and matches models to tables
   console.log('db synced!')
 
   // Creating Users
-  await Promise.all(funkos.map(funko => {
-    return FunkoPop.create(funko)
-  }))
+ 
+await funkoSeed()
 
-  const users = await Promise.all([
-    User.create({
+  const users = [
+   await User.create({
       username: "cody",
       userType: 'admin',
       password: "123",
       firstName: "Cody",
       lastName: "Wagner",
       email: "codyWagner@gmail.com",
-      id:1
     }),
-    User.create({
+   await  User.create({
       username: "murphy",
       userType: 'general',
       password: "123",
       firstName: "Murphy",
       lastName: "White",
       email: "murphyWhite@gmail.com",
-      id:2
     }),
-  ]);
+  ];
 
   await Promise.all(Orders.map(Order => {
 
