@@ -24,6 +24,7 @@ const CheckOut = () => {
     const [paymentInfo, setPaymentInfo] = useState('')
     const [paymentAmount, setPaymentAmount] = useState('')
 console.log(cart.totalPrice)
+
 const handleSubmit=async (evt)=>{
 evt.preventDefault()
 const orderId=cart.id
@@ -41,6 +42,21 @@ if (paymentAmount==cart.totalPrice){
 }
 }
   return (
+    <>
+    {items && items.length ? items.map((item) => (
+      <div >
+          <img src={item.FunkoPop.imageUrl} className='fImage' />
+          <div><Link to={`/funkoPops/${item.FunkoPop.id}`}> Name: {item.FunkoPop.name}</Link></div>
+          {/* <div> funkoPop Id: {item.FunkoPopId}</div> */}
+          <button onClick={(e) => removeOne(e, item)}>remove one</button>
+          <button onClick={(e) => removeAll(e, item)}>remove all</button>
+          <div> Qty: {item.quantity}</div>
+          <div> Price per item: {item.funkoPrice}</div>
+          <div> Total: {item.quantity * item.funkoPrice}</div>
+      </div>
+
+)) : null
+}
     <div>
      <form id="shipping-form" onSubmit={handleSubmit}>
       <div >Shipping Info:</div>
@@ -50,43 +66,43 @@ if (paymentAmount==cart.totalPrice){
           name="firstName"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
-        />
+          />
         <label htmlFor="lastName" className='formField'>Last Name:</label>
         <input
           name="lastName"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
-        />
+          />
         <label htmlFor="streetAddress" className='formField'>Street Address</label>
         <input
           name="streetAddress"
           value={streetAddress}
           onChange={(e) => setStreetAddress(e.target.value)}
-        />
+          />
         <label htmlFor="apt" className='formField'>Apt#,Floor, etc.:</label>
         <input
           name="apt"
           value={apt}
           onChange={(e) => setApt(e.target.value)}
-        />
+          />
         <label htmlFor="city" className='formField' >City:</label>
         <input
           name="city"
           value={city}
           onChange={(e) => setCity(e.target.value)}
-        />
+          />
          <label htmlFor="state" className='formField' >State:</label>
         <input
           name="state"
           value={state}
           onChange={(e) => setState(e.target.value)}
-        />
+          />
          <label htmlFor="zipCode" className='formField' >Zip Code:</label>
         <input
           name="zipCode"
           value={ zipCode}
           onChange={(e) => setZipCode(e.target.value)}
-        />
+          />
       </div>
 
       <label htmlFor="paymentInfo" className='formField' >Card Info:</label>
@@ -94,16 +110,17 @@ if (paymentAmount==cart.totalPrice){
           name="paymentInfo"
           value={paymentInfo}
           onChange={(e) => setPaymentInfo(e.target.value)}
-        />
+          />
          <label htmlFor="paymentAmount" className='formField' >Payment Amount:</label>
         <input
           name="paymentAmount"
           value={paymentAmount}
           onChange={(e) => setPaymentAmount(e.target.value)}
-        />
+          />
       <button type="submit" className='formField'>Submit Order</button>
     </form>
      </div>
+          </>
   );
 };
 
