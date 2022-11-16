@@ -68,7 +68,7 @@ const AllFunkos = () => {
     const addToCart = async (funko) => {
         if (!id) {
             const item = await dispatch(fetchSingleFunkoPop(funko.id))
-            await dispatch(addToLocalCart(item))
+            await dispatch(addToLocalCart(item.payload))
 
             // localStorage.setItem('cart', JSON.stringify(allItems))
             // let guestCart = JSON.parse(localStorage.getItem('cart'))
@@ -107,7 +107,7 @@ const AllFunkos = () => {
                         {/* <button onClick={()=>{qtyValueDecrease( funko)}} >-</button> QTY:{funko.qtyForCart} 
                         <button onClick={()=>{qtyValueIncrease( funko)}} >+</button> */}
 
-                        <button onClick={() => { addToCart(funko) }} >Add 1 to Cart</button>
+                        <button onClick={() => { addToCart(funko)} } >Add 1 to Cart</button>
                         {userType === 'admin' ? <button className='deleteF' type='button'
                             onClick={(event) => { handleDelete(funko.id) }}>Delete Funko</button> : null}
                     </div>
