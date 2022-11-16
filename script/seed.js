@@ -35,7 +35,7 @@ const funkos = [
 
   {
     name: "Kuromi (with Baku): Sanrio Collection",
-    category: "Disney",
+    category: "Anime",
     price: "14.90",
     imageUrl:
       "https://cdn.media.amplience.net/s/hottopic/18945338_hi?$productMainDesktopRetina$",
@@ -47,7 +47,7 @@ const funkos = [
 
   {
     name: "Games Lapras: Pokemon Collection",
-    category: "Disney",
+    category: "Anime",
     price: "12.90",
     imageUrl:
       "https://cdn.media.amplience.net/s/hottopic/17417633_hi?$productMainDesktopRetina$",
@@ -95,7 +95,7 @@ const funkos = [
 
   {
     name: "Pochacco: Sanrio Collection",
-    category: "Disney",
+    category: "Anime",
     price: "12.90",
     imageUrl:
       "https://cdn.media.amplience.net/s/hottopic/19426425_hi?$productMainDesktopRetina$",
@@ -107,7 +107,7 @@ const funkos = [
 
   {
     name: "Bisky: Hunter X Hunter Collection ",
-    category: "Disney",
+    category: "Anime",
     price: "12.90",
     imageUrl:
       "https://cdn.media.amplience.net/s/hottopic/17417605_hi?$productMainDesktopRetina$",
@@ -139,6 +139,247 @@ const funkos = [
     description:
       "Double the mud pie making fun with Pops! Phil and Lil Deville from Rugrats This exclusive 2-Pack of Pops! is here to help you make a delightfully terrific mess of your Pop! TV collection. Add some excitement and adventure to your Nickelodeon set. Vinyl figures are approximately 3.65-inches tall.",
   },
+
+  {
+    name: 'Sponge on the Run Squidward Tentacles: The SpongeBob Movie',
+    category: 'Disney',
+    price: '11.25',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/12803547_hi?$productMainDesktopRetina$',
+    size: 'regular',
+    edition: 'general',
+    description: 'Gary the Snail has been snailnapped by Poseidon! Go on the run with SpongeBob and his friends as he heads to the Lost City of Atlantic City to save his snail pal. This fun Funko-style Squidward Tentacles figure was created just for The SpongeBob Movie: Sponge On The Run. Add it to your collection today!',
+    },
+    
+    {
+    name: 'Sponge On The Run Patrick Star: The SpongeBob Movie',
+    category: 'Disney',
+    price: '11.25',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/12803523_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'general',
+    description: 'Gary the Snail has been snailnapped by Poseidon! Go on the run with SpongeBob and his friends as he heads to the Lost City of Atlantic City to save his snail pal. This fun Funko-style Patrick Star figure was created just for The SpongeBob Movie: Sponge On The Run. Add it to your collection today!',
+    },
+    
+    {
+    name: 'My Melody Ochaco: My Hero Academia X Hello Kitty',
+    category: 'TV',
+    price: '10.00',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/12651663_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'general',
+    description: 'Funko My Hero Academia X Hello Kitty And Friends Pop! My Melody Ochaco Vinyl Figure. The all new Sanrio Funko Pop! vinyl are here! BadtzMaru-Katsuki is here to join your collection! Here you can find the popular and classic My Melody mixed in with MHAs bubbly, lovable and funny Ochaco!'
+    },
+    
+    {
+    name: 'Holiday Stitch: Lilo & Stitch Collection',
+    category: 'Disney',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18538210_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Mele Kalikimaka from everyones favorite extraterrestrial experiment! Stitch is jumping into the holiday spirit as this Funko Soda figure. Dressed in Santas hat and clothes, Stitch waves hello as he embraces one of Earths most cherished traditions. If youre lucky, you may receive the chase of Stitch holding Lilos doll, Scrump!',
+    },
+    
+    {
+    name: 'Itchy & Scratchy (Skeleton): The Simpsons Halloween Collection ',
+    category: 'TV',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18049952_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Halloween just took a weird turn at the Simpsons household! Itchy and Scratchy have been transformed due to a Treehouse of Horror twist of events. Itchy is depicted holding a platter with a brain and Scratchy is depicted wearing a skeleton costume and pulling off his head. Get in the Halloween spirit and display Pop! Itchy & Scratchy on your shelf... if you dare!',
+    },
+    
+    {
+    name: 'Television Blue (Flocked): Nickelodeon Blues Clues',
+    category: 'TV',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/15848625_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Blue is back and still the cutest after all these years. Funko has given Steves bestie from Blues Clues a makeover as a fuzzy, flocked Pop! Add her to your collection today.',
+    },
+    
+    {
+    name: 'Belle: Princess Diamond Collection',
+    category: 'Disney',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/16260449_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Be our guest and add this Pop! to your Beauty and the Beast collection. It features a sparkly version of Belle reading a book.',
+    },
+    
+    {
+    name: 'Moment Lilo & Stitch In Hammock: Lilo and Stitch Collection',
+    category: 'Disney',
+    price: '32.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/17147922_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Kick back with your ohana. This Pop! Moment from Disney features Lilo and Stitch sitting in a hammock with Lilo playing the ukulele.',
+    },
+    
+    {
+    name: 'Bambi: Disney Classics Collection',
+    category: 'Disney',
+    price: '15.00',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18009431_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'general',
+    description: 'Funko Disney Classics Pop! Bambi Vinyl Figure Funko Summer Convention Exclusive. Is your Funko collection missing some woodland cuties? Pop! Bambi is here to prance his way onto your shelves! This vinyl figure depicts Bambi admiring a butterfly resting on his tail.',
+    },
+    
+    {
+    name: 'Hula Stitch: Lilo and Stitch Collection',
+    category: 'Disney',
+    price: '12.50',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/12165321_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Its time to boogie down with Stitch! Hula Stitch is here to bring sunshine and aloha to your collectibles shelf. He matches his bestie, Hula Lilo, perfectly now that hes been given the ultimate Funko Pop! makeover.',
+    },
+    
+    {
+    name: 'Penny: The Proud Family Collection',
+    category: 'TV',
+    price: '12.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/19149225_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Our queen Penny Proud has gotten a Funko makeover. Add her to your collectibles shelf today next to Dijonay and her dad, Oscar.',
+    },
+    
+    {
+    name: 'PhilharMagic Mickey Mouse: Disney Walt Disney World 50th Diamond Collection',
+    category: 'Disney',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/16260445_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Mickey is ready to conduct the PhilharMagic orchestra as this Pop! collectible. Bring Walt Disney World home with the new Walt Disney World Resort 50th Anniversary collection!',
+    },
+    
+    {
+    name: 'Suga Mama (With Puff): The Proud Family Collection',
+    category: 'TV',
+    price: '12.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/19149229_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'general',
+    description: 'Suga Mama and her beloved Puff have gotten a Funko makeover! Pennys grandma is here to watch over the rest of your The Proud Family: Louder And Prouder Pops',
+    },
+    
+    {
+    name: 'Luffy Kimono (Metallic): One Piece Collection',
+    category: 'Anime',
+    price: '12.50',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/14418972_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Greatest treasure on Earth? This Pop! vinyl figure from One Piece featuring Luffy in a kimono with a metallic finish.',
+    },
+    
+    {
+    name: 'My Melody: Sanrio Collection',
+    category: 'TV',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18049965_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Get ready to show off this exclusive Pop! My Melody figure at your next slumber party! My Melodys all ready for the sleepover too, and shes depicted in a sitting position while rocking her cutest slumber party outfit and wearing a bow covered in hearts.',
+    },
+    
+    {
+    name: 'True Heart Bear: Funko Care Bears 40th Anniversary Collection',
+    category: 'TV',
+    price: '12.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/19149237_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Its no lie—the truth is Pop! True Heart Bear wants to join your Pop! Animation collection to celebrate the 40th anniversary of Care Bears. With a message that truth shines from the inside, from the heart, Pop! True Heart Bear finds lots of beautiful ways to show she cares. If youre lucky, you may receive a translucent glitter chase variant.',
+    },
+    
+    {
+    name: 'Care-A-Lot Bear: Funko Care Bears 40th Anniversary Collection',
+    category: 'TV',
+    price: '12.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/19149235_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'The Caring Meter is set all the way to “rainbow” in the Kingdom of Caring. Take the sunshine with you and celebrate 40 years of Caring with this Care Bears 40th Anniversary Pop! Care-A-Lot Bear.  If youre lucky, you may receive a translucent glow-in-the-dark chase variant.',
+    },
+    
+    {
+    name: 'Wish Bear: Funko Care Bears 40th Anniversary Collection',
+    category: 'TV',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/16748980_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Make a wish! This Diamond Collection Pop! Wish Bear loves nothing more than to help you make it come true. And, at the top of this Pop! Wish Bears list is to join your Pop! Animation collection and help celebrate the Care Bears 40th anniversary. Pop! Wish Bear glitters and sparkles, especially for this occasion.',
+    },
+    
+    {
+    name: 'SpongeBob Weightlifter: SpongeBob Squarepants Collection',
+    category: 'Movie',
+    price: '12.50',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/14232474_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Make sure your collection is in top physical condition by adding this Pop! vinyl figure featuring SpongeBob lifting a stuffed animal barbell.',
+    },
+    
+    {
+    name: 'Cinnamoroll (Flocked): Sanrio Hello KItty Collection',
+    category: 'TV',
+    price: '15.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/19187480_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Sanrios plump puppy, Cinnamoroll, is the official mascot of Café Cinnamon and his cute curled tail looks similar to the sweet treat. Hes a bit shy but hes ready to join the Sanrio Unicorn Party collection. This version is flocked! Invite your sweet friend to join your set today.',
+    },
+    
+    {
+    name: 'Kaoru Hitachiin & Hikaru Hitachiin: Ouran High School Host Club Collection',
+    category: 'Anime',
+    price: '30.00',
+    imageUrl: 'https://cdn.media.amplience.net/i/hottopic/18837237_av2?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Lets all play the "Which one is Hikaru?" game! Think you can figure out which twin is which? Add your fave hosts to your Ouran High School Host Club collection! Kaoru and Hikaru Hitachiin have been given a Pop! makeover, and theyre ready to come home with you as a set.',
+    },
+    
+    {
+    name: 'Kyo With Cat: Fruit Basket Collection',
+    category: 'Anime',
+    price: '12.50',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/14065387_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Kyo in his human and his zodiac forms to add to your Fruits Basket collection with these stylized Pop!s from Funko. Just keep him away from your Yuki figures!'
+    },
+    
+    {
+    name: 'Mickey Mouse (Trick-Or-Treat): Disney Collection',
+    category: 'Disney',
+    price: '11.61',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18050791_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Fresh from the pumpkin patch, Pop! Mickey Mouse is ready to go trick-or-treating! Full of Halloween spirit, Mickey Mouse is depicted dressed in a jack-o-lantern costume. Add him as a sweet treat to your Disney set today!',
+    },
+    
+    {
+    name: 'Television Snail Lisa: The Simpsons Halloween Collection',
+    category: 'TV',
+    price: '11.61',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18050781_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Halloween just took a weird turn at the Simpsons household! Lisas been transformed due to a Treehouse of Horror twist of events. Shes depicted with an unamused expression on her face. Get in the Halloween spirit and display Pop! Snail Lisa on your shelf... if you dare!',
+    },
+    
   {
     name: "Geralt with Chase: Witcher",
     category: "Movies",
@@ -349,15 +590,15 @@ const funkos = [
   },
 
   {
-    name: "The Denom: Kiss",
+    name: "The Demon: Kiss",
     category: "Music Icons",
     price: "9.00",
     imageUrl:
-      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "https://m.media-amazon.com/images/I/41aOa6qV7CL._AC_SY580_.jpg",
     size: "mini",
     edition: "general",
     description:
-      "Invite Gene Simmons into your music collection with this Pop! of his KISS persona The Demon. Collectible stands approximately 3.75-inches tall.",
+      "Invite Gene Simmons into your music collection with this Pop! of his KISS persona The Demon. Collectible stands approximately 1.75-inches tall.",
   },
 
   {
@@ -392,6 +633,206 @@ const funkos = [
     edition: "exclusive",
     description:
       "Pop! figures bring your favorite characters to life with a unique stylized design. Each vinyl figure stands 3.75 inches tall and comes in window box packaging, making them great for display!",
+  },
+
+  {
+    name: "The Joker as Santa pin",
+    category: "DC Comics",
+    price: "15",
+    imageUrl: "https://bbts1.azureedge.net/images/p/full/2022/11/8f2f9401-328d-420a-9b6e-9b3f7be8c208.jpg",
+    size: "mini",
+    edition: "exclusive",
+    description: "Ready for a holiday surprise? The Joker™ has packed a bag full of tricks to share with the city of Gotham. Bring this festive fiend home to your DC collection as a Pop! Pin, and there’s a 1 in 12 chance you may find the textured chase! Enamel pin features shiny gold-colored hardware and a built-in stand. Pin is approximately 4-inches tall. Chase variants are shipped at random. Receiving a chase with purchase is not guaranteed."  
+  },
+
+  {
+    name: "Batman as Ebenezer Scrooge pin",
+    category: "DC Comics",
+    price: "15",
+    imageUrl: "https://media.entertainmentearth.com/assets/images/13f8d87d8eca4bbbb08690b75c84fd4cxl.jpg",
+    size: "mini",
+    edition: "exclusive",
+    description: "Spirits of past, present, or future are no match for Pop! Pin Batman, dressed as Ebenezer Scrooge. Display your holiday spirit, in superhero style with this Funko Loungefly Pop! pin. The Winged Crusader™ in Pop! pin form, wears his pajamas over his Batsuit and carries a candle to light the way. Expand your DC Comics set in festive holiday fashion. Enamel pin features gold-colored hardware and a built-in stand. Pin is approximately 4-inches tall."  
+  },
+
+  {
+    name: "The Flash Holiday Dash pin",
+    category: "DC Comics",
+    price: "15",
+    imageUrl: "https://media.entertainmentearth.com/assets/images/db91c814fb244225be875b7da0626bdaxl.jpg",
+    size: "mini",
+    edition: "exclusive",
+    description: "Dash through the snow with a heroic favorite! The Flash™ is saving the holiday season dressed in a festive version of his hero suit. Bring home The Flash Holiday Dash Pop! Pin to host some reindeer games in your DC Comics collection! Enamel pin features shiny gold-colored hardware and a built-in stand. Pin is approximately 4-inches tall."
+  },
+
+  {
+    name: "Holiday Harley Quinn pin",
+    category: "DC Comics",
+    price: "15",
+    imageUrl: "https://media.entertainmentearth.com/assets/images/a3eebc145ae945db8a3ffd0bca6fa222xl.jpg",
+    size: "mini",
+    edition: "exclusive",
+    description: "Crush the holiday rush with this Pop! Pin Harley Quinn, dressed in festive style, waiting for her Puddin’. Punch up your holiday look by displaying your DC Superheroes fandom with Loungefly Funko Pop! Pin flair. Enamel pin features gold-colored hardware and a built-in stand. Pin is approximately 4-inches tall." 
+  },
+
+  {
+    name: "Spike Spiegel: Cowboy Bebop",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/58024_Animation_CowboyBebop_SpikewWeaponSword_POP_GLAM-WEB.png?v=1660946842",
+    size: "regular",
+    edition: "limited",
+    description: "Your Cowboy Bebop collection is at risk of falling prey to toxic fridge monsters born of spoiled Ganymede rock lobsters. Call in Pop! Spike Spiegel, armed with a net gun and sword, to hunt down and collect the bounty on collection intruders. He may even accept a good meal as payment if you're out of Woolongs. Vinyl figure is approximately 4.12-inches tall." 
+  },
+
+  {
+    name: "Jet Black: Cowboy Bepop",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://media.entertainmentearth.com/assets/images/2e4f02f4bf974f4ead18153f6a13f75bxl.jpg",
+    size: "regular",
+    edition: "limited",
+    description: "Help your Cowboy Bebop collection find a moment of zen with Pop! Jet holding one of his beloved Bonsai in hand, perfectly pruned. No Cowboy Bebop collection is complete without Pop! Jet Black. Vinyl figure is approximately 3.9-inches tall. " 
+  },
+
+  {
+    name: "Faye Valentine: Cowboy Bepop",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://media.entertainmentearth.com/assets/images/062cf352d4584a9eaf29aa1197d25fcdxl.jpg",
+    size: "regular",
+    edition: "limited",
+    description:"Feeling full of herself, Faye breaks away from Spike and Jet to try an capture the bounty they're after for herself. Following a lead which takes her to an opera house, Faye can be found in a red dress in Session # 5 'Ballad of Fallen Angels' in Cowboy Bebop. Don’t miss your chance to capture this criminal for your Cowboy Bebop collection as Pop! Faye Valentine (Red Dress). Whether she stands alone in your collection or with the rest of the Bebop crew, you won’t want to miss your chance to collect this bounty. Vinyl figure is approximately 4.28-inches tall."
+  },
+
+  {
+    name: "Ed & Ein on Scooter: Cowboy Bepop",
+    category: "Anime",
+    price: "5",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/59469_Animation_CowboyBebop_Ed_Keychain_GLAM-WEB.png?v=1660946836",
+    size: "mini",
+    edition: "exclusive",
+    description: "Ed and Ein are on the go. With Ein the pup packed, Edward is pushing off to pursue your Cowboy Bebop collection in Pop! Keychain form. Act fast to catch this Welsh Corgi data dog and the oh-so-mysterious hacker, as Pop! Keychain Ed and Ein on Scooter for your Cowboy Bebop collection. Vinyl keychain is approximately 4-inches long."  
+  },
+
+  {
+    name: "Tanjiro Kamado: Demon Slayer",
+    category: "Anime",
+    price: "15",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/49010_DemonSlayer_TanjiroKamado_POP_GLAM-WEB.png?v=1621894597",
+    size: "jumbo",
+    edition: "exclusive",
+    description:''  
+  },
+
+  {
+    name: "Nezuko Kamado: Demon Slayer",
+    category: "Anime",
+    price: "15",
+    imageUrl: "https://i5.walmartimages.com/asr/4d79dec3-4b0f-4612-b527-cdd0d3500038.2361298d8ab221be6da33e029c89cc63.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+    size: "jumbo",
+    edition: "exclusive",
+    description: "Only two of the Kamado family survived a demon attack, and now Tanjiro and Nezuko are out for revenge. Expand your Demon Slayer collection with Pop! Nezuko Kamado. Vinyl figure is approximately 3.5-inches tall."  
+  },
+
+  {
+    name: "Inosuke Hashibira: Demon Slayer pin",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://s7.orientaltrading.com/is/image/OrientalTrading/PDP_VIEWER_IMAGE/funko-pop-pin-demon-slayer-inosuke-hashibira~14287653$NOWA$",
+    size: "mini",
+    edition: "limited",
+    description: "Sharpen your demon-slaying skills with Inosuke Hashibira as this Loungefly Demon Slayer Pop! Pin. In the dark, Pop! Pin Inosuke Hashibira’s blue eyes glow! There’s a 1 in 12 chance you may find the flocked chase variant, which also has blue eyes that glow in the dark. Pin features molded details on the 3D swords, shiny silver-colored hardware, and a built-in stand. Enamel pin is approximately 4-inches tall."  
+  },
+
+  {
+    name: "Sasuke: Naruto Shippuden",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/6367_Naruto_Sasuke_POP_GLAM-WEB.png?v=1623080930",
+    size: "regular",
+    edition: "general",
+    description: "As one of the last surviving members of the Uchiha clan, Sasuke makes it his mission to avenge his people and becomes close friends with Naruto Uzumaki along the way. Your Naruto collection would not be complete without Pop! Sasuke standing beside Naruto. Collectible stands approximately 3.75-inches tall."  
+  },
+
+  {
+    name: "Pain: Naruto Shippuden",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/49807_Naruto_Pain_POP_GLAM-WEB.png?v=1615497181",
+    size: "regular",
+    edition: "general",
+    description: "Nagato sought to bring peace to a violent world, but ended up slipping down a dark path of trying to establish peace by force and taking on the name Pain. Add Pop! Pain to your Naruto: Shippuden collection so that Naruto can show him a better way to bring peace to the land. Vinyl figure is approximately 5-inches tall."  
+  },
+
+  {
+    name: "Kakashi: Naruto Shippuden",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/12450_Naruto_Kakashi_POP_GLAM-WEB.png?v=1611868656",
+    size: "regular",
+    edition: "general",
+    description: "Kakashi is a skilled and famed shinobi of Konoha. Bring Pop! Kakashi into your Naruto collection to help protect against another shinobi war within your collection’s ranks. Vinyl figure is approximately 5-inches tall."
+  },
+
+  {
+    name: "Naruto Uzumaki: Naruto Shippuden",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/1436_3266_8d784b0b61ea3a0_46626_Naruto_NarutoRunning_POP_GLAM-WEB.png?v=1615486607",
+    size: "regular",
+    edition: "general",
+    description: "Naruto is charging straight into your Naruto Shippuden set. Own your own Pop! Vinyl of Naruto in his iconic running stance. Collectible stands 3.75-inches tall." 
+  },
+
+  {
+    name: "Kurama: Naruto Shippuden",
+    category: "Anime",
+    price: "20",
+    imageUrl: "https://m.media-amazon.com/images/I/51TZ+IXxE7L.jpg",
+    size: "jumbo",
+    edition: "exclusive",
+    description: "Also known as the Nine-Tails, Kurama is a demon creature able to wield chakra to perform deadly attacks. This beast was sealed into Naruto Uzumaki but now is your chance to collect the creature for your Naruto collection as Super Pop! Kurama. Vinyl figure is 6-inches tall."
+  },
+
+  {
+    name: "Goku: Drago Ball Z",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FFunko-POP-Animation-Dragon-Ball%2Fdp%2FB07MZQ36RG&psig=AOvVaw1EugzZuYhf6kidplKgZ1_0&ust=1668688152980000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNiF6PbZsvsCFQAAAAAdAAAAABAG",
+    size: "regular",
+    edition: "general",
+    description: "As an infant, Goku was sent to destroy Earth but ended up becoming one of the planet's greatest heroes after a head injury rid the young Saiyan of his senselessly destructive nature. Your Dragon Ball Z collection wouldn't be the same without it's warrior protagonist, Goku, in Pop! form to protect it from attackers. Collectible stands approximately 3.75-inches tall."  
+  },
+
+  {
+    name: "Super Saiyan Goku: Drago Ball Z",
+    category: "Anime",
+    price: "15",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/48600_DragonBallZ_GokuSuperSaiyan_POP_GLAM-WEB.png?v=1604602489",
+    size: "regular",
+    edition: "exclusive",
+    description: "As an infant, Goku was sent to destroy Earth but ended up becoming one of the planet's greatest heroes after the young Saiyan was rid of his senselessly destructive nature. Your Dragon Ball Z collection wouldn't be the same without it's warrior protagonist Goku, in his first appearance in Super Saiyan form, as a Pop! to protect it from attackers. Vinyl figure is approximately 5-inches tall."  
+  },
+
+  {
+    name: "Aang with Momo: The Last Airbender",
+    category: "Anime",
+    price: "14",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/1436_4203_36463_Avatar_AangWithMomo_POP_WEB.png?v=1624918459",
+    size: "regular",
+    edition: "general",
+    description: "Aang was told he was the next Avatar at only 12 years old. While trying to flee, Aang was encased in ice and survived to be broken out after a century to restore balance to the world. Collect Pop! Aang and Momo to restore balance to your collection of Avatar: The Last Airbender. Vinyl figure is approximately 5.75-inches tall."  
+  },
+
+  {
+    name: "Haise Sasaki: Tokyo Ghoul:Re",
+    category: "Anime",
+    price: "12",
+    imageUrl: "https://media.gamestop.com/i/gamestop/11136189/Funko-POP-Animation-Tokyo-Ghoulre-Haise-Sasaki-Vinyl-Figure",
+    size: "regular",
+    edition: "limited",
+    description: "After being attacked Ken Kaneki is on the run and stuck between the worlds of humans and ghouls. Help Pop! Ken Kaneki, or Haise Sasaki, find where he belongs by adding him to your Tokyo Ghoul collection. Vinyl figure is approximately 3.75-inches tall."
   },
 
   {
@@ -478,8 +919,187 @@ const funkos = [
       "Iron Man Mark 43 from Avengers Age of Ultron Figure stands approximately 10-inches tall Glows in the dark",
 
 
-  }
-
+  },
+  {
+  name: 'Green Lantern - Parallax Hal Jordan',
+    category: 'DC Comics',
+    price: '12.50', 
+imageUrl:'https://www.coleka.com/media/item/202208/30/pop-digital-new-item-003.webp',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'This Funko action figure Green Lantern - Parallax Hal Jordan is part of the POP! Digital series which currently counts 115 action figures. It is known under the reference number 82. This POP represents the character Green Lantern, Hal Jordan. It was released in 2022.'
+  },
+ {
+name: 'Deku',
+    category: 'Anime',
+    price: '12.50', 
+imageUrl:'https://i5.walmartimages.com/asr/212aa6be-a895-4dae-9913-8824c6f88169_1.c704e3521199caac6f8d1c5885e7fc69.jpeg',
+    size: 'regular',
+    edition: 'general',
+    description: 'Before Izuku Midoriya gets ready to take on the Provisional Hero License Exam, he must first make some upgrades to his costume with the help of Mei Hatsume! As seen in season 3 of My Hero Academia, Deku is ready to do his best with his new Pop! Makeover.',
+ },
+ {
+name: 'Shota',
+    category: 'Anime',
+    price: '30.00', 
+imageUrl:'https://i5.walmartimages.com/asr/ed33b50c-c1ae-432e-bf14-f84cd1e049d1.6a8345f81a1b9b953d4ece06571b6d86.jpeg?odnHeight=80&odnWidth=80&odnBg=FFFFFF' ,  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko Pop My Hero Academia: Hero Costume Shota Collectible Figure, Multicolor.'
+ },
+   {
+name: 'Ochaco',
+    category: 'Anime',
+    price: '15.00', 
+imageUrl:'https://i5.walmartimages.com/asr/a5a4491d-a3bd-4bb5-a508-0ee089cea5c3_4.099f8221958e60c9773189d6aed47089.jpeg?odnHeight=80&odnWidth=80&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'general',
+    description: 'Funko POP Anime: My Hero Academia - Ochako'
+   },
+   {
+name: 'All-Might ',
+    category: 'Anime',
+    price: '15.00', 
+imageUrl:'https://i5.walmartimages.com/asr/7a7abe72-5d2c-4833-b46d-f660250802a8_1.60301eeeef3192d0288afe6360c0eaaf.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF',
+ size: 'regular',
+    edition: 'general',
+    description: 'FUNKO POP! ANIMATION: MY HERO ACADEMIA - ALL MIGHT'
+   },
+   {
+name: 'Todoroki',
+    category: 'Anime',
+    price: '20.00', 
+imageUrl:'https://i5.walmartimages.com/asr/16716225-8188-47ec-aefd-1f979dd21df8.22739fee0ea16ef2dddc42c0f4112107.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF', 
+ size: 'regular',
+    edition: 'general',
+    description: 'This is the My Hero Academia Funko POP Animation Todoroki Vinyl Figure. A rare variant of an excellent character. Add to your collection today.',
+   },
+   {
+name: 'Beerus',
+    category: 'Anime',
+    price: '40.00', 
+imageUrl:'https://i5.walmartimages.com/asr/ee711660-c1e3-4282-8a7a-7ded202fbfa0.e48d6d8d32bf207b26bb93cd3d7dad96.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko Dragon Ball Super Pop! Animation Beerus (Eating Noodles) Vinyl Figure Exclusive'
+   },
+{
+name: 'Vegeta',
+    category: 'Anime',
+    price: '16.00', 
+imageUrl:'https://i5.walmartimages.com/asr/f65e7b37-8afe-4933-8db0-9215b18e8e9f_1.19a493a4221be34652aef7aa8173e086.png?odnHeight=80&odnWidth=80&odnBg=FFFFFF',   
+ size: 'regular',
+    edition: 'general',
+    description: 'POP Animation: DBZ S7 - Training Vegeta'
+},
+{
+name: 'Frieza',
+    category: 'Anime',
+    price: '12.00', 
+imageUrl:'https://i5.walmartimages.com/asr/a6057e29-60e2-4435-b2af-439feb77a21b.8f435e86186acea7fbfdbe5a503db761.png',  
+ size: 'regular',
+    edition: 'general',
+    description: 'Funko POP! Animation: Dragon Ball Z S8 - Frieza 100% Final Form'
+},
+{
+name: 'Super Sayian blue Goku',
+    category: 'Anime',
+    price: '16.00', 
+imageUrl:'https://i5.walmartimages.com/asr/1c36a171-7725-436c-b2ff-260b713615ff_1.ab7dab70c3bc1483d878dc1e0ec0a927.jpeg', 
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko POP! Animation Dragon Ball Super SSGSS Metallic Goku Exclusive'
+},
+{
+name: 'Daredevil',
+    category: 'Marvel',
+    price: '16.00', 
+imageUrl:'https://m.media-amazon.com/images/I/51ADNjJ9KgL._AC_SY355_.jpg', 
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'POP Marvel: Daredevil- Daredevil (Action Pose)'
+},
+{
+name: 'Carnage',
+    category: 'Marvel',
+    price: '17.50', 
+imageUrl:'https://i5.walmartimages.com/asr/03f51912-4b99-4d8b-8cf1-ce4dbcffec8c.1a825a82be1d7b6dbfaba9b141842a0d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Bring your favorite Marvel villain into your Spider-Man collection with this split Pop! of Carnage.',
+},
+{
+name: 'Miles Morales',
+    category: 'Marvel',
+    price: '19.50', 
+imageUrl:'https://i5.walmartimages.com/asr/6e14b460-5057-41a5-b93f-fc76f6c97e7e.320756c9b1cc0c29690f464e1fee4b99.png',  
+ size: 'regular',
+    edition: 'general',
+    description: 'A true original! Marvel’s Pop! Spider-Man Miles Morales is ready for action in his Classic Suit! Theres a 1 in 6 chance you may find the chase variant of Miles without his mask. Vinyl bobblehead is approximately 4.15-inches tall. Please note: Chase variants are shipped at random. Receiving a chase with purchase is not guaranteed.',
+},
+{
+name: 'The Mandalorian',
+    category: 'Star Wars',
+    price: '19.50', 
+imageUrl:'https://i5.walmartimages.com/asr/ea12c776-62e8-455c-a7b6-747544a3d84c.b7c967ca46551a7588bf17aa0fc7060d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',   
+ size: 'regular',
+    edition: 'general',
+    description: 'This Star Wars The Mandalorian with Child Flying Pop! Vinyl Figure measures approximately 3 3/4-inches tall and is now back in stock at Boxed Vinyl. This Funko Pop! comes packaged in a window display box.',
+},
+{
+name: 'Darth Maul',
+    category: 'Star Wars',
+    price: '14.50', 
+imageUrl:'https://i5.walmartimages.com/asr/ea31e625-e6e9-4e12-a9f8-32e556ce9d16.9b004be6da58eb7984b48a14e5ef7ee4.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'general',
+    description: 'Funko POP! Star Wars: Clone Wars - Darth Maul',
+},
+{
+name: 'Dr.Fate',
+    category: 'DC Comics',
+    price: '16.50', 
+imageUrl:'https://i5.walmartimages.com/asr/ad409a01-1089-4fc6-a0b3-3af39cab7b8d.d31c46c60a8bd4cf5e7decfa3ec4be77.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF',   
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko POP! Heroes DC Justice League Doctor Fate #395 Exclusive',
+},
+{
+name: 'Grogu',
+    category: 'Star Wars',
+    price: '14.50', 
+imageUrl:'https://i5.walmartimages.com/asr/9f04cc25-5dde-44c3-a1fa-11ff21f3f1ef.d89f05e70ac359d177a61bbc7adc93b9.png',  
+ size: 'regular',
+    edition: 'general',
+    description: 'A Mando Pop! pick. The Mandalorian The Child with Cookie Pop! Vinyl Figure measures approximately 3 3/4-inches tall.',
+},
+{
+name: 'Retro Darth Vader',
+    category: 'Star Wars',
+    price: '25.50', 
+imageUrl:'https://i5.walmartimages.com/asr/5d38d04e-cb75-43d0-89db-1706b866977a.00044fd819e7314c77e710b4c51511f3.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'This special series of STAR WARS™ Pops! is based on retro comic book art of the spectacular space saga. Bring home a piece of the stellar series with the exclusive Pop! Darth Vader. Vinyl bobblehead is approximately 4.5-inches tall. Share what you got!',
+},
+{
+name: 'Jawa',
+    category: 'Star Wars',
+    price: '21.50', 
+imageUrl:'https://i5.walmartimages.com/asr/8cb80b17-8018-4750-9633-5ccf28f61cdc_1.0123d013c2f9500b5efbf1c32452329c.png',  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko POP! Star Wars: The Mandalorian - Offworld Jawa',
+},
+{
+name: 'Star Fire',
+    category: 'DC Comics',
+    price: '35.50', 
+imageUrl:'https://i5.walmartimages.com/asr/5faf9578-01a4-4d87-b16e-f7b30404b29c.18cfe7784babf455f03e8bf4bf37bbb0.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko Justice League POP! Marvel Starfire Exclusive Vinyl Bobble Head #438',
+}
 
 
 
@@ -487,95 +1107,115 @@ const funkos = [
 
 const Orders = [
   {
-    totalPrice: "30.00",
+    totalPrice: "100.00",
     shippingAddress: "101 main street",
-    orderStatus: "Pending",
+    orderStatus: "Cart",
     userId: 1,
-    id:1
   },
   {
     totalPrice: "100.00",
     shippingAddress: "123 main street",
     orderStatus: "Cart",
     userId: 2,
-    id:2
 
   },
-  {
-    totalPrice: "24.00",
-    shippingAddress: "101 Red street",
-    orderStatus: "Shipping",
-    userId: 2,
-    id:3
-
-  },
-  {
-    totalPrice: "50.00",
-    shippingAddress: "123 First street",
-    orderStatus: "Complete",
-    userId: 2,
-    id:4
-
-  },
+  
 ]
 
 const OrderDetails = [
   {
     orderId: 1,
-    FunkoPopId: 1,
+    FunkoPopId: 60,
     quantity: 2,
     funkoPrice: 15,
+    userId:1
+  },
+  {
+    orderId: 1,
+    FunkoPopId: 85,
+    quantity: 1,
+    funkoPrice: 70,
+    userId:1
   },
   {
     orderId: 2,
-    FunkoPopId: 24,
+    FunkoPopId: 45,
     quantity: 2,
     funkoPrice: 20,
-    FunkoPopId: 24
+    userId:2
   },
   {
     orderId: 2,
-    FunkoPopId: 25,
+    FunkoPopId: 49,
     quantity: 3,
     funkoPrice: 20,
-    FunkoPopId: 25
+    userId:2
   }
 ]
 
+// const users = [
+//   {
+//      username: "cody",
+//      userType: 'admin',
+//      password: "123",
+//      firstName: "Cody",
+//      lastName: "Wagner",
+//      email: "codyWagner@gmail.com",
+//    },
+//   {
+//      username: "murphy",
+//      userType: 'general',
+//      password: "123",
+//      firstName: "Murphy",
+//      lastName: "White",
+//      email: "murphyWhite@gmail.com",
+//    },
+//  ];
 
 /**
  * seed - this function clears the database, updates tables to
  *      match the models, and populates the database.
  */
+
+const funkoSeed=async ()=>{
+  await funkos.map(funko => {
+     FunkoPop.create(funko)
+ })
+}
+const orderSeed=async ()=>{
+  await Orders.map(Order => {
+
+     OrderDB.create(Order)
+
+     
+  })
+}
 async function seed() {
   await db.sync({ force: true }) // clears db and matches models to tables
   console.log('db synced!')
 
   // Creating Users
-  await Promise.all(funkos.map(funko => {
-    return FunkoPop.create(funko)
-  }))
+ 
+await funkoSeed()
 
-  const users = await Promise.all([
-    User.create({
+  const users = [
+   await User.create({
       username: "cody",
       userType: 'admin',
       password: "123",
       firstName: "Cody",
       lastName: "Wagner",
       email: "codyWagner@gmail.com",
-      id:1
     }),
-    User.create({
+   await  User.create({
       username: "murphy",
       userType: 'general',
       password: "123",
       firstName: "Murphy",
       lastName: "White",
       email: "murphyWhite@gmail.com",
-      id:2
     }),
-  ]);
+  ];
 
   await Promise.all(Orders.map(Order => {
 
