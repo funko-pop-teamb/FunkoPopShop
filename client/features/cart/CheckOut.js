@@ -26,6 +26,9 @@ const CheckOut = () => {
 console.log(cart.totalPrice)
 
 const handleSubmit=async (evt)=>{
+  if(!me.id) {
+  navigate('/cart/checkout/complete')
+ }
 evt.preventDefault()
 const orderId=cart.id
 const shippingAddress=streetAddress+" "+apt+" "+city+" "+state+" "+zipCode

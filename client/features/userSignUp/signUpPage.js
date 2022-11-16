@@ -29,9 +29,6 @@ const SignUp = () => {
         await dispatch(
             postUser({ firstName, lastName, username, password, email })
         )
-        // await dispatch(
-        //     addOrder({ orderStatus, userId, shippingAddress, totalPrice })
-        // )
         navigate('/login')
     }
 
