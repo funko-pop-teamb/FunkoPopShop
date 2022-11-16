@@ -115,7 +115,6 @@ const Cart = () => {
                             <div><Link to={`/funkoPops/${store.id}`}> Name: {store.name}</Link></div>
                             {/*<div> funkoPop Id: {store.id}</div>*/}
                             <button value={store.id} onClick={(e) => removeOne(e, store)}>remove one</button>
-                            <button onClick={(e) => removeAll(e, store)}>remove all</button>
                             <div> Qty: {store.qtyForCart}</div>
                             <div> Price per item: {store.price}</div>
                             <div> Total: {store.qtyForCart * store.price}</div>
