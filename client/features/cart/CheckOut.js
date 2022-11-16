@@ -60,6 +60,7 @@ if (paymentAmount==cart.totalPrice){
 
 )) : null
 }
+<div>Total Price: {cart.totalPrice}</div>
     <div>
      <form id="shipping-form" onSubmit={handleSubmit}>
       <div >Shipping Info:</div>

@@ -29,7 +29,6 @@ const Navbar = () => {
   //
   const funkos = useSelector(selectFunkoPops);
   const [sortType, setSortType] = useState("");
-
   useEffect(() => {
   }, []);
 
@@ -61,8 +60,9 @@ const Navbar = () => {
     return state.cart.cart.id;
   });
 
-  return (
+  
 
+return (
     <>
       <div className="headerHome">
         <center>

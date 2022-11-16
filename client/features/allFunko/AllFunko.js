@@ -13,6 +13,7 @@ const AllFunkos = () => {
     let funkos = useSelector((state) => state.allFunkoPops)
     const cart = useSelector((state) => state.cart.cart)
     const items = useSelector((state) => state.cart.items)
+    const [search,setSearch]=useState('')
 
     const { userType, id, firstName, lastName, email, username } = useSelector((state) => state.auth.me)
     const isLoggedIn = useSelector((state) => { return state.auth.me.id })
@@ -46,9 +47,6 @@ const AllFunkos = () => {
         await dispatch(fetchFunkoPops())
     }
    
-
-console.log("*******"+orderId)
-
      //const allItems = []
     const addToCart = async (funko) => {
         if (!id) {
@@ -80,11 +78,19 @@ console.log("*******"+orderId)
             await dispatch(fetchAllCartFunkos(orderId))
         }
     }
-
+    const handleSearch= (e)=>{
+        e.preventDefault()
+         funkos.filter( (funko)=>{
+            funko.name.includes(search)
+    //  Object.values(funko).includes(search)   
+     })
+     console.log(funkos)
+    }
     return (
         <>
-
             <h1 className='header'>Funko Gallery</h1>
+            <input type="text" value={search} onChange={(e)=>{setSearch(e.target.value)}} placeholder="Search..."></input>
+            <button onClick={(e)=>handleSearch(e)}>Search</button>
             <div className='allFunkos'>
                 {funkos.map((funko) => (
                     <div key={funko.id} className='fCard'>
