@@ -139,6 +139,247 @@ const funkos = [
     description:
       "Double the mud pie making fun with Pops! Phil and Lil Deville from Rugrats This exclusive 2-Pack of Pops! is here to help you make a delightfully terrific mess of your Pop! TV collection. Add some excitement and adventure to your Nickelodeon set. Vinyl figures are approximately 3.65-inches tall.",
   },
+
+  {
+    name: 'Sponge on the Run Squidward Tentacles: The SpongeBob Movie',
+    category: 'Disney',
+    price: '11.25',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/12803547_hi?$productMainDesktopRetina$',
+    size: 'regular',
+    edition: 'general',
+    description: 'Gary the Snail has been snailnapped by Poseidon! Go on the run with SpongeBob and his friends as he heads to the Lost City of Atlantic City to save his snail pal. This fun Funko-style Squidward Tentacles figure was created just for The SpongeBob Movie: Sponge On The Run. Add it to your collection today!',
+    },
+    
+    {
+    name: 'Sponge On The Run Patrick Star: The SpongeBob Movie',
+    category: 'Disney',
+    price: '11.25',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/12803523_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'general',
+    description: 'Gary the Snail has been snailnapped by Poseidon! Go on the run with SpongeBob and his friends as he heads to the Lost City of Atlantic City to save his snail pal. This fun Funko-style Patrick Star figure was created just for The SpongeBob Movie: Sponge On The Run. Add it to your collection today!',
+    },
+    
+    {
+    name: 'My Melody Ochaco: My Hero Academia X Hello Kitty',
+    category: 'TV',
+    price: '10.00',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/12651663_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'general',
+    description: 'Funko My Hero Academia X Hello Kitty And Friends Pop! My Melody Ochaco Vinyl Figure. The all new Sanrio Funko Pop! vinyl are here! BadtzMaru-Katsuki is here to join your collection! Here you can find the popular and classic My Melody mixed in with MHAs bubbly, lovable and funny Ochaco!'
+    },
+    
+    {
+    name: 'Holiday Stitch: Lilo & Stitch Collection',
+    category: 'Disney',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18538210_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Mele Kalikimaka from everyones favorite extraterrestrial experiment! Stitch is jumping into the holiday spirit as this Funko Soda figure. Dressed in Santas hat and clothes, Stitch waves hello as he embraces one of Earths most cherished traditions. If youre lucky, you may receive the chase of Stitch holding Lilos doll, Scrump!',
+    },
+    
+    {
+    name: 'Itchy & Scratchy (Skeleton): The Simpsons Halloween Collection ',
+    category: 'TV',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18049952_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Halloween just took a weird turn at the Simpsons household! Itchy and Scratchy have been transformed due to a Treehouse of Horror twist of events. Itchy is depicted holding a platter with a brain and Scratchy is depicted wearing a skeleton costume and pulling off his head. Get in the Halloween spirit and display Pop! Itchy & Scratchy on your shelf... if you dare!',
+    },
+    
+    {
+    name: 'Television Blue (Flocked): Nickelodeon Blues Clues',
+    category: 'TV',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/15848625_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Blue is back and still the cutest after all these years. Funko has given Steves bestie from Blues Clues a makeover as a fuzzy, flocked Pop! Add her to your collection today.',
+    },
+    
+    {
+    name: 'Belle: Princess Diamond Collection',
+    category: 'Disney',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/16260449_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Be our guest and add this Pop! to your Beauty and the Beast collection. It features a sparkly version of Belle reading a book.',
+    },
+    
+    {
+    name: 'Moment Lilo & Stitch In Hammock: Lilo and Stitch Collection',
+    category: 'Disney',
+    price: '32.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/17147922_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Kick back with your ohana. This Pop! Moment from Disney features Lilo and Stitch sitting in a hammock with Lilo playing the ukulele.',
+    },
+    
+    {
+    name: 'Bambi: Disney Classics Collection',
+    category: 'Disney',
+    price: '15.00',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18009431_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'general',
+    description: 'Funko Disney Classics Pop! Bambi Vinyl Figure Funko Summer Convention Exclusive. Is your Funko collection missing some woodland cuties? Pop! Bambi is here to prance his way onto your shelves! This vinyl figure depicts Bambi admiring a butterfly resting on his tail.',
+    },
+    
+    {
+    name: 'Hula Stitch: Lilo and Stitch Collection',
+    category: 'Disney',
+    price: '12.50',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/12165321_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Its time to boogie down with Stitch! Hula Stitch is here to bring sunshine and aloha to your collectibles shelf. He matches his bestie, Hula Lilo, perfectly now that hes been given the ultimate Funko Pop! makeover.',
+    },
+    
+    {
+    name: 'Penny: The Proud Family Collection',
+    category: 'TV',
+    price: '12.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/19149225_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Our queen Penny Proud has gotten a Funko makeover. Add her to your collectibles shelf today next to Dijonay and her dad, Oscar.',
+    },
+    
+    {
+    name: 'PhilharMagic Mickey Mouse: Disney Walt Disney World 50th Diamond Collection',
+    category: 'Disney',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/16260445_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Mickey is ready to conduct the PhilharMagic orchestra as this Pop! collectible. Bring Walt Disney World home with the new Walt Disney World Resort 50th Anniversary collection!',
+    },
+    
+    {
+    name: 'Suga Mama (With Puff): The Proud Family Collection',
+    category: 'TV',
+    price: '12.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/19149229_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'general',
+    description: 'Suga Mama and her beloved Puff have gotten a Funko makeover! Pennys grandma is here to watch over the rest of your The Proud Family: Louder And Prouder Pops',
+    },
+    
+    {
+    name: 'Luffy Kimono (Metallic): One Piece Collection',
+    category: 'Anime',
+    price: '12.50',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/14418972_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Greatest treasure on Earth? This Pop! vinyl figure from One Piece featuring Luffy in a kimono with a metallic finish.',
+    },
+    
+    {
+    name: 'My Melody: Sanrio Collection',
+    category: 'TV',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18049965_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Get ready to show off this exclusive Pop! My Melody figure at your next slumber party! My Melodys all ready for the sleepover too, and shes depicted in a sitting position while rocking her cutest slumber party outfit and wearing a bow covered in hearts.',
+    },
+    
+    {
+    name: 'True Heart Bear: Funko Care Bears 40th Anniversary Collection',
+    category: 'TV',
+    price: '12.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/19149237_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Its no lie—the truth is Pop! True Heart Bear wants to join your Pop! Animation collection to celebrate the 40th anniversary of Care Bears. With a message that truth shines from the inside, from the heart, Pop! True Heart Bear finds lots of beautiful ways to show she cares. If youre lucky, you may receive a translucent glitter chase variant.',
+    },
+    
+    {
+    name: 'Care-A-Lot Bear: Funko Care Bears 40th Anniversary Collection',
+    category: 'TV',
+    price: '12.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/19149235_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'The Caring Meter is set all the way to “rainbow” in the Kingdom of Caring. Take the sunshine with you and celebrate 40 years of Caring with this Care Bears 40th Anniversary Pop! Care-A-Lot Bear.  If youre lucky, you may receive a translucent glow-in-the-dark chase variant.',
+    },
+    
+    {
+    name: 'Wish Bear: Funko Care Bears 40th Anniversary Collection',
+    category: 'TV',
+    price: '14.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/16748980_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Make a wish! This Diamond Collection Pop! Wish Bear loves nothing more than to help you make it come true. And, at the top of this Pop! Wish Bears list is to join your Pop! Animation collection and help celebrate the Care Bears 40th anniversary. Pop! Wish Bear glitters and sparkles, especially for this occasion.',
+    },
+    
+    {
+    name: 'SpongeBob Weightlifter: SpongeBob Squarepants Collection',
+    category: 'Movie',
+    price: '12.50',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/14232474_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Make sure your collection is in top physical condition by adding this Pop! vinyl figure featuring SpongeBob lifting a stuffed animal barbell.',
+    },
+    
+    {
+    name: 'Cinnamoroll (Flocked): Sanrio Hello KItty Collection',
+    category: 'TV',
+    price: '15.90',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/19187480_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Sanrios plump puppy, Cinnamoroll, is the official mascot of Café Cinnamon and his cute curled tail looks similar to the sweet treat. Hes a bit shy but hes ready to join the Sanrio Unicorn Party collection. This version is flocked! Invite your sweet friend to join your set today.',
+    },
+    
+    {
+    name: 'Kaoru Hitachiin & Hikaru Hitachiin: Ouran High School Host Club Collection',
+    category: 'Anime',
+    price: '30.00',
+    imageUrl: 'https://cdn.media.amplience.net/i/hottopic/18837237_av2?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Lets all play the "Which one is Hikaru?" game! Think you can figure out which twin is which? Add your fave hosts to your Ouran High School Host Club collection! Kaoru and Hikaru Hitachiin have been given a Pop! makeover, and theyre ready to come home with you as a set.',
+    },
+    
+    {
+    name: 'Kyo With Cat: Fruit Basket Collection',
+    category: 'Anime',
+    price: '12.50',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/14065387_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Kyo in his human and his zodiac forms to add to your Fruits Basket collection with these stylized Pop!s from Funko. Just keep him away from your Yuki figures!'
+    },
+    
+    {
+    name: 'Mickey Mouse (Trick-Or-Treat): Disney Collection',
+    category: 'Disney',
+    price: '11.61',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18050791_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Fresh from the pumpkin patch, Pop! Mickey Mouse is ready to go trick-or-treating! Full of Halloween spirit, Mickey Mouse is depicted dressed in a jack-o-lantern costume. Add him as a sweet treat to your Disney set today!',
+    },
+    
+    {
+    name: 'Television Snail Lisa: The Simpsons Halloween Collection',
+    category: 'TV',
+    price: '11.61',
+    imageUrl: 'https://cdn.media.amplience.net/s/hottopic/18050781_hi?$productMainTabletRetina$',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'Halloween just took a weird turn at the Simpsons household! Lisas been transformed due to a Treehouse of Horror twist of events. Shes depicted with an unamused expression on her face. Get in the Halloween spirit and display Pop! Snail Lisa on your shelf... if you dare!',
+    },
+    
   {
     name: "Geralt with Chase: Witcher",
     category: "Movies",
@@ -691,14 +932,12 @@ const Orders = [
     shippingAddress: "101 main street",
     orderStatus: "Cart",
     userId: 1,
-    id:1
   },
   {
     totalPrice: "100.00",
     shippingAddress: "123 main street",
     orderStatus: "Cart",
     userId: 2,
-    id:2
 
   },
   {
@@ -706,7 +945,6 @@ const Orders = [
     shippingAddress: "101 Red street",
     orderStatus: "Shipping",
     userId: 2,
-    id:3
 
   },
   {
@@ -714,8 +952,6 @@ const Orders = [
     shippingAddress: "123 First street",
     orderStatus: "Complete",
     userId: 2,
-    id:4
-
   },
 ]
 
@@ -742,40 +978,69 @@ const OrderDetails = [
   }
 ]
 
+// const users = [
+//   {
+//      username: "cody",
+//      userType: 'admin',
+//      password: "123",
+//      firstName: "Cody",
+//      lastName: "Wagner",
+//      email: "codyWagner@gmail.com",
+//    },
+//   {
+//      username: "murphy",
+//      userType: 'general',
+//      password: "123",
+//      firstName: "Murphy",
+//      lastName: "White",
+//      email: "murphyWhite@gmail.com",
+//    },
+//  ];
 
 /**
  * seed - this function clears the database, updates tables to
  *      match the models, and populates the database.
  */
+
+const funkoSeed=async ()=>{
+  await funkos.map(funko => {
+     FunkoPop.create(funko)
+ })
+}
+const orderSeed=async ()=>{
+  await Orders.map(Order => {
+
+     OrderDB.create(Order)
+
+     
+  })
+}
 async function seed() {
   await db.sync({ force: true }) // clears db and matches models to tables
   console.log('db synced!')
 
   // Creating Users
-  await Promise.all(funkos.map(funko => {
-    return FunkoPop.create(funko)
-  }))
+ 
+await funkoSeed()
 
-  const users = await Promise.all([
-    User.create({
+  const users = [
+   await User.create({
       username: "cody",
       userType: 'admin',
       password: "123",
       firstName: "Cody",
       lastName: "Wagner",
       email: "codyWagner@gmail.com",
-      id:1
     }),
-    User.create({
+   await  User.create({
       username: "murphy",
       userType: 'general',
       password: "123",
       firstName: "Murphy",
       lastName: "White",
       email: "murphyWhite@gmail.com",
-      id:2
     }),
-  ]);
+  ];
 
   await Promise.all(Orders.map(Order => {
 

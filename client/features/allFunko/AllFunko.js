@@ -19,6 +19,7 @@ const AllFunkos = () => {
 
     const dispatch = useDispatch()
 
+
     let orderId = cart.id
 
     const loadToPage = async() => {

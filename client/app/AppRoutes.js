@@ -8,6 +8,7 @@ import { me } from '../store';
 import Cart from '../features/cart/Cart';
 import { fetchAllCartFunkos, filteredOrdersByStatus } from './slice/cartProducts';
 import CheckOut from '../features/cart/CheckOut';
+import PurchaseComplete from '../features/cart/purchaseComplete';
 
 /*
  * COMPONENT
@@ -39,6 +40,7 @@ const AppRoutes = () => {
 
           <Route path="/cart" element={<Cart />} />
           <Route path="/cart/checkout" element={<CheckOut />} />
+          <Route path="/cart/checkout/complete" element={<PurchaseComplete/>} />
 
           <Route path="/funkoPops" element={<><AllFunkos /><AddFunko /></>} />
         </Routes>
