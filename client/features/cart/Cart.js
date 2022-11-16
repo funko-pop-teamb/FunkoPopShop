@@ -26,7 +26,7 @@ const Cart = () => {
     // const { userId, cartId } = useParams()
     useEffect(() => {
 
-        dispatch(filteredOrdersByStatus(id))
+        // dispatch(filteredOrdersByStatus(id))
         // dispatch(fetchAllCartFunkos(cartId))
 
     }, [])
@@ -44,11 +44,6 @@ const Cart = () => {
 
     const removeOne = async (e, item) => {
         e.preventDefault()
-        //if(!id){
-            //fetchSingleFunkoPop
-            //dispatch removeFromLocalCart}
-
-
         let orderId = cartId
         let FunkoPopId = item.FunkoPopId
         let funkoId = item.FunkoPopId

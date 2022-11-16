@@ -13,7 +13,8 @@ export const fetchAllCartFunkos = createAsyncThunk(
 export const updateOneOrderOneFunko = createAsyncThunk(
   "updateOneOrderOneFunko", async ({ FunkoPopId, orderId, quantity, funkoPrice }) => {
     try {
-      const { data } = await axios.put(`/api/orderFunkoPop/filterByOrderIdAndFunkoId/${orderId}/${FunkoPopId}`, { quantity, funkoPrice });
+      const { data } = await axios.put(`/api/orderFunkoPop/filterByOrderIdAndFunkoId/${orderId}/${FunkoPopId}`, 
+      { quantity, funkoPrice });
       return data;
     } catch (err) {
       console.log(err);

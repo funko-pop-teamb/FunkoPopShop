@@ -22,23 +22,30 @@ const CheckOut = () => {
     const [state, setState] = useState('')
     const [zipCode, setZipCode] = useState('')
     const [paymentInfo, setPaymentInfo] = useState('')
-
+    const [paymentAmount, setPaymentAmount] = useState('')
+console.log(cart.totalPrice)
 const handleSubmit=async (evt)=>{
 evt.preventDefault()
 const orderId=cart.id
 const shippingAddress=streetAddress+" "+apt+" "+city+" "+state+" "+zipCode
 let orderStatus="Complete"
-dispatch(updateOrder({orderId, shippingAddress, orderStatus}))
-let userId=me.id
-await dispatch(addOrder({userId}))
-navigate('/cart/checkout/complete')
+const shippingName=firstName+" "+lastName
+if (paymentAmount==cart.totalPrice){
+
+  dispatch(updateOrder({orderId, shippingAddress, orderStatus, shippingName}))
+  let userId=me.id
+  await dispatch(addOrder({userId}))
+  navigate('/cart/checkout/complete')
+} else {
+  alert("Payment Amount is not correct")
+}
 }
   return (
     <div>
      <form id="shipping-form" onSubmit={handleSubmit}>
       <div >Shipping Info:</div>
       <div>
-        {/* <label htmlFor="firstName" className='formField'>First Name:</label>
+        <label htmlFor="firstName" className='formField'>First Name:</label>
         <input
           name="firstName"
           value={firstName}
@@ -49,7 +56,7 @@ navigate('/cart/checkout/complete')
           name="lastName"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
-        /> */}
+        />
         <label htmlFor="streetAddress" className='formField'>Street Address</label>
         <input
           name="streetAddress"
@@ -82,11 +89,17 @@ navigate('/cart/checkout/complete')
         />
       </div>
 
-      <label htmlFor="paymentInfo" className='formField' >Payment Info:</label>
+      <label htmlFor="paymentInfo" className='formField' >Card Info:</label>
         <input
           name="paymentInfo"
           value={paymentInfo}
           onChange={(e) => setPaymentInfo(e.target.value)}
+        />
+         <label htmlFor="paymentAmount" className='formField' >Payment Amount:</label>
+        <input
+          name="paymentAmount"
+          value={paymentAmount}
+          onChange={(e) => setPaymentAmount(e.target.value)}
         />
       <button type="submit" className='formField'>Submit Order</button>
     </form>
