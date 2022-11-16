@@ -35,7 +35,7 @@ const funkos = [
 
   {
     name: "Kuromi (with Baku): Sanrio Collection",
-    category: "Disney",
+    category: "Anime",
     price: "14.90",
     imageUrl:
       "https://cdn.media.amplience.net/s/hottopic/18945338_hi?$productMainDesktopRetina$",
@@ -47,7 +47,7 @@ const funkos = [
 
   {
     name: "Games Lapras: Pokemon Collection",
-    category: "Disney",
+    category: "Anime",
     price: "12.90",
     imageUrl:
       "https://cdn.media.amplience.net/s/hottopic/17417633_hi?$productMainDesktopRetina$",
@@ -95,7 +95,7 @@ const funkos = [
 
   {
     name: "Pochacco: Sanrio Collection",
-    category: "Disney",
+    category: "Anime",
     price: "12.90",
     imageUrl:
       "https://cdn.media.amplience.net/s/hottopic/19426425_hi?$productMainDesktopRetina$",
@@ -107,7 +107,7 @@ const funkos = [
 
   {
     name: "Bisky: Hunter X Hunter Collection ",
-    category: "Disney",
+    category: "Anime",
     price: "12.90",
     imageUrl:
       "https://cdn.media.amplience.net/s/hottopic/17417605_hi?$productMainDesktopRetina$",
@@ -349,15 +349,15 @@ const funkos = [
   },
 
   {
-    name: "The Denom: Kiss",
+    name: "The Demon: Kiss",
     category: "Music Icons",
     price: "9.00",
     imageUrl:
-      "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "https://m.media-amazon.com/images/I/41aOa6qV7CL._AC_SY580_.jpg",
     size: "mini",
     edition: "general",
     description:
-      "Invite Gene Simmons into your music collection with this Pop! of his KISS persona The Demon. Collectible stands approximately 3.75-inches tall.",
+      "Invite Gene Simmons into your music collection with this Pop! of his KISS persona The Demon. Collectible stands approximately 1.75-inches tall.",
   },
 
   {
