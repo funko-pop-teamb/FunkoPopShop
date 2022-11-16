@@ -22,7 +22,7 @@ router.get('/filterByUserId/:funkoId', async (req, res, next) => {
       where:{
         FunkoPopId:funkoId
       },
-
+include:[FunkoPop]
     })
     res.json(orderProducts)
   } catch (err) {
@@ -45,17 +45,31 @@ router.get('/filterByOrderId/:orderId', async (req, res, next) => {
     next(err)
   }
 })
-//get details about a single funko from a single order
-router.get('/filterByOrderIdAndUserId/:orderId/:funkoId', async (req, res, next) => {
+router.get('/filterByOrderIdAndFunkoId/:orderId/:FunkoPopId', async (req, res, next) => {
   try {
-    const {orderId, funkoId}=req.params
-    const orderProducts = await Order_FunkoPop.findAll({
+    const {orderId, FunkoPopId}=req.params
+    const updatedFunko = await Order_FunkoPop.findOne({
       where:{
         orderId:orderId,
-        FunkoPopId:funkoId
+        FunkoPopId:FunkoPopId
       }
     })
-    res.json(orderProducts)
+    res.json( updatedFunko)
+  } catch (err) {
+    next(err)
+  }
+})
+//get details about a single funko from a single order
+router.put('/filterByOrderIdAndFunkoId/:orderId/:FunkoPopId', async (req, res, next) => {
+  try {
+    const {orderId, FunkoPopId}=req.params
+    const updatedFunko = await Order_FunkoPop.findOne({
+      where:{
+        orderId:orderId,
+        FunkoPopId:FunkoPopId
+      }
+    })
+    res.json(await updatedFunko.update(req.body))
   } catch (err) {
     next(err)
   }
@@ -74,15 +88,15 @@ router.post('/', async (req, res, next) => {
 //updating cart information
 router.put('/:orderId/:funkoId', async (req, res, next) => {
   try {
-    const {orderId, userId}=req.params
-    const user = await Order_FunkoPop.findOne({
+    const {orderId, funkoId}=req.params
+    const funko = await Order_FunkoPop.findOne({
       where:{
         orderId:orderId,
-        userId:userId,
+        FunkoPopId:funkoId,
       }
     })
-    await user.destroy()
-    res.send(user)
+    
+    res.send(await funko.update(req.body))
   } catch (err) {
     next(err)
   }
@@ -91,15 +105,15 @@ router.put('/:orderId/:funkoId', async (req, res, next) => {
 //delete item in cart
 router.delete('/:orderId/:funkoId', async (req, res, next) => {
   try {
-    const {orderId, userId}=req.params
-    const user = await Order_FunkoPop.findOne({
+    const {orderId, funkoId}=req.params
+    const funko = await Order_FunkoPop.findOne({
       where:{
         orderId:orderId,
-        userId:userId
+        FunkoPopId:funkoId
       }
     })
-    await user.destroy()
-    res.send(user)
+    await funko.destroy()
+    res.send(funko)
   } catch (err) {
     next(err)
   }

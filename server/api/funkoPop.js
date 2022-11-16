@@ -32,6 +32,88 @@ router.get('/:funkoId', async (req, res, next) => {
     }
 })
 
+//LINKS FOR SEARCH/SORT DROPDOWN MENU
+
+router.get('/sort/byName', async (req, res, next) => {
+    try {
+        res.send(await FunkoPop.findAll({order: [
+            ["name", "ASC"],
+            ],}))
+    } catch (err) {
+
+    }
+})
+
+router.get('/sort/priceLow', async (req, res, next) => {
+    try {
+        res.send(await FunkoPop.findAll({order: [
+            ["price", "ASC"],
+            ],}))
+    } catch (err) {
+        
+    }
+})
+
+router.get('/sort/priceHigh', async (req, res, next) => {
+    try {
+        res.send(await FunkoPop.findAll({order: [
+            ["price", "DESC"],
+            ],}))
+    } catch (err) {
+        
+    }
+})
+
+router.get('/sort/mini', async (req, res, next) => {
+    try {
+        // const { mini } = req.params
+        res.json(await FunkoPop.findAll( {
+
+            where: { size: 'mini' }
+        }))
+    } catch (err) {
+
+    }
+})
+
+router.get('/sort/regular', async (req, res, next) => {
+    try {
+        // const { regular } = req.params
+        res.json(await FunkoPop.findAll( {
+
+            where: { size: 'regular' }
+        }))
+    } catch (err) {
+
+    }
+})
+
+router.get('/sort/jumbo', async (req, res, next) => {
+    try {
+        // const { jumbo } = req.params
+        res.json(await FunkoPop.findAll( {
+
+            where: { size: 'jumbo' }
+        }))
+    } catch (err) {
+
+    }
+})
+
+
+
+// router.get('/filter/:size', async (req, res, next) => {
+//     try {
+//         const { size } = req.params
+//         res.json(await FunkoPop.findAll( {
+
+//             where: { size: size }
+//         }))
+//     } catch (err) {
+
+//     }
+// })
+
 router.post('/', async (req, res, next) => {
     try {
         const newFunko = await FunkoPop.create(req.body)

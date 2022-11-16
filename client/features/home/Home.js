@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import { useSelector, useDispatch, } from 'react-redux';
 import { fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice';
 import { Link, useParams } from 'react-router-dom'
+import { filteredOrdersByStatus } from '../../app/slice/cartProducts';
 
 /**
  * COMPONENT
@@ -10,18 +11,20 @@ const Home = () => {
   // const username = useSelector((state) => state.auth.me.username);
 
   const dispatch = useDispatch()
-
+  const me = useSelector((state) => state.auth.me);
+console.log('*****'+me.order_funkoPops)
 useEffect(()=>{
-  dispatch(fetchSingleFunkoPop(41))
-  console.log(fetchSingleFunkoPop(41))
+  dispatch(fetchSingleFunkoPop(61))
+  dispatch(filteredOrdersByStatus(me.id));
+
 },[])
 const oneFunko = useSelector((state) => { return state.singleFunkoPop })
 
+
 // const funko = useSelector(selectSingleFunkoPop)
-console.log(oneFunko)
 return (
-    <div>
-        Funko of the month!
+    <div className='featuredFunko'>
+        <h2 className='fTitle'>Funko of the Month!</h2>
         <Link key={oneFunko.id} to={`/funkoPops/${oneFunko.id}`}>
 
         <img src={oneFunko.imageUrl} className='fImage' />

@@ -1,5 +1,10 @@
 body {
+  background-image: radial-gradient(rgb(1, 120, 120), rgb(255, 0, 144), gold);
+  /* background-image: url("https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sb3JmdWwlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80"); */
+  /* background-repeat: repeat; */
+  background-size: 100%;
   font-family: sans-serif;
+
 }
 
 a {
@@ -10,15 +15,37 @@ label {
   display: block;
 }
 
-nav a {
-  display: inline-block;
-  margin: 1em;
+nav {
+  background-color: rgba(0, 0, 0, 0.822);
+  width: 100%;
+  height: 45px;
+  margin: 0%;
+  padding: 0%;
 }
 
-form div {
-  margin: 1em;
-  display: inline-block;
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
 }
+
+.navHome a{
+  margin-right: 7px;
+}
+
+.navSelect a{
+  margin-left: 7px;
+}
+
+.navSelect button {
+  margin-left: 7px;
+}
+
+.sideNavBar {
+  height: 100px;
+  overflow-y: scroll;
+}
+
 
 .allFunkos {
   display: flex;
@@ -55,4 +82,13 @@ form div {
 
 .deleteF {
   margin-bottom: 10px;
+}
+
+form div {
+  margin: 1em;
+  display: inline-block;
+}
+
+.allOrderImage{
+  height: 10vh;
 }

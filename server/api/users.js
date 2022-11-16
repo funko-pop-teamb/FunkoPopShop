@@ -1,5 +1,6 @@
 const router = require('express').Router()
 const { models: { User, Order }} = require('../db')
+const Order_FunkoPop = require('../db/models/Order_FunkoPop')
 module.exports = router
 
 //get all exisiting usersId  username firstName lastName and email
@@ -25,7 +26,8 @@ router.get('/:userId', async (req, res, next) => {
         where: {
             id: userId,
           },
-          attributes: { exclude: ['password'] }
+          attributes: { exclude: ['password'] },
+          include:[Order_FunkoPop]
     })
     res.json(oneUser)
   } catch (err) {
@@ -37,7 +39,7 @@ router.get('/:userId', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     const newUsers = await User.create(req.body)
-    res.json(newUsers)
+    res.send(newUsers)
   } catch (err) {
     next(err)
   }
@@ -46,6 +48,7 @@ router.post('/', async (req, res, next) => {
 //updating user information
 router.put('/:userId', async (req, res, next) => {
   try {
+    
     const user = await User.findByPk(req.params.userId)
     res.send(await user.update(req.body))
   } catch (err) {

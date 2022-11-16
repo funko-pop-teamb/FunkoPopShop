@@ -13,6 +13,8 @@ export const fetchUsers = createAsyncThunk("fetchUsers", async () => {
 export const postUser = createAsyncThunk("postUser", async (payload) => {
   try {
     const { data } = await axios.post("/api/users", payload);
+    const {data: newOrder} = await axios.post('/api/orders', {userId: data.id});
+    console.log(newOrder)
     return data;
   } catch (err) {
     console.log(err);
@@ -64,6 +66,8 @@ const usersSlice = createSlice({
     })
   },
 });
+
+
 
 export const selectSIngleUser = (state) => {
 
