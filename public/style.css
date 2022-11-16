@@ -46,6 +46,24 @@ nav {
   overflow-y: scroll;
 }
 
+footer section {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.822);
+  width: 100%;
+  height: 45px;
+}
+
+.footerMain {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(148, 178, 237, 0.798);
+}
+
+.footerMain ul{
+  list-style-type: none;
+}
+
 
 .allFunkos {
   display: flex;
