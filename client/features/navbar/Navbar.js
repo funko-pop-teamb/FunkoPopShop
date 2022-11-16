@@ -104,7 +104,7 @@ const Navbar = () => {
                   <option value="regular">Regular</option>
                   <option value="jumbo">Jumbos</option>
                 </select>
-
+                
                 <Link to="/account">Account</Link>
                 <Link to="/cart/">Cart({items.length})</Link>
                 <button type="button" onClick={logoutAndRedirectHome}>

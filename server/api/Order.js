@@ -36,7 +36,24 @@ router.get('/filter/status/:userId/cart', async (req, res, next) => {
     }
 
 })
+router.get('/filter/status/:userId/complete', async (req, res, next) => {
+    try {
+        const { userId } = req.params
+        res.send(await Order.findAll({
 
+            where: { orderStatus: 'Complete', 
+                userId:userId },
+                include:[{model:Order_FunkoPop, include:[FunkoPop]}]
+
+        }))
+
+    } catch (err) {
+
+        console.log("Error in GET/api/orderId")
+
+    }
+
+})
 router.get('/filter/:orderId', async (req, res, next) => {
     try {
         const { orderId } = req.params
