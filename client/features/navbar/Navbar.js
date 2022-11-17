@@ -26,18 +26,15 @@ const Navbar = () => {
   const items = useSelector((state) => state.cart.items)
 
   const { userType, id } = useSelector((state) => state.auth.me);
-  //
+
   const funkos = useSelector(selectFunkoPops);
   const [sortType, setSortType] = useState("");
   useEffect(() => {
   }, []);
 
-  //*add a handleChange instead to to handle onChange drop down menu??
   const handleChange = async (evt) => {
     evt.preventDefault();
     setSortType({ [evt.target.name]: evt.target.value });
-    // {[evt.target.name]: evt.target.value}
-    // value={sortType.dropDown} name='dropDown'
 
     if (evt.target.value === "priceLow") {
       await dispatch(fetchFunkosByPriceLow());
@@ -59,8 +56,6 @@ const Navbar = () => {
   const cartId = useSelector((state) => {
     return state.cart.cart.id;
   });
-
-  
 
 return (
     <>

@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { postUser } from '../../app/slice/usersSlice'
 import { useNavigate } from 'react-router-dom'
-import { addOrder } from '../../app/slice/allOrderSlice'
 import { me } from '../auth/authSlice'
 
 
@@ -15,11 +14,6 @@ const SignUp = () => {
     const [email, setEmail] = useState('')
 
     const { id } = useSelector((state) => { return state.auth.me })
-
-    // const [orderStatus, setOrderStatus] = useState('Cart')
-    // const [userId, setUserId] = useState(id)
-    // const [shippingAddress, setShippingAddress] = useState('123 Lane Road')
-    // const [totalPrice, setTotalPrice] = useState(0)
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
