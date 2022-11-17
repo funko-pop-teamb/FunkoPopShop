@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-
 import axios from "axios";
 
 export const fetchFunkoPops = createAsyncThunk("fetchFunkoPops", async () => {
@@ -129,16 +128,6 @@ export const fetchJumboFunkos = createAsyncThunk(
   }
 );
 
-// export const fetchFunkoPopBySize = createAsyncThunk(
-//   "fetchFunkoPopBySize", async (size) => {
-//     try {
-//       const { data } = await axios.get(`/api/funkoPop/filter/${size}`);
-//       return data;
-//     } catch (err) {
-//       console.log(err);
-//     }
-//   });
-
 export const fetchFunkoPopByFunkoId = createAsyncThunk(
   "fetchFunkoPopByFunkoId",
   async (funkoId) => {
@@ -150,25 +139,6 @@ export const fetchFunkoPopByFunkoId = createAsyncThunk(
     }
   }
 );
-// export const updateFunkoPops = createAsyncThunk(
-//   "updateFunkoPop", async ({ funkoId, name, category, price, imageUrl, size, edition, description, qtyForCart }) => {
-//       try {
-//           const { data } = await axios.put(`/api/funkoPop/${funkoId}`, {
-//               name,
-//               category,
-//               price,
-//               imageUrl,
-//               size,
-//               edition,
-//               description,
-//               qtyForCart
-//           });
-//           console.log(data)
-//           return data;
-//       } catch (err) {
-//           console.log(err);
-//       }
-//   });
 
 const allFunkoPopsSlice = createSlice({
   name: "funkoPops",
@@ -206,18 +176,14 @@ const allFunkoPopsSlice = createSlice({
       .addCase(fetchJumboFunkos.fulfilled, (state, action) => {
         return action.payload;
       })
-       // .addCase(fetchFunkoPopBySize.fulfilled, (state, action) => {
-      //   return action.payload;
-      // })
       .addCase(fetchFunkoPopByFunkoId.fulfilled, (state, action) => {
         return action.payload;
       });
-    // .addCase(updateFunkoPops.fulfilled, (state, action) => {
-    //   return action.payload;
-    // })
   },
 });
+
 export const selectFunkoPops = (state) => {
   return state.allFunkoPops;
 };
+
 export default allFunkoPopsSlice.reducer;
