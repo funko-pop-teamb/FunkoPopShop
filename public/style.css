@@ -57,7 +57,7 @@ footer section {
 .footerMain {
   display: flex;
   justify-content: space-between;
-  background-color: rgba(148, 178, 237, 0.798);
+  background-color: rgba(201, 214, 242, 0.798);
 }
 
 .footerMain ul{

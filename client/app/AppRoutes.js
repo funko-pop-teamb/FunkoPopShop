@@ -1,14 +1,26 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
-import AuthForm from '../features/auth/AuthForm';
-import Home from '../features/home/Home';
-import { AllFunkos, LandingPage, SingleFunko, AddFunko, SignUp, PersonalAccount } from '../features/allfeatures'
-import { me } from '../store';
-import Cart from '../features/cart/Cart';
-import { fetchAllCartFunkos, filteredOrdersByStatus } from './slice/cartProducts';
-import CheckOut from '../features/cart/CheckOut';
-import PurchaseComplete from '../features/cart/purchaseComplete';
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Route, Routes } from "react-router-dom";
+import AuthForm from "../features/auth/AuthForm";
+import Home from "../features/home/Home";
+import {
+  AllFunkos,
+  LandingPage,
+  SingleFunko,
+  AddFunko,
+  SignUp,
+  PersonalAccount,
+  AllOrders,
+  AllUsers,
+} from "../features/allfeatures";
+import { me } from "../store";
+import Cart from "../features/cart/Cart";
+import {
+  fetchAllCartFunkos,
+  filteredOrdersByStatus,
+} from "./slice/cartProducts";
+import CheckOut from "../features/cart/CheckOut";
+import PurchaseComplete from "../features/cart/purchaseComplete";
 
 /*
  * COMPONENT
@@ -19,30 +31,73 @@ const AppRoutes = () => {
   const dispatch = useDispatch();
   // const {userType}=useSelector((state)=>  state.auth.me)
   // console.log('*******'+userType)
-  const { id } = useSelector((state) => state.auth.me)
-  const {cart, items} = useSelector((state) =>  state.cart )
+  const { id, userType } = useSelector((state) => state.auth.me);
+  const { cart, items } = useSelector((state) => state.cart);
   useEffect(async () => {
     dispatch(me());
-    await dispatch(filteredOrdersByStatus(id))
+    await dispatch(filteredOrdersByStatus(id));
     // await dispatch(fetchAllCartFunkos(cart.id))
-
   }, []);
 
   return (
     <div>
-      {isLoggedIn ? (
+      {isLoggedIn && userType === "admin" ? (
         <Routes>
           <Route path="/*" element={<Home />} />
-          <Route path= "/account" element = {<PersonalAccount />} />
+          <Route path="/account" element={<PersonalAccount />} />
 
-          <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
+          <Route path="/funkoPops/:funkoId/*" element={<SingleFunko />} />
           {/* <Route path="/home" element={<LandingPage />} /> */}
 
           <Route path="/cart" element={<Cart />} />
           <Route path="/cart/checkout" element={<CheckOut />} />
-          <Route path="/cart/checkout/complete" element={<PurchaseComplete/>} />
+          <Route
+            path="/cart/checkout/complete"
+            element={<PurchaseComplete />}
+          />
 
-          <Route path="/funkoPops" element={<><AllFunkos /><AddFunko /></>} />
+          <Route
+            path="/funkoPops"
+            element={
+              <>
+                <AllFunkos />
+                <AddFunko />
+              </>
+            }
+          />
+
+          {/* <Route path="/users" elements={<Footer />}/> */}
+          <Route path="/allOrders" element={<AllOrders />} />
+
+          {/* <Route path="/orders" element={<AllFunkos />} /> */}
+          {/* <Route path="/orders/filter/status/:userId/cart" elements={<AllOrders />} /> */}
+          <Route path="/users" element={<AllUsers />} />
+          <Route path="/users/:userId/*" element={<AllUsers />} />
+        </Routes>
+      ) : isLoggedIn ? (
+        <Routes>
+          <Route path="/*" element={<Home />} />
+
+          <Route path="/account" element={<PersonalAccount />} />
+
+          <Route path="/funkoPops/:funkoId/*" element={<SingleFunko />} />
+
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart/checkout" element={<CheckOut />} />
+          <Route
+            path="/cart/checkout/complete"
+            element={<PurchaseComplete />}
+          />
+
+          <Route
+            path="/funkoPops"
+            element={
+              <>
+                <AllFunkos />
+                <AddFunko />
+              </>
+            }
+          />
         </Routes>
       ) : (
         <Routes>
@@ -60,10 +115,9 @@ const AppRoutes = () => {
           />
           <Route path="/funkoPops" element={<AllFunkos />} />
 
-          <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
-          
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/funkoPops/:funkoId/*" element={<SingleFunko />} />
 
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       )}
     </div>

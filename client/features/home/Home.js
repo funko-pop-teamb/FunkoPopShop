@@ -14,7 +14,7 @@ const Home = () => {
   const { userType, id } = useSelector((state) => state.auth.me);
 
 useEffect(()=>{
-  dispatch(fetchSingleFunkoPop(61))
+  dispatch(fetchSingleFunkoPop(85))
   dispatch(filteredOrdersByStatus(id));
 
 },[])
