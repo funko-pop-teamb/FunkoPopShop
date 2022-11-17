@@ -18,7 +18,7 @@ const AllOrders = () => {
         <h2>All Orders</h2>
         <div className='orders'>
             {orders && orders.length ? orders.map((order) => (
-                <div key={order.id}>
+                <div key={order.id} className="singleorder">
                     <ul>
                     {/* <Link to={`/orders/filter/status/${order.userId}/cart`} key={order.id}> */}
                         <li>ID: {order.id}</li>

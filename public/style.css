@@ -82,7 +82,7 @@ nav {
 .sideNavBar {
   float: left;
   width:155px;
-  height: 155px; 
+  height: fit-content; 
   margin-top: 80px;
   padding-top: 20px;
   margin-left: initial;
@@ -258,4 +258,18 @@ margin-right: 70px;
 form div {
   margin: 1em;
   display: inline-block;
+}
+
+.users{
+  margin-left: 155px;    background-color: rgba(255, 228, 196, 0.47);
+
+}
+
+.singleuser {
+  margin-bottom: 10px;
+
+}
+
+.orders{
+  margin-left: 155px;
 }
