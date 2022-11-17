@@ -1,9 +1,17 @@
+* {
+  box-sizing: border-box;
+  font-family: arial, sans-serif;
+}
+
 body {
+  margin: 0%;
+  padding: 0%;
   background-image: radial-gradient(rgb(1, 120, 120), rgb(255, 0, 144), gold);
   /* background-image: url("https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sb3JmdWwlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80"); */
   /* background-repeat: repeat; */
   background-size: 100%;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  /* cursor: url("https://cpng.pikpng.com/pngl/s/75-757718_mouse-cursor-click-clipart-vector-flecha-de-seleccion.png"), url("https://w7.pngwing.com/pngs/843/168/png-transparent-computer-mouse-magic-mouse-computer-icons-pointer-computer-mouse-purple-angle-electronics.png"), url("https://e7.pngegg.com/pngimages/378/261/png-clipart-green-arrow-illustration-computer-mouse-pointer-arrow-icon-cursor-arrow-angle-web-design.png"), auto; */
 
 }
 
@@ -11,16 +19,45 @@ a {
   text-decoration: none;
 }
 
+a:link {
+  color:blueviolet;
+  text-shadow: 2pt 2pt 3px rgba(0, 0, 0, 0.461);
+
+}
+
+a:hover {
+  text-decoration: underline;
+  /* color: #0e93b1f8; */
+  font-weight: bolder;
+}
+
+a:visited {
+  color: #0e93b1f8;
+  font-weight: bolder;
+}
+
 label {
   display: block;
 }
 
+ul {
+  list-style-type: none;
+}
+
+.headerHome img{
+  margin: 0%;
+  padding: 0%;
+}
+
 nav {
-  background-color: rgba(0, 0, 0, 0.822);
+  background-color: rgb(0, 0, 0);
   width: 100%;
   height: 45px;
   margin: 0%;
   padding: 0%;
+  padding-left: 7px;
+  padding-right: 7px;
+
 }
 
 .navBar {
@@ -31,6 +68,7 @@ nav {
 
 .navHome a{
   margin-right: 7px;
+  color: white;
 }
 
 .navSelect a{
@@ -42,15 +80,120 @@ nav {
 }
 
 .sideNavBar {
-  height: 100px;
+  float: left;
+  width:155px;
+  height: fit-content; 
+  margin-top: 80px;
+  padding-top: 20px;
+  margin-left: initial;
+  margin-right: 20px;
   overflow-y: scroll;
+  background-color: rgba(201, 214, 242, 0.798);
 }
 
+.sideNavBar a {
+  padding: 6px 8px 6px 16px;
+  /* text-decoration: none; */
+  font-size: 20px;
+}
+
+.sideNavBar a:visited {
+ color:black;
+}
+
+.sideNavBar a:hover {
+  color: #0e93b1f8;
+
+}
+
+footer section {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  height: 45px;
+  padding-top: 10px;
+  padding-left: 7px;
+  padding-right: 7px;
+  justify-content: space-between;
+}
+
+.socialIcons img {
+  /* padding-top: 10px; */
+  /* height: 30%; */
+max-width: 28px;}
+
+.socialIcons a{
+margin-right: 70px;
+}
+
+.socialIcons a{
+/* padding-left: 25%; */
+}
+
+.footerMain {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(201, 214, 242, 0.798);
+  /* padding-left: 40px;
+  padding-right: 35px; */
+}
+
+.footerMain h4 {
+ text-align: center;
+}
+
+.adminLink {
+  text-align: center;
+}
+
+.footerMain ul{
+  text-align: center;
+  padding-right: 50px;
+}
+
+.funkosHeader{
+  text-align: center;
+  color: rgb(247, 247, 5);
+  text-shadow: 4px 4px 13px rgb(191, 41, 208);
+
+}
 
 .allFunkos {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 20px;
+  text-align: center;
+
+}
+
+.allFunkos img {
+  background-color: white;
+  border-radius: 100px;
+  box-shadow: 0 0 20px 8px rgb(255, 238, 3);
+
+}
+
+#single-funko{
+  margin: 20px;
+  text-align: center;
+}
+
+#single-funko h1{
+  color: rgb(247, 247, 5);
+  text-shadow: 4px 4px 13px rgb(154, 9, 221);
+
+}
+
+#single-funko img{
+  max-width: 30%;
+  border-radius: 100px;
+  box-shadow: 0 0 20px 8px rgb(255, 238, 3);
+
+}
+
+.featuredFunko{
+  text-align: center;
 }
 
 .fCard {
@@ -58,26 +201,54 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* padding: 8px; */
+}
+
+.fTitle {
+  color: rgb(247, 247, 5);
+  text-shadow: 6px 6px 13px rgb(4, 109, 255);
+  font-size: 45px;
+}
+
+.allfName {  margin-bottom: 5px;
+
 }
 
 .fName {
-  text-align: center;
-  margin-bottom: 5px;
+  /* text-align: center; */
+  color: rgb(4, 109, 255);
+  padding-left: 205px
 }
 
-.fImage {
-  width: 250px;
+.allfImage {  width: 250px;
   height: 300px;
 }
 
-.fCategory {
-  margin-top: 5px;
+.fImage {
+
+  max-width: 25%;
+  /* background-image: url("https://t3.ftcdn.net/jpg/03/61/65/64/360_F_361656465_nwaxQle2PyHfInAFjiTpYleNp7mdcH7F.jpg"); */
+
+}
+
+.allfCategory {margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.fPrice {
-  margin-top: 5px;
+.fCategory {
+  
+  color: rgb(4, 109, 255);
+  padding-left: 205px
+}
+
+.allfPrice { margin-top: 5px;
   margin-bottom: 10px;
+}
+
+.fPrice {
+ 
+  color: rgb(4, 109, 255);
+  padding-left: 205px
 }
 
 .deleteF {
@@ -89,6 +260,21 @@ form div {
   display: inline-block;
 }
 
+<<<<<<< HEAD
+.users{
+  margin-left: 155px;    background-color: rgba(255, 228, 196, 0.47);
+
+}
+
+.singleuser {
+  margin-bottom: 10px;
+
+}
+
+.orders{
+  margin-left: 155px;
+=======
 .allOrderImage{
   height: 10vh;
+>>>>>>> 3e72068b93382223a2d79ea840beb410e6ea13bd
 }

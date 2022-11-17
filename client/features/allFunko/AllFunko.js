@@ -82,17 +82,21 @@ const AllFunkos = () => {
     }
     return (
         <>
-            <h1 className='header'>Funko Gallery</h1>
+            <h1 className='funkosheader'>Funko Gallery</h1>
             <input type="text" value={search} onChange={(e) => { setSearch(e.target.value) }} placeholder="Search..."></input>
             <button onClick={(e) => handleSearch(e)}>Search</button>
             <div className='allFunkos'>
+                
                 {funkos.map((funko) => (
                     <div key={funko.id} className='fCard'>
                         <Link key={funko.id} to={`/funkoPops/${funko.id}`}>
-                            <img src={funko.imageUrl} className='fImage' />
-                            <h2 className='fName'>{funko.name}</h2></Link>
-                        <h3 className='fCategory'>Category: {funko.category}</h3>
-                        <h3 className='fPrice'>Price: ${funko.price}</h3>
+                            <img src={funko.imageUrl} className='allfImage' />
+                            <h2 className='allfName'>{funko.name}</h2></Link>
+                        <h3 className='allfCategory'>Category: {funko.category}</h3>
+                        <h3 className='allfPrice'>Price: ${funko.price}</h3>
+                        {/* <button onClick={()=>{qtyValueDecrease( funko)}} >-</button> QTY:{funko.qtyForCart} 
+                        <button onClick={()=>{qtyValueIncrease( funko)}} >+</button> */}
+
                         <button onClick={() => { addToCart(funko) }} >Add 1 to Cart</button>
                         {userType === 'admin' ? <button className='deleteF' type='button'
                             onClick={(event) => { handleDelete(funko.id) }}>Delete Funko</button> : null}

@@ -796,10 +796,10 @@ const funkos = [
   },
 
   {
-    name: "Goku: Drago Ball Z",
+    name: "Goku: Drago Ball Z - World Tournament",
     category: "Anime",
     price: "12",
-    imageUrl: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FFunko-POP-Animation-Dragon-Ball%2Fdp%2FB07MZQ36RG&psig=AOvVaw1EugzZuYhf6kidplKgZ1_0&ust=1668688152980000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCNiF6PbZsvsCFQAAAAAdAAAAABAG",
+    imageUrl: "https://i5.walmartimages.com/asr/4f503f9d-455e-4ca0-a9eb-627cc6a62a28_1.0836d674340053c0f262bc36486710e0.png",
     size: "regular",
     edition: "general",
     description: "As an infant, Goku was sent to destroy Earth but ended up becoming one of the planet's greatest heroes after a head injury rid the young Saiyan of his senselessly destructive nature. Your Dragon Ball Z collection wouldn't be the same without it's warrior protagonist, Goku, in Pop! form to protect it from attackers. Collectible stands approximately 3.75-inches tall."  
@@ -909,14 +909,14 @@ const funkos = [
       "Funko - POP! Games Star Wars Jedi: Fallen Order! Cal Kestis With BD-1",
   },
   {
-    name: "Iron Man",
+    name: "Iron Man: Avengers Endgame",
     category: "Marvel",
-    price: "70.00",
-    imageUrl: "https://m.media-amazon.com/images/I/61-IpUOEa4L.jpg",
+    price: "100.00",
+    imageUrl: "https://cdn.shopify.com/s/files/1/1052/2158/products/58145_Marvel_InfinitySaga_Iron_Man_MegaPOP_GLAM-WEB.png?v=1637702532",
     size: "jumbo",
     edition: "exclusive",
     description:
-      "Iron Man Mark 43 from Avengers Age of Ultron Figure stands approximately 10-inches tall Glows in the dark",
+      "Tony Stark gears up in his red and gold Iron Man suit to join your Marvel Avengers: Endgame collection as a Mega Pop! figure. Complete your Marvel lineup with the towering, Funko Exclusive figure! Vinyl figure is approximately 18-inches tall.",
 
 
   },
