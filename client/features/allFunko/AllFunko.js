@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { addItemToCart, fetchAllCartFunkos, filteredOrdersByStatus, updateOneOrderOneFunko, addToLocalCart } from '../../app/slice/cartProducts'
 import { fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice'
 import { updateOrder } from '../../app/slice/singleOrderSlice'
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const AllFunkos = () => {
@@ -61,13 +62,22 @@ const AllFunkos = () => {
             await dispatch(filteredOrdersByStatus(id));
             await dispatch(fetchAllCartFunkos(orderId))
         }
+        toast(`${funko.name} added to cart!`, {
+            position: "bottom-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            })
     }
     const handleSearch = (e) => {
         e.preventDefault()
         funkos.filter((funko) => {
             funko.name.includes(search)
         })
-        console.log(funkos)
     }
     return (
         <>
@@ -88,7 +98,7 @@ const AllFunkos = () => {
                     </div>
                 ))}
             </div>
-
+<ToastContainer/>
         </>
     )
 }
