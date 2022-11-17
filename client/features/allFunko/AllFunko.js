@@ -53,10 +53,7 @@ const AllFunkos = () => {
             const item = await dispatch(fetchSingleFunkoPop(funko.id))
             await dispatch(addToLocalCart(item.payload))
 
-            // localStorage.setItem('cart', JSON.stringify(allItems))
-            // let guestCart = JSON.parse(localStorage.getItem('cart'))
-            // console.log(guestCart)
-            // in /cart component localStorage.getItem('cart')
+          
         } else {
             let FunkoPopId = funko.id
             orderId = cart.id

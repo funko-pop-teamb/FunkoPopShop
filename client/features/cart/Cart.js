@@ -33,10 +33,10 @@ const Cart = () => {
 
     }
     // const { userId, cartId } = useParams()
-    useEffect(() => {
+    useEffect(async () => {
         loadTocart()
 
-        // dispatch(filteredOrdersByStatus(id))
+        await dispatch(filteredOrdersByStatus(id))
         // dispatch(fetchAllCartFunkos(cartId))
     }, [])
 

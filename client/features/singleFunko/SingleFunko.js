@@ -10,14 +10,17 @@ import {
   updateFunkoPop,
 } from "../../app/slice/oneFunkoSlice";
 import { addItemToCart, fetchAllCartFunkos, updateOneOrderOneFunko } from "../../app/slice/cartProducts";
+import { addToLocalCart } from "../../app/slice/cartProducts";
 
 const SingleFunko = () => {
   const dispatch = useDispatch();
   const { funkoId, id } = useParams();
 
+  const { me} = useSelector((state) => state.auth);
+
   const singleFunko = useSelector(selectSingleFunkoPop);
-  const { userType } = useSelector((state) => state.auth.me);
-  const {cart, items}=useSelector((state)=>   state.cart)
+  const { userType} = useSelector((state) => state.auth.me);
+  const { cart, items } = useSelector((state) => state.cart)
 
   // const { name, imageUrl, price, category, size, edition, description } =
   //   singleFunko;
@@ -31,9 +34,9 @@ const SingleFunko = () => {
 
   useEffect(() => {
     dispatch(fetchSingleFunkoPop(funkoId));
-    dispatch(me());
   }, [dispatch, funkoId]);
 
+  console.log(items)
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
@@ -63,24 +66,28 @@ const SingleFunko = () => {
     //     let guestCart = JSON.parse(localStorage.getItem('cart'))
     //     console.log(guestCart)
     // } else {
-        // in /cart component localStorage.getItem('cart')
-        let FunkoPopId=funko.id
-        let orderId=cart.id
-       let quantity=1
-       let funkoPrice=funko.price
-      if (items.filter(e=> e.FunkoPopId===funko.id).length>0){
-          let index=items.findIndex(e=> 
-               e.FunkoPopId===funko.id
-          )
-          quantity=items[index].quantity+1
-          await dispatch(updateOneOrderOneFunko({FunkoPopId, orderId, quantity}))
-      } else {
-          await  dispatch(addItemToCart({FunkoPopId, orderId,quantity,funkoPrice}))
-      }
-    // }
-  await dispatch(fetchAllCartFunkos(orderId))
+    // in /cart component localStorage.getItem('cart')
 
-}
+    if (!me.id) {
+      const item = await dispatch(fetchSingleFunkoPop(funko.id))
+      await dispatch(addToLocalCart(item.payload))
+    } else {
+      let FunkoPopId = funko.id
+      let orderId = cart.id
+      let quantity = 1
+      let funkoPrice = funko.price
+      if (items.filter(e => e.FunkoPopId === funko.id).length > 0) {
+        let index = items.findIndex(e =>
+          e.FunkoPopId === funko.id
+        )
+        quantity = items[index].quantity + 1
+        await dispatch(updateOneOrderOneFunko({ FunkoPopId, orderId, quantity }))
+      } else {
+        await dispatch(addItemToCart({ FunkoPopId, orderId, quantity, funkoPrice }))
+      }
+      await dispatch(fetchAllCartFunkos(orderId))
+    }
+  }
 
   return (
     <>
@@ -92,7 +99,7 @@ const SingleFunko = () => {
         <h4>
           Edition: {singleFunko.edition} / Size: {singleFunko.size}
         </h4>
-        <button onClick={()=> addToCart(singleFunko)}>Add to Cart</button>
+        <button onClick={() => addToCart(singleFunko)}>Add to Cart</button>
         <hr></hr>
         <h3>About me: {singleFunko.description}</h3>
         <hr></hr>
