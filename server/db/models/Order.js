@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
 const db = require('../db');
 
 const Order = db.define('orders', {
+
   totalPrice: {
     type: Sequelize.FLOAT,
     defaultValue: 0
@@ -18,8 +19,6 @@ const Order = db.define('orders', {
     type: Sequelize.STRING,
     defaultValue: null
   }
-
-
 });
 
 
