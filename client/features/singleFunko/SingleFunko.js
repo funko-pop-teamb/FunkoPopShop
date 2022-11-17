@@ -5,13 +5,18 @@ import { me } from "../auth/authSlice";
 import { deleteFunkoPop } from "../../app/slice/allFunkoSlice";
 import { fetchSingleFunkoPop, selectSingleFunkoPop, updateFunkoPop } from "../../app/slice/oneFunkoSlice";
 import { addItemToCart, fetchAllCartFunkos, updateOneOrderOneFunko } from "../../app/slice/cartProducts";
+import { addToLocalCart } from "../../app/slice/cartProducts";
 
 const SingleFunko = () => {
   const dispatch = useDispatch();
   const { funkoId, id } = useParams();
 
+  const { me} = useSelector((state) => state.auth);
+
   const singleFunko = useSelector(selectSingleFunkoPop);
+
   const { userType } = useSelector((state) => state.auth.me);
+
   const { cart, items } = useSelector((state) => state.cart)
 
   const [name, setName] = useState("");
@@ -24,7 +29,6 @@ const SingleFunko = () => {
 
   useEffect(() => {
     dispatch(fetchSingleFunkoPop(funkoId));
-    dispatch(me());
   }, [dispatch, funkoId]);
 
   const handleSubmit = async (evt) => {
@@ -47,21 +51,26 @@ const SingleFunko = () => {
     await dispatch(deleteFunkoPop(funkoId));
   };
   const addToCart = async (funko) => {
-    let FunkoPopId = funko.id
-    let orderId = cart.id
-    let quantity = 1
-    let funkoPrice = funko.price
 
-    if (items.filter(e => e.FunkoPopId === funko.id).length > 0) {
-      let index = items.findIndex(e =>
-        e.FunkoPopId === funko.id
-      )
-      quantity = items[index].quantity + 1
-      await dispatch(updateOneOrderOneFunko({ FunkoPopId, orderId, quantity }))
+    if (!me.id) {
+      const item = await dispatch(fetchSingleFunkoPop(funko.id))
+      await dispatch(addToLocalCart(item.payload))
     } else {
-      await dispatch(addItemToCart({ FunkoPopId, orderId, quantity, funkoPrice }))
+      let FunkoPopId = funko.id
+      let orderId = cart.id
+      let quantity = 1
+      let funkoPrice = funko.price
+      if (items.filter(e => e.FunkoPopId === funko.id).length > 0) {
+        let index = items.findIndex(e =>
+          e.FunkoPopId === funko.id
+        )
+        quantity = items[index].quantity + 1
+        await dispatch(updateOneOrderOneFunko({ FunkoPopId, orderId, quantity }))
+      } else {
+        await dispatch(addItemToCart({ FunkoPopId, orderId, quantity, funkoPrice }))
+      }
+      await dispatch(fetchAllCartFunkos(orderId))
     }
-    await dispatch(fetchAllCartFunkos(orderId))
   }
 
   return (

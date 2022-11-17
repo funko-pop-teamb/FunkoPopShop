@@ -24,8 +24,12 @@ const Cart = () => {
 
     }
 
-    useEffect(() => {
+
+    useEffect(async () => {
         loadTocart()
+
+        await dispatch(filteredOrdersByStatus(id))
+
     }, [])
 
 

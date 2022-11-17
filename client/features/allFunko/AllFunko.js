@@ -43,6 +43,7 @@ const AllFunkos = () => {
         if (!id) {
             const item = await dispatch(fetchSingleFunkoPop(funko.id))
             await dispatch(addToLocalCart(item.payload))
+
         } else {
             let FunkoPopId = funko.id
             orderId = cart.id
