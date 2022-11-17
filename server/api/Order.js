@@ -1,5 +1,7 @@
 const router = require('express').Router()
 const { models: { Order } } = require('../db')
+const FunkoPop = require('../db/models/FunkoPop')
+const Order_FunkoPop = require('../db/models/Order_FunkoPop')
 
 module.exports = router
 
@@ -20,52 +22,48 @@ router.get('/filter/status/:userId/cart', async (req, res, next) => {
     try {
         const { userId } = req.params
         res.send(await Order.findOne({
-
             where: { orderStatus: 'Cart', 
-                userId:userId }
-
+                userId:userId },
+                include:[{model:Order_FunkoPop, include:[FunkoPop]}]
         }))
-
     } catch (err) {
-
         console.log("Error in GET/api/orderId")
-
     }
+})
 
+router.get('/filter/status/:userId/complete', async (req, res, next) => {
+    try {
+        const { userId } = req.params
+        res.send(await Order.findAll({
+            where: { orderStatus: 'Complete', 
+                userId:userId },
+                include:[{model:Order_FunkoPop, include:[FunkoPop]}]
+        }))
+    } catch (err) {
+        console.log("Error in GET/api/orderId")
+    }
 })
 
 router.get('/filter/:orderId', async (req, res, next) => {
     try {
         const { orderId } = req.params
         res.json(await Order.findAll({
-
             where: { id: orderId }
-
         }))
-
     } catch (err) {
-
         console.log("Error in GET/api/orderId")
-
     }
-
 })
+
 router.get('/filter/:userId', async (req, res, next) => {
     try {
         const { userId } = req.params
         res.json(await Order.findAll({
-
             where: { id: userId }
-
         }))
-
     } catch (err) {
-
         console.log("Error in GET/api/userId")
-
     }
-
-
 })
 
 router.get('/:orderId', async (req, res, next) => {
@@ -80,6 +78,7 @@ router.get('/:orderId', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
     try {
+        console.log(req.body)
         const newOrder = await Order.create(req.body)
         res.send(newOrder)
     } catch (err) {

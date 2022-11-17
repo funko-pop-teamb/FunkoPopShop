@@ -260,6 +260,7 @@ form div {
   display: inline-block;
 }
 
+<<<<<<< HEAD
 .users{
   margin-left: 155px;    background-color: rgba(255, 228, 196, 0.47);
 
@@ -272,4 +273,8 @@ form div {
 
 .orders{
   margin-left: 155px;
+=======
+.allOrderImage{
+  height: 10vh;
+>>>>>>> 3e72068b93382223a2d79ea840beb410e6ea13bd
 }

@@ -1,84 +1,55 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteFunkoPop, fetchFunkoPops, addFunkoPop, selectFunkoPops, updateFunkoPops } from '../../app/slice/allFunkoSlice'
-import { logout, me } from '../auth/authSlice'
-import { Link, useParams } from 'react-router-dom'
-import { addItemToCart, fetchAllCartFunkos, filteredOrdersByStatus, updateOneOrderOneFunko, addToLocalCart} from '../../app/slice/cartProducts'
-import { updateFunkoPop, fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice'
-
+import { deleteFunkoPop, fetchFunkoPops } from '../../app/slice/allFunkoSlice'
+import { Link } from 'react-router-dom'
+import { addItemToCart, fetchAllCartFunkos, filteredOrdersByStatus, updateOneOrderOneFunko, addToLocalCart } from '../../app/slice/cartProducts'
+import { fetchSingleFunkoPop } from '../../app/slice/oneFunkoSlice'
+import { updateOrder } from '../../app/slice/singleOrderSlice'
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const AllFunkos = () => {
 
     let funkos = useSelector((state) => state.allFunkoPops)
-    const { cart, items } = useSelector((state) => state.cart)
+    const cart = useSelector((state) => state.cart.cart)
+    const items = useSelector((state) => state.cart.items)
+    const [search, setSearch] = useState('')
 
-    const { userType, id, firstName, lastName, email, username } = useSelector((state) => state.auth.me)
-    const isLoggedIn = useSelector((state) => { return state.auth.me.id })
-
+    const { userType, id } = useSelector((state) => state.auth.me)
 
     const dispatch = useDispatch()
 
-
     let orderId = cart.id
 
-    const loadToPage = async() => {
-    if (!id) {
-        dispatch(fetchFunkoPops())
-    } else {
-        dispatch(fetchFunkoPops())
-        dispatch(fetchAllCartFunkos(orderId))
+    const loadToPage = async () => {
+        if (!id) {
+            dispatch(fetchFunkoPops())
+        } else {
+            dispatch(fetchFunkoPops())
+            dispatch(fetchAllCartFunkos(orderId))
+        }
     }
-}
 
     useEffect(() => {
         loadToPage()
-        // dispatch(fetchFunkoPops())
-        // dispatch(fetchAllCartFunkos(orderId))
-        // dispatch(me())
-        // dispatch(filteredOrdersByStatus(id))
     }, [])
-
 
     const handleDelete = async (funkoId) => {
         await dispatch(deleteFunkoPop(funkoId))
         await dispatch(fetchFunkoPops())
     }
-    //items= funkoPops in the current cart
-    // const  item=useSelector((state)=>   state.cart.items)
-    // const addToCart = async (funko)=>{
-    //     let FunkoPopId=funko.id
-    //       orderId=cart.id
-    //      let quantity=1
-    //      let funkoPrice=funko.price
-    //     if (items.filter(e=> e.FunkoPopId===funko.id).length>0){
-    //         let index=items.findIndex(e=> 
-    //              e.FunkoPopId===funko.id
-    //         )
-    //         quantity=items[index].quantity+1
-    //         await dispatch(updateOneOrderOneFunko({FunkoPopId, orderId, quantity}))
-    //     } else {
-    //         await  dispatch(addItemToCart({FunkoPopId, orderId,quantity,funkoPrice}))
-    //     }
-    //     await dispatch(fetchAllCartFunkos(orderId))
 
-
-
-     //const allItems = []
     const addToCart = async (funko) => {
         if (!id) {
             const item = await dispatch(fetchSingleFunkoPop(funko.id))
-            await dispatch(addToLocalCart(item))
+            await dispatch(addToLocalCart(item.payload))
 
-            // localStorage.setItem('cart', JSON.stringify(allItems))
-            // let guestCart = JSON.parse(localStorage.getItem('cart'))
-            // console.log(guestCart)
-            // in /cart component localStorage.getItem('cart')
         } else {
             let FunkoPopId = funko.id
             orderId = cart.id
             let quantity = 1
             let funkoPrice = funko.price
+            let totalPrice = cart.totalPrice + funkoPrice
             if (items.filter(e => e.FunkoPopId === funko.id).length > 0) {
                 let index = items.findIndex(e =>
                     e.FunkoPopId === funko.id
@@ -88,14 +59,32 @@ const AllFunkos = () => {
             } else {
                 await dispatch(addItemToCart({ FunkoPopId, orderId, quantity, funkoPrice }))
             }
+            await dispatch(updateOrder({ orderId, totalPrice }))
+            await dispatch(filteredOrdersByStatus(id));
             await dispatch(fetchAllCartFunkos(orderId))
         }
+        toast(`${funko.name} added to cart!`, {
+            position: "bottom-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            })
     }
-
+    const handleSearch = (e) => {
+        e.preventDefault()
+        funkos.filter((funko) => {
+            funko.name.includes(search)
+        })
+    }
     return (
         <>
-
-            <h1 className='funkosHeader'>Funko Gallery</h1>
+            <h1 className='funkosheader'>Funko Gallery</h1>
+            <input type="text" value={search} onChange={(e) => { setSearch(e.target.value) }} placeholder="Search..."></input>
+            <button onClick={(e) => handleSearch(e)}>Search</button>
             <div className='allFunkos'>
                 
                 {funkos.map((funko) => (
@@ -114,7 +103,7 @@ const AllFunkos = () => {
                     </div>
                 ))}
             </div>
-
+<ToastContainer/>
         </>
     )
 }

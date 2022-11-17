@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { postUser } from '../../app/slice/usersSlice'
 import { useNavigate } from 'react-router-dom'
-import { addOrder } from '../../app/slice/allOrderSlice'
 import { me } from '../auth/authSlice'
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const SignUp = () => {
@@ -16,11 +16,6 @@ const SignUp = () => {
 
     const { id } = useSelector((state) => { return state.auth.me })
 
-    const [orderStatus, setOrderStatus] = useState('Cart')
-    const [userId, setUserId] = useState(id)
-    const [shippingAddress, setShippingAddress] = useState('123 Lane Road')
-    const [totalPrice, setTotalPrice] = useState(0)
-
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -29,9 +24,16 @@ const SignUp = () => {
         await dispatch(
             postUser({ firstName, lastName, username, password, email })
         )
-        // await dispatch(
-        //     addOrder({ orderStatus, userId, shippingAddress, totalPrice })
-        // )
+        toast(`Thank you for signing up!`, {
+            position: "bottom-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            })
         navigate('/login')
     }
 
@@ -66,6 +68,8 @@ const SignUp = () => {
 
                 <button className='SignUpBtn' type='submit'>Sign Up</button>
             </form>
+            <ToastContainer/>
+
         </div>
     )
 }

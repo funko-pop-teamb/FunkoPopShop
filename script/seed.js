@@ -919,8 +919,187 @@ const funkos = [
       "Tony Stark gears up in his red and gold Iron Man suit to join your Marvel Avengers: Endgame collection as a Mega Pop! figure. Complete your Marvel lineup with the towering, Funko Exclusive figure! Vinyl figure is approximately 18-inches tall.",
 
 
-  }
-
+  },
+  {
+  name: 'Green Lantern - Parallax Hal Jordan',
+    category: 'DC Comics',
+    price: '12.50', 
+imageUrl:'https://www.coleka.com/media/item/202208/30/pop-digital-new-item-003.webp',
+    size: 'regular',
+    edition: 'exclusive',
+    description: 'This Funko action figure Green Lantern - Parallax Hal Jordan is part of the POP! Digital series which currently counts 115 action figures. It is known under the reference number 82. This POP represents the character Green Lantern, Hal Jordan. It was released in 2022.'
+  },
+ {
+name: 'Deku',
+    category: 'Anime',
+    price: '12.50', 
+imageUrl:'https://i5.walmartimages.com/asr/212aa6be-a895-4dae-9913-8824c6f88169_1.c704e3521199caac6f8d1c5885e7fc69.jpeg',
+    size: 'regular',
+    edition: 'general',
+    description: 'Before Izuku Midoriya gets ready to take on the Provisional Hero License Exam, he must first make some upgrades to his costume with the help of Mei Hatsume! As seen in season 3 of My Hero Academia, Deku is ready to do his best with his new Pop! Makeover.',
+ },
+ {
+name: 'Shota',
+    category: 'Anime',
+    price: '30.00', 
+imageUrl:'https://i5.walmartimages.com/asr/ed33b50c-c1ae-432e-bf14-f84cd1e049d1.6a8345f81a1b9b953d4ece06571b6d86.jpeg?odnHeight=80&odnWidth=80&odnBg=FFFFFF' ,  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko Pop My Hero Academia: Hero Costume Shota Collectible Figure, Multicolor.'
+ },
+   {
+name: 'Ochaco',
+    category: 'Anime',
+    price: '15.00', 
+imageUrl:'https://i5.walmartimages.com/asr/a5a4491d-a3bd-4bb5-a508-0ee089cea5c3_4.099f8221958e60c9773189d6aed47089.jpeg?odnHeight=80&odnWidth=80&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'general',
+    description: 'Funko POP Anime: My Hero Academia - Ochako'
+   },
+   {
+name: 'All-Might ',
+    category: 'Anime',
+    price: '15.00', 
+imageUrl:'https://i5.walmartimages.com/asr/7a7abe72-5d2c-4833-b46d-f660250802a8_1.60301eeeef3192d0288afe6360c0eaaf.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF',
+ size: 'regular',
+    edition: 'general',
+    description: 'FUNKO POP! ANIMATION: MY HERO ACADEMIA - ALL MIGHT'
+   },
+   {
+name: 'Todoroki',
+    category: 'Anime',
+    price: '20.00', 
+imageUrl:'https://i5.walmartimages.com/asr/16716225-8188-47ec-aefd-1f979dd21df8.22739fee0ea16ef2dddc42c0f4112107.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF', 
+ size: 'regular',
+    edition: 'general',
+    description: 'This is the My Hero Academia Funko POP Animation Todoroki Vinyl Figure. A rare variant of an excellent character. Add to your collection today.',
+   },
+   {
+name: 'Beerus',
+    category: 'Anime',
+    price: '40.00', 
+imageUrl:'https://i5.walmartimages.com/asr/ee711660-c1e3-4282-8a7a-7ded202fbfa0.e48d6d8d32bf207b26bb93cd3d7dad96.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko Dragon Ball Super Pop! Animation Beerus (Eating Noodles) Vinyl Figure Exclusive'
+   },
+{
+name: 'Vegeta',
+    category: 'Anime',
+    price: '16.00', 
+imageUrl:'https://i5.walmartimages.com/asr/f65e7b37-8afe-4933-8db0-9215b18e8e9f_1.19a493a4221be34652aef7aa8173e086.png?odnHeight=80&odnWidth=80&odnBg=FFFFFF',   
+ size: 'regular',
+    edition: 'general',
+    description: 'POP Animation: DBZ S7 - Training Vegeta'
+},
+{
+name: 'Frieza',
+    category: 'Anime',
+    price: '12.00', 
+imageUrl:'https://i5.walmartimages.com/asr/a6057e29-60e2-4435-b2af-439feb77a21b.8f435e86186acea7fbfdbe5a503db761.png',  
+ size: 'regular',
+    edition: 'general',
+    description: 'Funko POP! Animation: Dragon Ball Z S8 - Frieza 100% Final Form'
+},
+{
+name: 'Super Sayian blue Goku',
+    category: 'Anime',
+    price: '16.00', 
+imageUrl:'https://i5.walmartimages.com/asr/1c36a171-7725-436c-b2ff-260b713615ff_1.ab7dab70c3bc1483d878dc1e0ec0a927.jpeg', 
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko POP! Animation Dragon Ball Super SSGSS Metallic Goku Exclusive'
+},
+{
+name: 'Daredevil',
+    category: 'Marvel',
+    price: '16.00', 
+imageUrl:'https://m.media-amazon.com/images/I/51ADNjJ9KgL._AC_SY355_.jpg', 
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'POP Marvel: Daredevil- Daredevil (Action Pose)'
+},
+{
+name: 'Carnage',
+    category: 'Marvel',
+    price: '17.50', 
+imageUrl:'https://i5.walmartimages.com/asr/03f51912-4b99-4d8b-8cf1-ce4dbcffec8c.1a825a82be1d7b6dbfaba9b141842a0d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Bring your favorite Marvel villain into your Spider-Man collection with this split Pop! of Carnage.',
+},
+{
+name: 'Miles Morales',
+    category: 'Marvel',
+    price: '19.50', 
+imageUrl:'https://i5.walmartimages.com/asr/6e14b460-5057-41a5-b93f-fc76f6c97e7e.320756c9b1cc0c29690f464e1fee4b99.png',  
+ size: 'regular',
+    edition: 'general',
+    description: 'A true original! Marvel’s Pop! Spider-Man Miles Morales is ready for action in his Classic Suit! Theres a 1 in 6 chance you may find the chase variant of Miles without his mask. Vinyl bobblehead is approximately 4.15-inches tall. Please note: Chase variants are shipped at random. Receiving a chase with purchase is not guaranteed.',
+},
+{
+name: 'The Mandalorian',
+    category: 'Star Wars',
+    price: '19.50', 
+imageUrl:'https://i5.walmartimages.com/asr/ea12c776-62e8-455c-a7b6-747544a3d84c.b7c967ca46551a7588bf17aa0fc7060d.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',   
+ size: 'regular',
+    edition: 'general',
+    description: 'This Star Wars The Mandalorian with Child Flying Pop! Vinyl Figure measures approximately 3 3/4-inches tall and is now back in stock at Boxed Vinyl. This Funko Pop! comes packaged in a window display box.',
+},
+{
+name: 'Darth Maul',
+    category: 'Star Wars',
+    price: '14.50', 
+imageUrl:'https://i5.walmartimages.com/asr/ea31e625-e6e9-4e12-a9f8-32e556ce9d16.9b004be6da58eb7984b48a14e5ef7ee4.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'general',
+    description: 'Funko POP! Star Wars: Clone Wars - Darth Maul',
+},
+{
+name: 'Dr.Fate',
+    category: 'DC Comics',
+    price: '16.50', 
+imageUrl:'https://i5.walmartimages.com/asr/ad409a01-1089-4fc6-a0b3-3af39cab7b8d.d31c46c60a8bd4cf5e7decfa3ec4be77.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF',   
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko POP! Heroes DC Justice League Doctor Fate #395 Exclusive',
+},
+{
+name: 'Grogu',
+    category: 'Star Wars',
+    price: '14.50', 
+imageUrl:'https://i5.walmartimages.com/asr/9f04cc25-5dde-44c3-a1fa-11ff21f3f1ef.d89f05e70ac359d177a61bbc7adc93b9.png',  
+ size: 'regular',
+    edition: 'general',
+    description: 'A Mando Pop! pick. The Mandalorian The Child with Cookie Pop! Vinyl Figure measures approximately 3 3/4-inches tall.',
+},
+{
+name: 'Retro Darth Vader',
+    category: 'Star Wars',
+    price: '25.50', 
+imageUrl:'https://i5.walmartimages.com/asr/5d38d04e-cb75-43d0-89db-1706b866977a.00044fd819e7314c77e710b4c51511f3.png?odnHeight=612&odnWidth=612&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'This special series of STAR WARS™ Pops! is based on retro comic book art of the spectacular space saga. Bring home a piece of the stellar series with the exclusive Pop! Darth Vader. Vinyl bobblehead is approximately 4.5-inches tall. Share what you got!',
+},
+{
+name: 'Jawa',
+    category: 'Star Wars',
+    price: '21.50', 
+imageUrl:'https://i5.walmartimages.com/asr/8cb80b17-8018-4750-9633-5ccf28f61cdc_1.0123d013c2f9500b5efbf1c32452329c.png',  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko POP! Star Wars: The Mandalorian - Offworld Jawa',
+},
+{
+name: 'Star Fire',
+    category: 'DC Comics',
+    price: '35.50', 
+imageUrl:'https://i5.walmartimages.com/asr/5faf9578-01a4-4d87-b16e-f7b30404b29c.18cfe7784babf455f03e8bf4bf37bbb0.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF',  
+ size: 'regular',
+    edition: 'exclusive',
+    description: 'Funko Justice League POP! Marvel Starfire Exclusive Vinyl Bobble Head #438',
+}
 
 
 
@@ -928,7 +1107,7 @@ const funkos = [
 
 const Orders = [
   {
-    totalPrice: "30.00",
+    totalPrice: "100.00",
     shippingAddress: "101 main street",
     orderStatus: "Cart",
     userId: 1,
@@ -940,41 +1119,37 @@ const Orders = [
     userId: 2,
 
   },
-  {
-    totalPrice: "24.00",
-    shippingAddress: "101 Red street",
-    orderStatus: "Shipping",
-    userId: 2,
-
-  },
-  {
-    totalPrice: "50.00",
-    shippingAddress: "123 First street",
-    orderStatus: "Complete",
-    userId: 2,
-  },
+  
 ]
 
 const OrderDetails = [
   {
     orderId: 1,
-    FunkoPopId: 1,
+    FunkoPopId: 60,
     quantity: 2,
     funkoPrice: 15,
+    userId:1
+  },
+  {
+    orderId: 1,
+    FunkoPopId: 85,
+    quantity: 1,
+    funkoPrice: 70,
+    userId:1
   },
   {
     orderId: 2,
-    FunkoPopId: 24,
+    FunkoPopId: 45,
     quantity: 2,
     funkoPrice: 20,
-    FunkoPopId: 24
+    userId:2
   },
   {
     orderId: 2,
-    FunkoPopId: 25,
+    FunkoPopId: 49,
     quantity: 3,
     funkoPrice: 20,
-    FunkoPopId: 25
+    userId:2
   }
 ]
 

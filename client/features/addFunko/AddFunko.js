@@ -52,7 +52,7 @@ const AddFunko = () => {
                         <input className='fInputDescription' name='description' value={description} onChange={(e) => setDescription(e.target.value)} />
 
                         <button className='addbtn' type='submit'>Add Funko</button>
-                        <button className='clearbtn' type='button'>Clear</button>
+                        <button className='clearbtn' type='button' onClick={() => { setName(''), setCategory(''), setPrice(''), setImageUrl(''), setSize(''), setEdition(''), setDescription('') }}>Clear</button>
                     </form>
 
                 </div> : null}

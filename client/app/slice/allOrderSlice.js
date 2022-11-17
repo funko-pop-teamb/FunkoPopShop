@@ -10,9 +10,13 @@ export const filteredOrders = createAsyncThunk('filteredOrders', async () => {
     const { data } = await axios.get(`/api/orders/filter/${userId}`)
     return data
 })
-
-export const addOrder = createAsyncThunk('addOrder', async ( {userId}) => {
-    const { data } = axios.post('/api/orders', { userId})
+export const filteredOrdersComplete = createAsyncThunk('filteredOrdersComplete', async (userId) => {
+    const { data } = await axios.get(`/api/orders/filter/status/${userId}/complete`)
+    console.log(data)
+    return data
+})
+export const addOrder = createAsyncThunk('addOrder', async ({ userId }) => {
+    const { data } = axios.post('/api/orders', { userId })
     return data
 })
 
@@ -21,12 +25,12 @@ export const deleteOrder = createAsyncThunk('deleteOrder', async () => {
     return data
 })
 
-const allOrderSlice = createSlice ({
+const allOrderSlice = createSlice({
     name: 'orders',
     initialState: {
         orders: [],
     },
-    reducers:{},
+    reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchOrders.pending, (state, action) => {
             state.loading = true
@@ -35,7 +39,9 @@ const allOrderSlice = createSlice ({
             state.loading = false
             state.orders = action.payload
         })
-   
+        builder.addCase(filteredOrdersComplete.fulfilled, (state, action) => {
+            state.orders = action.payload
+        })
         builder.addCase(addOrder.fulfilled, (state, action) => {
             state.orders.push(action.payload)
         })

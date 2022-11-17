@@ -13,7 +13,8 @@ export const fetchAllCartFunkos = createAsyncThunk(
 export const updateOneOrderOneFunko = createAsyncThunk(
   "updateOneOrderOneFunko", async ({ FunkoPopId, orderId, quantity, funkoPrice }) => {
     try {
-      const { data } = await axios.put(`/api/orderFunkoPop/filterByOrderIdAndFunkoId/${orderId}/${FunkoPopId}`, { quantity, funkoPrice });
+      const { data } = await axios.put(`/api/orderFunkoPop/filterByOrderIdAndFunkoId/${orderId}/${FunkoPopId}`,
+        { quantity, funkoPrice });
       return data;
     } catch (err) {
       console.log(err);
@@ -33,6 +34,7 @@ export const addItemToCart = createAsyncThunk(
 export const filteredOrdersByStatus = createAsyncThunk('filteredOrdersByStatus', async (userId) => {
   try {
     const { data } = await axios.get(`/api/orders/filter/status/${userId}/cart`)
+    console.log(data)
     return data
   } catch (err) {
     console.log(err);
@@ -50,17 +52,21 @@ const singleOrderWithFunkoPopSlice = createSlice({
   name: "funkoPops",
   initialState: {
     items: [],
-    cart: []
+    cart: [],
   },
   reducers: {
     addToLocalCart(state, action) {
-      console.log(state)
       state.items.push(action.payload)
       localStorage.setItem('cart', JSON.stringify(state.items))
     },
 
-    //need a removeFromLocalCart function
+    removeFromLocalCart(state, action) {
+      JSON.parse(localStorage.getItem('cart'))
+      state.items.splice(action.payload, 1)
+      localStorage.setItem('cart', JSON.stringify(state.items))
+    }
   },
+
   extraReducers: (builder) => {
     builder
       .addCase(fetchAllCartFunkos.fulfilled, (state, action) => {
@@ -74,10 +80,8 @@ const singleOrderWithFunkoPopSlice = createSlice({
       })
       .addCase(filteredOrdersByStatus.fulfilled, (state, action) => {
         state.cart = action.payload
+        state.items = action.payload.order_funkoPops
       })
-    // .addCase(removeFunkoPop.fulfilled, (state, action) => {
-    //   const newState = state.items.filter((item) => item.id !== action.payload.id)
-    //   return newState})
   },
 });
 
@@ -86,6 +90,7 @@ export const selectOrderFunkoPop = (state) => {
   return state.singleOrderProduct;
 };
 
-export const {addToLocalCart} = singleOrderWithFunkoPopSlice.actions
+export const { addToLocalCart, removeFromLocalCart } = singleOrderWithFunkoPopSlice.actions
+
 
 export default singleOrderWithFunkoPopSlice.reducer;

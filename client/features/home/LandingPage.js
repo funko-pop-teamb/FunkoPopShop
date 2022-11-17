@@ -25,9 +25,6 @@ const LandingPage = () => {
 
   return (
     <>
-      {/* <div className="headerHome">
-                <center> <img src="https://www.crystalcommerce.com/blog/wp-content/uploads/sites/2/2019/12/billboard_funko-pop-1024x264.jpg" width={1250} /></center>
-            </div> */}
       <div>
         <div className="sideNavBar">
           <div
