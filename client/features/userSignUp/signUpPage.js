@@ -16,10 +16,10 @@ const SignUp = () => {
 
     const { id } = useSelector((state) => { return state.auth.me })
 
-    const [orderStatus, setOrderStatus] = useState('Cart')
-    const [userId, setUserId] = useState(id)
-    const [shippingAddress, setShippingAddress] = useState('123 Lane Road')
-    const [totalPrice, setTotalPrice] = useState(0)
+    // const [orderStatus, setOrderStatus] = useState('Cart')
+    // const [userId, setUserId] = useState(id)
+    // const [shippingAddress, setShippingAddress] = useState('123 Lane Road')
+    // const [totalPrice, setTotalPrice] = useState(0)
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
