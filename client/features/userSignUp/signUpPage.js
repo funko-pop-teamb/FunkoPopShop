@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { postUser } from '../../app/slice/usersSlice'
 import { useNavigate } from 'react-router-dom'
 import { me } from '../auth/authSlice'
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const SignUp = () => {
@@ -23,6 +24,16 @@ const SignUp = () => {
         await dispatch(
             postUser({ firstName, lastName, username, password, email })
         )
+        toast(`Thank you for signing up!`, {
+            position: "bottom-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            })
         navigate('/login')
     }
 
@@ -57,6 +68,8 @@ const SignUp = () => {
 
                 <button className='SignUpBtn' type='submit'>Sign Up</button>
             </form>
+            <ToastContainer/>
+
         </div>
     )
 }
