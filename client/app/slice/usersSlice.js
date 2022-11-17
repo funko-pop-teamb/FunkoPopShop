@@ -13,7 +13,7 @@ export const fetchUsers = createAsyncThunk("fetchUsers", async () => {
 export const postUser = createAsyncThunk("postUser", async (payload) => {
   try {
     const { data } = await axios.post("/api/users", payload);
-    const {data: newOrder} = await axios.post('/api/orders', {userId: data.id});
+    const { data: newOrder } = await axios.post('/api/orders', { userId: data.id });
     console.log(newOrder)
     return data;
   } catch (err) {
@@ -27,21 +27,16 @@ export const deleteUser = createAsyncThunk("/api/users", async (id) => {
 });
 
 export const editUser = createAsyncThunk(
-  "editUser", async({userId, username, firstName, lastName, email}) => {
-    try{
-
-      const {data} = await axios.put(`/api/users/${userId}`, {username,
-      firstName, lastName, email })
-
+  "editUser", async ({ userId, username, firstName, lastName, email }) => {
+    try {
+      const { data } = await axios.put(`/api/users/${userId}`, {
+        username,
+        firstName, lastName, email
+      })
       return data;
-    }catch(err) {
-
+    } catch (err) {
       console.log(err)
-
     }
-
-
-
   })
 
 const usersSlice = createSlice({
@@ -61,7 +56,6 @@ const usersSlice = createSlice({
       return newState;
     });
     builder.addCase(editUser.fulfilled, (state, action) => {
-
       return action.payload;
     })
   },

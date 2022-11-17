@@ -40,7 +40,7 @@ router.get('/sort/byName', async (req, res, next) => {
             ["name", "ASC"],
             ],}))
     } catch (err) {
-
+        console.log('Error in GET/sort/byName', err)
     }
 })
 
@@ -50,7 +50,7 @@ router.get('/sort/priceLow', async (req, res, next) => {
             ["price", "ASC"],
             ],}))
     } catch (err) {
-        
+        console.log('Error in GET/sort/priceLow', err)
     }
 })
 
@@ -60,59 +60,40 @@ router.get('/sort/priceHigh', async (req, res, next) => {
             ["price", "DESC"],
             ],}))
     } catch (err) {
-        
+        console.log('Error in GET/sort/priceHigh', err)
     }
 })
 
 router.get('/sort/mini', async (req, res, next) => {
     try {
-        // const { mini } = req.params
         res.json(await FunkoPop.findAll( {
 
             where: { size: 'mini' }
         }))
     } catch (err) {
-
+        console.log('Error in GET/sort/mini', err)
     }
 })
 
 router.get('/sort/regular', async (req, res, next) => {
     try {
-        // const { regular } = req.params
         res.json(await FunkoPop.findAll( {
-
             where: { size: 'regular' }
         }))
     } catch (err) {
-
+        console.log('Error in GET/sort/regular', err)
     }
 })
 
 router.get('/sort/jumbo', async (req, res, next) => {
     try {
-        // const { jumbo } = req.params
         res.json(await FunkoPop.findAll( {
-
             where: { size: 'jumbo' }
         }))
     } catch (err) {
-
+        console.log('Error in GET/sort/jumbo', err)
     }
 })
-
-
-
-// router.get('/filter/:size', async (req, res, next) => {
-//     try {
-//         const { size } = req.params
-//         res.json(await FunkoPop.findAll( {
-
-//             where: { size: size }
-//         }))
-//     } catch (err) {
-
-//     }
-// })
 
 router.post('/', async (req, res, next) => {
     try {

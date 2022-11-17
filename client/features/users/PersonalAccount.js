@@ -9,11 +9,9 @@ const PersonalAccount = () => {
     const dispatch = useDispatch()
     const me = useSelector((state) => state.auth.me)
     const [username, setUserName] = useState("")
-    //const [AccPassword, setPassword] = useState("")
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
     const [email, setEmail] = useState("")
-
 
     function refreshPage() {
         window.location.reload(false);
@@ -40,10 +38,6 @@ const PersonalAccount = () => {
                     <label htmlFor="username">Username:</label>
                     <input value={username} onChange={(evt) =>
                         setUserName(evt.target.value)} />
-
-                    {/* <label htmlFor = "password">Password:</label>
-                <input value = {AccPassword} onChange = {(evt) => 
-                setPassword(evt.target.value)} /> */}
 
                     <label htmlFor="firstName">First Name:</label>
                     <input value={firstName} onChange={(evt) =>

@@ -3,10 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import AuthForm from '../features/auth/AuthForm';
 import Home from '../features/home/Home';
-import { AllFunkos, LandingPage, SingleFunko, AddFunko, SignUp, PersonalAccount } from '../features/allfeatures'
+import { AllFunkos, SingleFunko, AddFunko, SignUp, PersonalAccount } from '../features/allfeatures'
 import { me } from '../store';
 import Cart from '../features/cart/Cart';
-import { fetchAllCartFunkos, filteredOrdersByStatus } from './slice/cartProducts';
+import { filteredOrdersByStatus } from './slice/cartProducts';
 import CheckOut from '../features/cart/CheckOut';
 import PurchaseComplete from '../features/cart/purchaseComplete';
 import AllOrders from '../features/users/AllOrders';
@@ -18,15 +18,12 @@ import AllOrders from '../features/users/AllOrders';
 const AppRoutes = () => {
   const isLoggedIn = useSelector((state) => !!state.auth.me.id);
   const dispatch = useDispatch();
-  // const {userType}=useSelector((state)=>  state.auth.me)
-  // console.log('*******'+userType)
+
   const { id } = useSelector((state) => state.auth.me)
-  const {cart, items} = useSelector((state) =>  state.cart )
+
   useEffect(async () => {
     dispatch(me());
     await dispatch(filteredOrdersByStatus(id))
-    // await dispatch(fetchAllCartFunkos(cart.id))
-
   }, []);
 
   return (
@@ -34,17 +31,16 @@ const AppRoutes = () => {
       {isLoggedIn ? (
         <Routes>
           <Route path="/*" element={<Home />} />
-          <Route path= "/account" element = {<PersonalAccount />} />
+          <Route path="/account" element={<PersonalAccount />} />
 
           <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
-          {/* <Route path="/home" element={<LandingPage />} /> */}
 
           <Route path="/cart" element={<Cart />} />
           <Route path="/cart/checkout" element={<CheckOut />} />
-          <Route path="/cart/checkout/complete" element={<PurchaseComplete/>} />
+          <Route path="/cart/checkout/complete" element={<PurchaseComplete />} />
 
           <Route path="/funkoPops" element={<><AllFunkos /><AddFunko /></>} />
-          <Route path="/allOrders" element={<AllOrders/>} />
+          <Route path="/allOrders" element={<AllOrders />} />
 
         </Routes>
       ) : (
@@ -64,10 +60,10 @@ const AppRoutes = () => {
           <Route path="/funkoPops" element={<AllFunkos />} />
 
           <Route path='/funkoPops/:funkoId/*' element={<SingleFunko />} />
-          
+
           <Route path="/cart" element={<Cart />} />
           <Route path="/cart/checkout" element={<CheckOut />} />
-          <Route path="/cart/checkout/complete" element={<PurchaseComplete/>} />
+          <Route path="/cart/checkout/complete" element={<PurchaseComplete />} />
 
 
         </Routes>

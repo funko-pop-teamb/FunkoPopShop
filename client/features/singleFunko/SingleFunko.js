@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { me } from "../auth/authSlice";
 import { deleteFunkoPop } from "../../app/slice/allFunkoSlice";
-import {
-  fetchSingleFunkoPop,
-  selectSingleFunkoPop,
-  updateFunkoPop,
-} from "../../app/slice/oneFunkoSlice";
+import { fetchSingleFunkoPop, selectSingleFunkoPop, updateFunkoPop } from "../../app/slice/oneFunkoSlice";
 import { addItemToCart, fetchAllCartFunkos, updateOneOrderOneFunko } from "../../app/slice/cartProducts";
 import { addToLocalCart } from "../../app/slice/cartProducts";
 
@@ -19,11 +14,11 @@ const SingleFunko = () => {
   const { me} = useSelector((state) => state.auth);
 
   const singleFunko = useSelector(selectSingleFunkoPop);
-  const { userType} = useSelector((state) => state.auth.me);
+
+  const { userType } = useSelector((state) => state.auth.me);
+
   const { cart, items } = useSelector((state) => state.cart)
 
-  // const { name, imageUrl, price, category, size, edition, description } =
-  //   singleFunko;
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [price, setPrice] = useState("");
@@ -35,8 +30,6 @@ const SingleFunko = () => {
   useEffect(() => {
     dispatch(fetchSingleFunkoPop(funkoId));
   }, [dispatch, funkoId]);
-
-  console.log(items)
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
@@ -52,21 +45,12 @@ const SingleFunko = () => {
         description,
       })
     );
-    // useNavigate(`/funkoPops/${funkoId}`);
   };
 
   const handleDelete = async () => {
     await dispatch(deleteFunkoPop(funkoId));
   };
   const addToCart = async (funko) => {
-    // if (!id) {
-    //     const item = await dispatch(fetchSingleFunkoPop(funko.id))
-    //     allItems.push(item)
-    //     localStorage.setItem('cart', JSON.stringify(allItems))
-    //     let guestCart = JSON.parse(localStorage.getItem('cart'))
-    //     console.log(guestCart)
-    // } else {
-    // in /cart component localStorage.getItem('cart')
 
     if (!me.id) {
       const item = await dispatch(fetchSingleFunkoPop(funko.id))
