@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchOrders, filteredOrders } from '../../app/slice/allOrderSlice'
-import { singleOrder } from '../../app/slice/singleOrderSlice'
-import { filteredOrdersByStatus } from '../../app/slice/cartProducts'
+import { fetchOrders } from '../../app/slice/allOrderSlice'
+import { Link } from 'react-router-dom'
 
 
 const AllOrders = () => {
     const orders = useSelector((state) => state.allOrder.orders)
-    // const { userType } = useSelector((state) => state.auth.me);
     const dispatch = useDispatch()
 
     useEffect(() => {

@@ -24,6 +24,8 @@ const oneFunko = useSelector((state) => { return state.singleFunkoPop })
 
 // const funko = useSelector(selectSingleFunkoPop)
 return (
+
+
     <div className='featuredFunko'>
         <h2 className='fTitle'>Funko of the Month!</h2>
         <Link key={oneFunko.id} to={`/funkoPops/${oneFunko.id}`}>
@@ -31,7 +33,7 @@ return (
         <img src={oneFunko.imageUrl} className='fImage' />
         <h2 className='fName'>{oneFunko.name}</h2>
         <h3 className='fCategory'>Category: {oneFunko.category}</h3>
-        <h3 className='fPrice'>Price: ${oneFunko.price}</h3>
+        <h3 className='fPrice'> ${oneFunko.price}</h3>
         </Link>
     </div>
   );

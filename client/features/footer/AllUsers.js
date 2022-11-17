@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchUsers, selectSIngleUser } from "../../app/slice/usersSlice";
+import { fetchUsers } from "../../app/slice/usersSlice";
 import { Link } from "react-router-dom";
 
 const AllUsers = () => {
   const users = useSelector((state) => state.usersSlice);
-  // const { userType } = useSelector((state) => state.auth.me);
-  console.log(users);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -45,7 +43,7 @@ const AllUsers = () => {
             ))
           : null}
       </div>
-      ≈{" "}
+      
     </>
   );
 };

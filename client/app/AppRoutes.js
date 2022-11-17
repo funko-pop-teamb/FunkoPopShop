@@ -66,13 +66,10 @@ const AppRoutes = () => {
             }
           />
 
-          {/* <Route path="/users" elements={<Footer />}/> */}
           <Route path="/allOrders" element={<AllOrders />} />
-
-          {/* <Route path="/orders" element={<AllFunkos />} /> */}
           {/* <Route path="/orders/filter/status/:userId/cart" elements={<AllOrders />} /> */}
           <Route path="/users" element={<AllUsers />} />
-          <Route path="/users/:userId/*" element={<AllUsers />} />
+          {/* <Route path="/users/:userId/*" element={<AllUsers />} /> */}
         </Routes>
       ) : isLoggedIn ? (
         <Routes>

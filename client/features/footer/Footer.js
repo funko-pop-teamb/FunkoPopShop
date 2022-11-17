@@ -25,7 +25,8 @@ const Footer = () => {
     <>
       <div>
         <footer>
-          <section className="socialIcons">
+          <section >
+            {/* <div className="footerHome"> */}
             <Link to="/home">
               <img
                 src="https://funkilandia.com/wp-content/uploads/2022/07/imagen_1.1.png"
@@ -33,19 +34,29 @@ const Footer = () => {
                 height={25}
               />
             </Link>
+            {/* </div>
+            <div > */}
             {/* FIND TRANSPARENT SOCIAL ICONS */}
+            <div className="socialIcons">
             <a href="https://twitter.com/OriginalFunko">
-              <img src="" />
-              TWIT
+              <img src="https://i.pinimg.com/originals/8a/24/f9/8a24f98f493888400837ca126d6a981d.jpg" />
+              {/* TWIT */}
             </a>
+            {/* </div><div> */}
+
             <a href="https://www.facebook.com/originalfunko">
-              <img src="" />
-              FB
+              <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" />
+              {/* FB */}
             </a>
+            {/* </div>
+            <div> */}
+
             <a href="https://www.youtube.com/channel/UCiBxZWamaDdlemljJ3aGPZQ">
-              <img src="" />
-              YT
+              <img src="https://i.pinimg.com/736x/9a/25/a3/9a25a391d3e5a3e14f5dde1855a71fd9.jpg" />
+              {/* YT */}
             </a>
+            {/* </div> */}
+            </div>
           </section>
           {/* CHANGE TO isAdmin */}
           {isLoggedIn && userType === "admin" ? (
@@ -54,12 +65,12 @@ const Footer = () => {
                 <h4>ADMIN</h4>
                 {/* grab all useers w/ order links */}
                 {/* <div onClick={handleChange} value={"allUsers"}> */}
-                <div>
+                <div className="adminLink">
                   <Link to="/users">All Users</Link>
                 </div>
                 {/* view all orders */}
                 {/* <div onClick={handleChange} value={"allOrders"}> */}
-                <div>
+                <div className="adminLink">
                   <Link to="/allOrders">Users' Orders</Link>
                 </div>
               </div>
