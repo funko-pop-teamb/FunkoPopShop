@@ -64,8 +64,7 @@ return (
           {" "}
           <img
             src="https://www.crystalcommerce.com/blog/wp-content/uploads/sites/2/2019/12/billboard_funko-pop-1024x264.jpg"
-            width={1400}
-            height={250}
+         className="banner"
           />
         </center>
       </div>

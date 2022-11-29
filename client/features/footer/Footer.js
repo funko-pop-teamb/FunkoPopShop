@@ -23,7 +23,7 @@ const Footer = () => {
 
   return (
     <>
-      <div>
+  
         <footer>
           <section >
             {/* <div className="footerHome"> */}
@@ -166,7 +166,7 @@ const Footer = () => {
             </div>
           )}
         </footer>
-      </div>
+
     </>
   );
 };

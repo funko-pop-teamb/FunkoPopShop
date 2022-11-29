@@ -13,7 +13,7 @@ const Home = () => {
   const me = useSelector((state) => state.auth.me);
 
   useEffect(() => {
-    dispatch(fetchSingleFunkoPop(61))
+    dispatch(fetchSingleFunkoPop(85))
     dispatch(filteredOrdersByStatus(me.id));
 
   }, [])
